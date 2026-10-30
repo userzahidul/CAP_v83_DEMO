@@ -1,0 +1,1920 @@
+<!doctype html>
+<html lang="bn"><head>
+<!-- PUBLIC DEMO BUILD: contains fictional starter examples and demo-only credentials; never enter real company data. --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CAP Web App v83 — Live Report Above Settings</title>
+<style>
+:root{font-family:Arial,'Noto Sans Bengali',sans-serif;color:#172033;background:#eaf0e5}*{box-sizing:border-box}body{margin:0}header{background:#315b25;color:white;padding:16px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}header h1{font-size:22px;margin:0}header small{opacity:.85}.wrap{max-width:1400px;margin:18px auto;padding:0 14px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tabs button,.btn{border:0;border-radius:7px;padding:10px 14px;cursor:pointer;background:#155e9a;color:#fff;font-weight:600}.tabs button{background:#dbe7f2;color:#153d61}.tabs button.active{background:#155e9a;color:#fff}.btn.gray{background:#5b6573}.btn.red{background:#a63232}.btn.green{background:#147346}.card{background:#fff;border:2px solid #b9cfa9;border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 2px 8px #152b4410}.card h2{font-size:19px;margin:0 0 14px;color:#254b20}.step-banner{background:#2f6da8;color:#fff;border:2px solid #1d578c;border-radius:4px;padding:12px;margin:10px 0}.step-banner h2{color:#fff!important;margin:0 0 10px!important}.step-pill{display:inline-block;background:#ffc400;color:#111;border-radius:18px;padding:5px 18px;font-weight:bold}.finding-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.finding-option{display:grid;grid-template-columns:34px 1fr 32px;align-items:center;gap:4px;background:#fff;color:#111;border:1px solid #b6c9d7;padding:5px;cursor:pointer;text-align:left;min-width:0}.finding-option .num{background:#a9d18e;text-align:center;font-weight:bold;padding:5px}.finding-option .fname{font-weight:bold;overflow-wrap:anywhere;padding:4px}.finding-option .mark{text-align:center;font-size:18px;font-weight:bold}.finding-option.selected{outline:3px solid #ffc400;background:#fff9d9}.finding-option .mark.ok{color:#d34b4b}.finding-option .mark.bad{color:#b42318}.design-note{font-size:13px;color:#334155;margin:8px 0}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field label{font-size:13px;font-weight:bold;color:#35465b}.field input,.field select,.field textarea{border:1px solid #c5d0dc;border-radius:6px;padding:9px;font:inherit;min-width:0;background:#fff}.field textarea{min-height:80px;resize:vertical}.span2{grid-column:span 2}.span4{grid-column:1/-1}.muted{color:#64748b;font-size:13px}.status{font-weight:bold;margin-left:8px}.ok{color:#087443}.bad{color:#b42318}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px}th,td{border:1px solid #bac5d1;padding:7px;text-align:left;vertical-align:top}th{background:#e8edf3}td img{max-width:100px;max-height:85px;object-fit:contain}.hidden{display:none!important}.user-mode .design-note,.user-mode #appView>.notice,.user-mode [data-admin-only],.user-mode #recheckCommentsField{display:none!important}.notice{background:#fff8df;border:1px solid #f1d67a;padding:10px;border-radius:7px;margin-bottom:14px;font-size:13px}.metric{display:flex;gap:12px;flex-wrap:wrap}.metric div{background:#edf4fa;border-radius:8px;padding:12px;min-width:140px}.metric strong{display:block;font-size:22px;color:#155e9a}.reporthead{text-align:center;margin-bottom:12px}.reporthead h2{margin:0}.photo{width:90px;height:70px;object-fit:contain}.report-photo-tools{display:flex;flex-direction:column;gap:4px;align-items:center;margin-top:5px}.report-photo-tools .btn{font-size:10px;padding:5px 6px;white-space:normal}.report-photo-tools input{max-width:100%}@media print{.report-photo-tools{display:none!important}}.login{max-width:1050px;margin:5vh auto}.login-shell{display:grid;grid-template-columns:1.05fr .95fr;overflow:hidden;border-radius:22px;min-height:520px;box-shadow:0 20px 55px #18351e30;border:1px solid #c7d7bc;background:#fff}.login-visual{position:relative;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;padding:28px;color:#fff;background:linear-gradient(140deg,#123e1e,#2d702f 55%,#78a84d)}.login-visual:before,.login-visual:after{content:"";position:absolute;border-radius:50%;border:1px solid #ffffff36;animation:floatOrb 9s ease-in-out infinite}.login-visual:before{width:340px;height:340px;top:-95px;left:-110px}.login-visual:after{width:260px;height:260px;right:-70px;bottom:40px;animation-delay:-4s}.login-brand,.login-profile,.login-visual-foot{position:relative;z-index:1}.login-brand h1{font-size:25px;margin:0 0 8px;text-align:center}.login-brand p{margin:0;color:#e3f5dc;text-align:center}.login-profiles{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;align-items:start}.login-profile{width:100%;max-width:135px;margin:auto;text-align:center;animation:floatPhoto 5s ease-in-out infinite}.login-profile:nth-child(2){animation-delay:-1.5s}.login-profile:nth-child(3){animation-delay:-3s}.login-profile .portrait{width:100%;aspect-ratio:1;border:4px solid #ffffffce;border-radius:50%;overflow:hidden;box-shadow:0 12px 32px #071e0f50;background:#fff;display:flex;align-items:center;justify-content:center;color:#285329;font-size:32px;font-weight:bold}.login-profile img{width:100%;height:100%;object-fit:cover;object-position:center 30%}.login-profile .portrait-label{font-size:13px;font-weight:bold;margin-top:8px;color:#fff;line-height:1.4}.role-photo-preview{width:74px;height:74px;border-radius:50%;object-fit:cover;border:2px solid #b9cfa9;background:#f1f6ed}.role-photo-card{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #d8e3d0;border-radius:10px;background:#f9fcf7}.role-photo-card .field{flex:1;min-width:0}.login-visual-foot{font-size:13px;line-height:1.7}.login-panel{padding:42px;display:flex;flex-direction:column;justify-content:center}.login-panel h2{text-align:left;font-size:28px;margin:0 0 8px;color:#214b22}.login-subtitle{color:#64748b;margin:0 0 24px}.login-panel .field input{padding:12px 13px}.login-panel .btn{min-width:130px;padding:12px 20px}.login-action-buttons{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:12px}.login-action-buttons .btn{min-width:0;flex:0 1 auto;white-space:nowrap}.login-error{margin-top:6px;min-height:0}.login-error:empty{display:none}@media(max-width:520px){.login-action-buttons{gap:7px}.login-action-buttons .btn{padding:10px 12px;font-size:12px}}.login-contact{margin-top:28px;padding-top:18px;border-top:1px solid #e2e8f0;color:#334155;font-size:13px;line-height:1.8}.login-contact strong{font-size:15px;color:#1f3e25}.page-company{max-width:1400px;margin:0 auto 6px;text-align:center;font-size:13px;color:#465a43;line-height:1.6}.footer{color:#64748b;font-size:12px;text-align:center;padding:16px}.footer .dev{display:block;margin-top:3px}@keyframes floatPhoto{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes floatOrb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(18px,-14px) scale(1.04)}}.footer{color:#64748b;font-size:12px;text-align:center;padding:16px}@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.login-shell{grid-template-columns:1fr}.login-visual{min-height:300px}.login-profiles{gap:8px}.login-profile{max-width:115px}.login-profile .portrait-label{font-size:12px}.login-panel{padding:28px}}@media(max-width:520px){.grid{grid-template-columns:1fr}.span2{grid-column:span 1}header h1{font-size:18px}.login{margin:16px auto}.login-visual{padding:22px;min-height:280px}.login-brand h1{font-size:21px}.login-panel{padding:24px}.login-panel h2{font-size:24px}}@media print{header,.tabs,.noprint,.footer{display:none!important}body{background:white}.wrap{max-width:none;margin:0;padding:0}.card{box-shadow:none;border:0;padding:0}.report-table{font-size:10px}.report-table th,.report-table td{padding:4px}}
+
+.cap-photo-row{display:grid!important;grid-template-columns:34px minmax(0,1fr)!important;gap:5px}.cap-photo-row .fname{grid-column:2}.photo-fields{grid-column:1/-1;background:#f1f6ed;padding:8px;display:flex;flex-direction:column;gap:6px;min-width:0}.photo-fields label{font-size:12px;font-weight:bold}.photo-fields input{width:100%;min-width:0;font-size:12px}.step1-card{background:#315b25;border:3px solid #628b42;border-radius:22px;color:#fff;padding:18px}.step1-card h2{color:#fff}.step1-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.step1-side{min-width:0}.step1-line{display:grid;grid-template-columns:minmax(105px,155px) 12px minmax(0,1fr);align-items:center;gap:7px;min-height:28px;border-bottom:1px dotted #d2e0c8;font-size:13px}.step1-line label{color:#fff;font-weight:normal;padding-left:8px}.step1-line input{width:100%;min-width:0;border:0;border-radius:0;background:#52783a;color:#fff;padding:7px 9px;font:inherit;outline-offset:-2px}.step1-line input::placeholder{color:#dbe8d3}.step1-card .field label{color:#fff}.step1-card select{background:#52783a;color:#fff;border-color:#7e9e6c}@media(max-width:750px){.step1-grid{grid-template-columns:1fr;gap:12px}.step1-line{grid-template-columns:125px 10px minmax(0,1fr)}}
+
+/* v25: report actions dropdown below report; centered merged cells */
+.report-actions summary{cursor:pointer;font-weight:bold;color:#254b20;padding:4px 2px;}
+.report-actions[open] summary{margin-bottom:8px}
+/* v24: left-side navigation; preserve existing sections and behavior */
+#appView{display:grid;grid-template-columns:220px minmax(0,1fr);column-gap:18px;align-items:start}
+#appView>.notice{grid-column:1/-1}
+#appView>.tabs{grid-column:1;grid-row:2;display:flex;flex-direction:column;align-self:start;position:sticky;top:12px;background:#fff;border:1px solid #cbd8c2;border-radius:12px;padding:10px;box-shadow:0 2px 8px #152b4410}
+#appView>.tabs button{width:100%;text-align:left;line-height:1.35;padding:12px 13px;border-radius:8px}
+#appView>.tabs button.active{background:#155e9a;color:#fff}
+#appView>section[id^="tab-"]{grid-column:2;grid-row:2;min-width:0}
+@media(max-width:850px){#appView{grid-template-columns:175px minmax(0,1fr);column-gap:12px}#appView>.tabs{padding:7px}#appView>.tabs button{font-size:12px;padding:10px 8px}}
+@media(max-width:620px){#appView{display:flex;flex-direction:column;gap:10px}#appView>.notice,#appView>.tabs,#appView>section[id^="tab-"]{width:100%}#appView>.tabs{position:static;display:flex;flex-direction:row;overflow-x:auto;gap:6px}#appView>.tabs button{width:auto;min-width:max-content;text-align:center;padding:9px 11px}}
+
+#appView>.tabs .sidebar-report-actions{display:flex;flex-direction:column;gap:6px;padding:8px 4px 8px 12px;margin:0 0 5px 7px;border-left:3px solid #9dbb8d;background:#f5f8f2;border-radius:0 8px 8px 0}
+#appView>.tabs .sidebar-report-actions .sidebar-report-title{font-size:12px;font-weight:700;color:#315b25;padding:4px 2px}
+#appView>.tabs .sidebar-report-actions button{font-size:11px;white-space:normal;text-align:left;padding:8px 9px;line-height:1.25}
+@media(max-width:620px){#appView>.tabs .sidebar-report-actions{min-width:180px;flex-shrink:0;margin:0;padding:6px;border-left:0;border-top:3px solid #9dbb8d;border-radius:8px}#appView>.tabs .sidebar-report-actions button{min-width:160px;text-align:left}}
+
+/* v27 requested login and application header refinements */
+.login-visual{justify-content:space-between;min-height:520px}
+.login-visual-foot{width:100%;text-align:center;align-self:stretch;padding:8px 4px 2px;line-height:1.5;overflow:visible;white-space:normal;overflow-wrap:anywhere}
+.login-address{display:block;text-align:center;font-size:15px;font-weight:600;line-height:1.5;padding:4px 0;margin:0 auto;max-width:100%}
+.login-values{text-align:center;font-size:12px;line-height:1.5;margin-top:5px}
+.app-company{grid-column:1/-1;grid-row:1;margin:0 0 8px;padding:8px 0 10px;border-bottom:2px solid #b9cfa9;color:#315b25;font-size:16px}
+.app-company strong,.app-company span{display:block;text-align:center}
+.app-company strong{font-size:19px;letter-spacing:.4px}
+#appHeader{display:flex}
+@media(max-width:620px){.login-visual{min-height:440px}.login-visual-foot{padding-bottom:6px}.app-company strong{font-size:17px}}
+
+
+/* v33 responsive layout fixes */
+#appView{display:flex;flex-direction:column;min-width:0}
+#appView>.page-company{order:1;width:100%;margin:0 auto 8px;text-align:center}
+#appView>.tabs{order:2}
+#appView>.notice{order:3}
+#appView>section[id^="tab-"]{order:4;min-width:0}
+#appView>.footer{order:99;width:100%;margin-top:24px;flex:0 0 auto;text-align:center}
+@media(max-width:650px){
+ #appView>.page-company{padding:12px 10px;margin-bottom:4px}
+ #appView>.footer{margin-top:18px;padding:18px 12px;line-height:1.8}
+ .step1-card{padding:16px 14px!important;min-width:0}
+ .step1-card h2{display:flex;align-items:center;gap:8px;flex-wrap:wrap;line-height:1.35;margin-bottom:18px!important}
+ .step1-grid{grid-template-columns:minmax(0,1fr)!important;gap:14px!important}
+ .step1-side{display:flex;flex-direction:column;gap:12px;min-width:0}
+ .step1-line{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:6px!important;min-height:0!important;border:0!important;border-bottom:1px solid #edf1ed!important;padding:0 0 10px!important;font-size:14px!important;min-width:0}
+ .step1-line label{display:block!important;width:100%;font-size:13px!important;line-height:1.4;padding:0!important}
+ .step1-line>span{display:none!important}
+ .step1-line input,.step1-line select,.step1-line textarea{display:block;width:100%!important;max-width:100%!important;box-sizing:border-box;font-size:15px!important}
+ .step1-card>.field{max-width:none!important;width:100%!important;margin-top:16px!important}
+ .step1-card>.field select{width:100%!important}
+}
+
+/* v34: keep the main navigation buttons horizontal on desktop and mobile */
+#appView>.tabs{display:flex!important;flex-direction:row!important;align-items:stretch;flex-wrap:wrap;gap:8px;width:100%;position:static;overflow:visible;background:transparent;border:0;border-radius:0;padding:0;box-shadow:none}
+#appView>.tabs>button{width:auto!important;flex:0 1 auto;min-width:145px;text-align:center!important;white-space:normal;padding:12px 16px!important;}
+/* v35: report actions open downward below the main horizontal navigation */
+#appView>.tabs{row-gap:8px!important;column-gap:8px!important}
+#appView>.tabs>button{order:0!important}
+#appView>.tabs .sidebar-report-actions{order:1!important;flex:1 0 100%!important;width:100%;display:flex;flex-direction:row;align-items:center;flex-wrap:wrap;gap:7px;padding:8px 10px;margin:0;border:1px solid #cbd8c2;border-radius:10px;background:#fff;min-width:0;box-shadow:0 4px 12px #152b4410}
+#appView>.tabs .sidebar-report-actions.hidden{display:none!important}
+#appView>.tabs .sidebar-report-actions .sidebar-report-title{padding:4px 6px;white-space:nowrap}
+#appView>.tabs .sidebar-report-actions button{width:auto!important;min-width:0;flex:0 1 auto;text-align:center!important;white-space:normal;padding:9px 11px!important}
+@media(max-width:650px){
+ #appView>.tabs{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;overflow:visible!important;gap:7px!important}
+ #appView>.tabs>button{order:0!important;flex:1 1 calc(50% - 7px);min-width:0!important;width:auto!important;text-align:center!important;padding:11px 8px!important;font-size:13px!important}
+ #appView>.tabs .sidebar-report-actions{order:1!important;flex:1 0 100%!important;display:flex;flex-direction:row;flex-wrap:wrap;min-width:0;margin:0;padding:8px;gap:6px}
+ #appView>.tabs .sidebar-report-actions .sidebar-report-title{flex:1 1 100%}
+ #appView>.tabs .sidebar-report-actions button{flex:1 1 calc(50% - 6px);min-width:0!important;width:auto!important;text-align:center!important;font-size:12px!important;padding:9px 6px!important}
+}
+
+/* v36: centered login brand, admin-managed scrolling announcement, report action contrast */
+.login-brand{width:100%;text-align:center}
+.announcement-ticker{display:flex;align-items:center;gap:12px;overflow:hidden;white-space:nowrap;background:#173f26;color:#fff;border:1px solid #a8c394;border-radius:8px;padding:10px 12px;margin:12px 0 0;min-height:42px}
+.announcement-ticker #announcementText{display:inline-block;flex:1 1 auto;min-width:max-content;font-weight:600;animation:capTickerScroll 24s linear infinite}
+.announcement-ticker:hover #announcementText{animation-play-state:paused}
+.announcement-ticker #editAnnouncementBtn{flex:0 0 auto;padding:6px 10px!important;font-size:12px}
+@keyframes capTickerScroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+#sidebarReportActions button.btn.gray,#sidebarReportActions button.btn.green{color:#fff!important}
+@media(max-width:520px){.announcement-ticker{padding:8px;font-size:12px}.announcement-ticker #announcementText{animation-duration:18s}.login-brand h1{font-size:21px}}
+
+/* v37: announcement on login screen; admin edit control in main menu; matching browser title */
+.login-announcement{max-width:none;width:calc(100% - 28px);margin:18px 14px 24px;min-height:44px;border-radius:10px;box-shadow:0 4px 14px rgba(28,65,40,.08)}
+#loginView{margin-bottom:0}
+#appView .tabs #editAnnouncementBtn{display:inline-flex;align-items:center;justify-content:center;background:#315b25!important;color:#fff!important;min-height:42px}
+#appView .tabs #editAnnouncementBtn.hidden{display:none!important}
+@media(max-width:620px){.login-announcement{width:calc(100% - 16px);margin:14px 8px 20px}.login-announcement #announcementText{min-width:max-content}}
+
+/* v38: use available desktop width while keeping responsive limits */
+.wrap{width:calc(100% - 28px);max-width:1800px;margin-left:auto;margin-right:auto;padding-left:0;padding-right:0}
+#appView{width:100%;min-width:0}
+#appView>section[id^="tab-"]{width:100%;max-width:none;min-width:0}
+#appView>section[id^="tab-"]>.card,
+#appView>section[id^="tab-"]>.step1-card,
+#appView>section[id^="tab-"] .card{max-width:none}
+.step1-card{width:100%;max-width:none}
+.step1-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(18px,2.5vw,36px)}
+#appView .tablewrap{max-width:100%;overflow-x:auto}
+@media(max-width:850px){.wrap{width:calc(100% - 20px)}.step1-grid{grid-template-columns:minmax(0,1fr);gap:14px}}
+@media(max-width:520px){.wrap{width:calc(100% - 16px)}.card{padding:14px}.step1-card{padding:14px 12px!important}}
+
+/* v39 final responsive layout safeguards */
+.wrap{width:calc(100% - 24px);max-width:1600px;margin-left:auto;margin-right:auto}
+#appView{min-width:0;width:100%}
+#appView>section[id^="tab-"]{min-width:0;width:100%}
+#appView .tablewrap{max-width:100%;overflow-x:auto}
+@media(max-width:850px){.wrap{width:calc(100% - 16px);padding-left:8px;padding-right:8px}}
+
+
+/* v42 fix: login ticker/footer styles belong to the page stylesheet */
+.login-announcement{position:relative;display:flex;width:100%;margin:16px 0 0;min-height:46px;border-radius:8px;box-shadow:0 4px 14px rgba(28,65,40,.10)}
+.login-developed-label{display:block;font-weight:700;color:#1f3e25;margin-bottom:2px}
+.login-contact strong{display:block}
+@media(max-width:620px){.login-announcement{width:100%;margin:14px 0 0}.login-contact{text-align:left}}
+/* v42 fix: login ticker/footer styles */
+.login-announcement{position:relative;display:flex;width:100%;margin:16px 0 0;min-height:46px;border-radius:8px;box-shadow:0 4px 14px rgba(28,65,40,.10)}
+.login-developed-label{display:block;font-weight:700;color:#1f3e25;margin-bottom:2px}
+.login-contact strong{display:block}
+@media(max-width:620px){.login-announcement{width:100%;margin:14px 0 0}.login-contact{text-align:left}}
+
+/* v58: professional visual refresh + switchable dark/light mode */
+:root{--bg:#eef2f7;--surface:#ffffff;--surface2:#f5f7fb;--ink:#172033;--muted:#68758a;--line:#d8e0ec;--accent:#2563eb;--accent2:#1d4ed8;--soft:#e8efff;--shadow:0 8px 28px rgba(15,23,42,.08)}
+body{background:var(--bg);color:var(--ink);font-family:Arial,'Noto Sans Bengali',sans-serif;transition:background .2s,color .2s}
+header#appHeader{background:linear-gradient(115deg,#111827,#1e3a5f 65%,#1d4ed8);box-shadow:0 5px 20px rgba(15,23,42,.18);padding:17px clamp(14px,3vw,32px);border-bottom:1px solid rgba(255,255,255,.14)}
+header h1{letter-spacing:.2px;font-weight:750}header small{color:#dbeafe}
+.wrap{max-width:1600px}
+.card,.login-visual,.login-form,.step1-card,#appView>.tabs,.login-shell{border-radius:16px!important;box-shadow:var(--shadow)!important}
+.card,.step1-card,.login-visual,.login-form{background:var(--surface)!important;color:var(--ink);border:1px solid var(--line)!important}
+.card h2,.card h3{color:var(--ink)}
+input,select,textarea{background:var(--surface)!important;color:var(--ink)!important;border:1px solid #b9c5d6!important;border-radius:8px!important;padding:10px!important;max-width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid #60a5fa;outline-offset:1px;border-color:#2563eb!important}
+button,.btn{border-radius:9px!important;transition:transform .12s,filter .12s,box-shadow .12s;box-shadow:0 2px 5px rgba(15,23,42,.08)}
+button:hover,.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn:not(.gray):not(.red):not(.green),.tabs button.active{background:linear-gradient(135deg,#2563eb,#1d4ed8)!important;color:white!important}
+.btn.green{background:#15803d!important}.btn.red{background:#b91c1c!important}.btn.gray{background:#475569!important}
+#appView>.tabs{background:var(--surface)!important;border:1px solid var(--line)!important;padding:12px!important}
+#appView>.tabs>button{min-height:42px;font-weight:650}
+#appView>.tabs .sidebar-report-actions{background:var(--surface2)!important;border-color:var(--line)!important}
+#appView>.tabs .sidebar-report-actions .sidebar-report-title{color:var(--ink)!important}
+.app-company{border-bottom:1px solid var(--line)!important;color:var(--ink)!important;padding:15px 8px!important}
+.app-company strong{letter-spacing:.7px}
+.notice,.muted,.help-text{color:var(--muted)}
+table{border-collapse:collapse}th{font-weight:700}td,th{border-color:var(--line)}
+#themeToggle{background:rgba(255,255,255,.12)!important;color:#fff!important;border:1px solid rgba(255,255,255,.35)!important;padding:9px 13px!important;white-space:nowrap}
+/* Dark theme */
+body.dark-mode{--bg:#0b1220;--surface:#111c2e;--surface2:#17243a;--ink:#e6edf7;--muted:#a7b5ca;--line:#2b3a52;--soft:#1e3150;--shadow:0 10px 28px rgba(0,0,0,.25);background:var(--bg);color:var(--ink)}
+body.dark-mode header#appHeader{background:linear-gradient(115deg,#070d18,#111c2e 60%,#172554)}
+body.dark-mode .card,body.dark-mode .step1-card,body.dark-mode .login-visual,body.dark-mode .login-form,body.dark-mode .login-shell{background:var(--surface)!important;color:var(--ink)!important;border-color:var(--line)!important}
+body.dark-mode .card h2,body.dark-mode .card h3,body.dark-mode label,body.dark-mode .app-company,body.dark-mode .app-company strong,body.dark-mode .app-company span{color:var(--ink)!important}
+body.dark-mode input,body.dark-mode select,body.dark-mode textarea{background:#0b1424!important;color:#edf4ff!important;border-color:#3a4b66!important;color-scheme:dark}
+body.dark-mode #appView>.tabs{background:var(--surface)!important;border-color:var(--line)!important}
+body.dark-mode #appView>.tabs>button:not(.active){background:#24344c!important;color:#e2eaf6!important}
+body.dark-mode #appView>.tabs .sidebar-report-actions{background:var(--surface2)!important;border-color:var(--line)!important}
+body.dark-mode #appView>.tabs .sidebar-report-actions .sidebar-report-title{color:#dbeafe!important}
+body.dark-mode .step-banner{background:#1d4ed8!important;border-color:#3b82f6!important}
+body.dark-mode .step-pill{background:#facc15!important;color:#111827!important}
+body.dark-mode .announcement-ticker,body.dark-mode .login-announcement{background:#102b27!important;border-color:#2d6b5b!important}
+body.dark-mode .login-developed-label{color:#86efac!important}
+body.dark-mode .app-company{border-bottom-color:var(--line)!important}
+body.dark-mode table,body.dark-mode th,body.dark-mode td{border-color:var(--line)!important}
+body.dark-mode th{background:#20314a!important;color:#edf4ff!important}
+body.dark-mode td{color:var(--ink)}
+body.dark-mode .photo-fields{background:#17243a!important;color:var(--ink)!important}
+body.dark-mode .report-actions summary{color:#bfdbfe!important}
+body.dark-mode .notice{background:#17243a!important;color:#dbeafe!important;border-color:#2b3a52!important}
+@media(max-width:650px){header#appHeader{padding:13px 12px}header h1{font-size:19px}.wrap{width:calc(100% - 16px)}#themeToggle{padding:8px 10px!important;font-size:12px}}
+
+
+/* v59 readability + modern accessible polish */
+:root{--app-ink:#182338;--app-muted:#526176;--app-line:#cbd5e1;--app-card:#ffffff;--app-field:#ffffff;--app-accent:#2563eb;--app-bg:#f1f5f9}
+body{font-size:15px;line-height:1.55;background:var(--app-bg);color:var(--app-ink)}
+body:not(.dark-mode){background:linear-gradient(135deg,#f8fafc 0%,#eaf1fb 100%);color:var(--app-ink)}
+header#appHeader{background:linear-gradient(115deg,#10213d,#1d4ed8 72%,#0e7490);box-shadow:0 8px 24px rgba(15,23,42,.15)}
+.card,.step1-card,.login-visual,.login-form,.login-shell{border:1px solid #d6dfeb!important;border-radius:16px!important;box-shadow:0 8px 24px rgba(15,23,42,.07)!important}
+.card h2,.card h3{color:#17345f;font-weight:750;letter-spacing:.1px}
+label, .field-label, .form-label{color:#26364d!important;font-weight:700!important;font-size:14px!important;line-height:1.45}
+input,select,textarea{color:#172033!important;background:#fff!important;border:1.5px solid #b8c5d8!important;border-radius:9px!important;min-height:40px;padding:9px 11px!important;font-size:15px!important;line-height:1.45!important;box-shadow:inset 0 1px 2px rgba(15,23,42,.035)}
+textarea{min-height:88px}
+input::placeholder,textarea::placeholder{color:#68778d!important;opacity:1!important}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(37,99,235,.22)!important;border-color:#2563eb!important}
+button,.btn{font-size:14px;line-height:1.35;font-weight:700;border-radius:9px;transition:filter .15s ease,transform .15s ease}
+button:hover,.btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.tabs button:not(.active){background:#e8eef7;color:#243b5b;border:1px solid #d1dbea}
+.tabs button.active{background:linear-gradient(135deg,#1d4ed8,#2563eb);color:#fff;box-shadow:0 4px 12px #2563eb2a}
+.step-banner{border-radius:11px!important;letter-spacing:.15px}
+table{border-collapse:separate;border-spacing:0;width:100%;overflow:hidden;border-radius:10px}
+th{font-weight:750}
+td,th{padding:10px 12px!important;line-height:1.45}
+.notice{border-radius:10px!important;line-height:1.55}
+/* High-contrast dark theme */
+body.dark-mode{--bg:#080f1d;--surface:#111c2e;--surface2:#192943;--ink:#f3f7ff;--muted:#c2cee0;--line:#3b4d68;--soft:#243b5e;--shadow:0 10px 28px rgba(0,0,0,.3);background:#080f1d!important;color:#f3f7ff!important}
+body.dark-mode header#appHeader{background:linear-gradient(115deg,#050a14,#102449 65%,#164e63)!important}
+body.dark-mode .card,body.dark-mode .step1-card,body.dark-mode .login-visual,body.dark-mode .login-form,body.dark-mode .login-shell{background:#111c2e!important;color:#f3f7ff!important;border-color:#344762!important;box-shadow:0 8px 25px rgba(0,0,0,.24)!important}
+body.dark-mode .card h2,body.dark-mode .card h3,body.dark-mode label,body.dark-mode .field-label,body.dark-mode .form-label,body.dark-mode p,body.dark-mode li,body.dark-mode small,body.dark-mode strong{color:#edf4ff}
+body.dark-mode label,body.dark-mode .field-label,body.dark-mode .form-label{font-weight:700!important}
+body.dark-mode input,body.dark-mode select,body.dark-mode textarea{background:#081426!important;color:#f8fbff!important;border:1.5px solid #526783!important;color-scheme:dark}
+body.dark-mode input::placeholder,body.dark-mode textarea::placeholder{color:#b2c0d4!important;opacity:1!important}
+body.dark-mode .tabs button:not(.active){background:#1d2e49!important;color:#eaf2ff!important;border-color:#3a4e6b!important}
+body.dark-mode .tabs button.active{background:linear-gradient(135deg,#2563eb,#0891b2)!important;color:#fff!important}
+body.dark-mode th{background:#223653!important;color:#f5f8ff!important}
+body.dark-mode td{background:#111c2e!important;color:#edf4ff!important}
+body.dark-mode td,body.dark-mode th,body.dark-mode table{border-color:#3b4d68!important}
+body.dark-mode .notice,body.dark-mode .photo-fields{background:#172943!important;color:#edf4ff!important;border-color:#3b4d68!important}
+body.dark-mode .app-company,body.dark-mode .app-company strong,body.dark-mode .app-company span{color:#f3f7ff!important}
+@media(max-width:650px){body{font-size:14px}.wrap{padding:0 10px}.card{padding:14px!important}input,select,textarea{font-size:16px!important}button,.btn{padding:10px 12px}}
+
+
+/* v60 Modern Professional Theme Pack: Green (default), Dark, Light Blue */
+:root{font-family:Inter,"Segoe UI",Arial,"Noto Sans Bengali",sans-serif;color:#142a22;background:#eaf7f0;font-synthesis:none;text-rendering:optimizeLegibility}
+body{background:linear-gradient(135deg,#eaf7f0 0%,#f6fbf8 52%,#e1f3e9 100%);color:#18352a;line-height:1.45}
+header#appHeader{background:linear-gradient(110deg,#064e3b 0%,#047857 52%,#059669 100%);color:#fff;padding:17px 24px;box-shadow:0 5px 22px #064e3b25;border-bottom:1px solid #6ee7b780}
+header#appHeader h1{font-size:clamp(20px,2vw,28px);letter-spacing:.2px;font-weight:750}
+header#appHeader small{font-size:13px;color:#d1fae5}
+.wrap{max-width:1540px;margin:22px auto;padding:0 18px}
+#appView{column-gap:18px}
+#appView>.tabs{background:linear-gradient(180deg,#063d31,#052e26)!important;border:1px solid #0b6b50!important;border-radius:16px!important;padding:10px!important;box-shadow:0 12px 28px #064e3b20!important}
+#appView>.tabs button{background:transparent!important;color:#d1fae5!important;border:1px solid transparent!important;border-radius:9px!important;padding:12px 13px!important;font-size:13px!important;transition:background .18s ease,transform .18s ease}
+#appView>.tabs button:hover{background:#ffffff15!important;transform:translateX(2px)}
+#appView>.tabs button.active{background:linear-gradient(100deg,#059669,#10b981)!important;color:#fff!important;border-color:#6ee7b7!important;box-shadow:0 5px 14px #10b98130}
+#appView>.tabs .sidebar-report-actions{background:#0b4738!important;border-color:#167a5a!important}
+#appView>.tabs .sidebar-report-actions .sidebar-report-title{color:#a7f3d0!important}
+.card,.login-form,.login-shell{border:1px solid #c6e7d5!important;border-radius:16px!important;box-shadow:0 8px 24px #14532d0d!important;background:rgba(255,255,255,.96)!important}
+.card{padding:22px;margin-bottom:18px}
+.card h2,.card h3{color:#065f46!important;font-weight:750;letter-spacing:.05px}
+.tabs button,.btn{border-radius:9px;transition:filter .15s ease,transform .15s ease,box-shadow .15s ease}
+.btn{background:linear-gradient(120deg,#047857,#059669);box-shadow:0 3px 8px #04785718}
+.btn:hover,.tabs button:hover{filter:brightness(1.04)}
+.btn.green{background:linear-gradient(120deg,#047857,#10b981)!important}
+.btn.gray{background:#e7f3ed!important;color:#174b38!important;border:1px solid #c6e7d5!important;box-shadow:none}
+.btn.red{background:#b42332!important}
+#appView>.tabs button.active{background:linear-gradient(120deg,#047857,#10b981)!important}
+.field label,.field label span,label{color:#203b30;font-weight:700}
+.field input,.field select,.field textarea,input,select,textarea{background:#fff;color:#152f25;border:1.5px solid #c4d9cd;border-radius:9px;padding:11px 12px;min-height:42px;outline:none;transition:border-color .15s ease,box-shadow .15s ease}
+.field input:focus,.field select:focus,.field textarea:focus,input:focus,select:focus,textarea:focus{border-color:#10a36e;box-shadow:0 0 0 3px #10a36e20}
+input::placeholder,textarea::placeholder{color:#71877c;opacity:1}
+.step-banner{background:linear-gradient(110deg,#047857,#10b981)!important;border:1px solid #6ee7b7!important;border-radius:12px!important;box-shadow:0 6px 16px #0478571a}
+.step1-card{background:linear-gradient(135deg,#064e3b,#047857)!important;border:1px solid #34d399!important;border-radius:16px!important;box-shadow:0 10px 25px #064e3b1c}
+.step1-line{border-bottom-color:#ffffff35}
+.step1-line input,.step1-card select{background:#0c684d!important;color:#fff!important;border:1px solid #4adea3!important;border-radius:7px!important}
+.step1-line input::placeholder{color:#d1fae5!important}
+.finding-option{border:1px solid #c6e7d5;border-radius:9px;background:#fff;color:#173b2b;padding:8px;transition:all .15s ease}
+.finding-option:hover{border-color:#10b981;background:#f0fdf4}
+.finding-option.selected{outline:2px solid #059669;background:#dcfce7}
+.photo-fields{background:#f0faf4;border:1px dashed #a7d9bd;border-radius:10px}
+.notice{background:#fffbeb;border:1px solid #f4d27b;color:#713f12;border-radius:10px}
+th{background:#e4f5eb;color:#14532d}td,th{border-color:#c8e0d2}
+.metric div{background:#e7f7ee;border:1px solid #c6e7d5;border-radius:12px}
+.metric strong{color:#047857}
+.app-company{color:#065f46!important;border-bottom-color:#a7d9bd!important}
+.footer{color:#587468}
+.login-visual{background:linear-gradient(145deg,#064e3b,#047857 58%,#34d399)!important}
+.login-panel h2{color:#065f46!important}
+.login-panel .field input{background:#fff!important;color:#152f25!important}
+#themeToggle{background:#ffffff18!important;color:#fff!important;border:1px solid #a7f3d070!important}
+body.light-blue-theme{background:linear-gradient(135deg,#eff6ff,#f8fbff 55%,#e0f2fe)!important;color:#172b45!important}
+body.light-blue-theme header#appHeader{background:linear-gradient(110deg,#12335b,#155eaa,#0284c7)!important;border-bottom-color:#93c5fd}
+body.light-blue-theme #appView>.tabs{background:linear-gradient(180deg,#102b4d,#0f2440)!important;border-color:#315c87!important}
+body.light-blue-theme #appView>.tabs button{color:#dbeafe!important}
+body.light-blue-theme #appView>.tabs button.active{background:linear-gradient(100deg,#2563eb,#0284c7)!important;border-color:#93c5fd!important}
+body.light-blue-theme .card,body.light-blue-theme .login-shell{border-color:#c5dcf5!important}
+body.light-blue-theme .card h2,body.light-blue-theme .card h3,body.light-blue-theme .app-company{color:#174a85!important}
+body.light-blue-theme .btn{background:linear-gradient(120deg,#1d4ed8,#0284c7)}
+body.light-blue-theme .step-banner{background:linear-gradient(110deg,#1d4ed8,#0284c7)!important;border-color:#93c5fd!important}
+body.light-blue-theme .step1-card{background:linear-gradient(135deg,#102b4d,#155eaa)!important;border-color:#60a5fa!important}
+body.light-blue-theme .login-visual{background:linear-gradient(145deg,#102b4d,#155eaa 58%,#38bdf8)!important}
+body.dark-mode{background:#081610!important;color:#e7f8ef!important}
+body.dark-mode header#appHeader{background:linear-gradient(110deg,#031e17,#064e3b 60%,#065f46)!important}
+body.dark-mode #appView>.tabs{background:linear-gradient(180deg,#052e26,#031e17)!important;border-color:#16654e!important}
+body.dark-mode #appView>.tabs button{color:#d1fae5!important}
+body.dark-mode #appView>.tabs button.active{background:linear-gradient(100deg,#047857,#10b981)!important;color:#fff!important}
+body.dark-mode .card,body.dark-mode .login-shell,body.dark-mode .login-form{background:#10271f!important;color:#e7f8ef!important;border-color:#285744!important}
+body.dark-mode .card h2,body.dark-mode .card h3,body.dark-mode label,body.dark-mode .field label,body.dark-mode p,body.dark-mode li,body.dark-mode small,body.dark-mode strong{color:#e7f8ef!important}
+body.dark-mode input,body.dark-mode select,body.dark-mode textarea,.dark-mode .field input,.dark-mode .field select,.dark-mode .field textarea{background:#071a13!important;color:#f0fdf4!important;border:1.5px solid #3f7059!important;color-scheme:dark}
+body.dark-mode input::placeholder,body.dark-mode textarea::placeholder{color:#a9c9b7!important}
+body.dark-mode th{background:#1b4232!important;color:#f0fdf4!important}
+body.dark-mode td{background:#10271f!important;color:#e7f8ef!important}
+body.dark-mode td,body.dark-mode th,body.dark-mode table{border-color:#315b46!important}
+body.dark-mode .photo-fields,body.dark-mode .notice{background:#17382a!important;color:#e7f8ef!important;border-color:#315b46!important}
+body.dark-mode .step1-card{background:linear-gradient(135deg,#063d2e,#075c43)!important}
+body.dark-mode .app-company,body.dark-mode .app-company strong,body.dark-mode .app-company span{color:#d1fae5!important}
+body.dark-mode .metric div{background:#17382a!important;border-color:#315b46!important}
+body.dark-mode .btn.gray{background:#1d4030!important;color:#e7f8ef!important;border-color:#315b46!important}
+@media(max-width:850px){.wrap{padding:0 10px}.card{padding:15px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+
+/* v62: green professional tree navigation + dashboard */
+:root{--cap-green:#087443;--cap-green-dark:#043e2c;--cap-green-soft:#e7f7ee;--cap-line:#c8e3d3;--cap-ink:#163326}
+body{background:#edf7f1;color:var(--cap-ink)}
+header{background:linear-gradient(115deg,#043e2c,#087443 68%,#11945a);box-shadow:0 4px 18px #063c2922;position:relative;z-index:4}
+header h1{letter-spacing:.2px}
+#appView{max-width:none;margin:0;padding:0 18px 22px}
+#appView .page-company,#appView .notice,#appView>.card.noprint:not(:first-child){margin-left:258px}
+#appView>.tabs{position:fixed;z-index:5;left:0;top:78px;bottom:0;width:240px;overflow-y:auto;overflow-x:hidden;margin:0;padding:16px 12px 22px;background:linear-gradient(180deg,#063f2d,#032e23);border-right:1px solid #1e7554;display:flex;flex-direction:column;flex-wrap:nowrap;gap:5px;box-shadow:4px 0 18px #052d2018}
+#appView>.tabs .tree-brand{color:#eafff2;font-weight:800;font-size:13px;letter-spacing:1px;padding:5px 10px 12px;border-bottom:1px solid #ffffff24;margin-bottom:7px}
+#appView>.tabs button{width:100%;min-width:0;text-align:left;border:0;border-radius:8px;padding:11px 12px;background:transparent;color:#d8f3e5;font-size:14px;font-weight:600;display:flex;align-items:center;gap:10px;box-shadow:none;white-space:normal}
+#appView>.tabs button:hover{background:#ffffff12;color:#fff}
+#appView>.tabs button.active{background:linear-gradient(90deg,#13a064,#087443);color:#fff;box-shadow:inset 3px 0 #8ef0b9}
+#appView>.tabs .tree-sub{padding:4px 0 7px 18px;margin:0 0 4px 14px;border-left:1px solid #ffffff35;display:flex;flex-direction:column;gap:3px}
+#appView>.tabs .tree-sub button{font-size:12px;padding:8px 9px;color:#bfe8d2}
+#appView>.tabs .tree-sub button:hover{background:#ffffff12}
+#appView>.tabs .tree-heading{font-size:10px;text-transform:uppercase;letter-spacing:1.4px;color:#80c9a6;padding:13px 10px 4px}
+#appView>.tabs .sidebar-report-actions{display:flex;flex-direction:column;gap:3px;padding:4px 0 6px 12px;margin:0 0 4px 13px;border-left:1px solid #ffffff35;background:transparent;border-radius:0}
+#appView>.tabs .sidebar-report-title{font-size:10px;color:#82d4a8;padding:4px 8px}
+#appView>.tabs .sidebar-report-actions button{font-size:12px;padding:8px 9px}
+#appView>.tabs .tree-bottom{margin-top:auto;padding-top:12px;border-top:1px solid #ffffff24}
+#appView>.card.noprint:first-child{margin:14px 0 12px 258px;padding:12px;border-color:#cde7d7}
+#appView>.card.noprint:first-child .row{margin:0!important}
+#appView .page-company{margin-top:12px;text-align:center;border:1px solid #c5e6d3;border-radius:10px;background:#fff;padding:12px}
+#appView .notice{border-radius:10px}
+#appView section{margin-left:258px}
+#appView section .card{border:1px solid #d1e8da;box-shadow:0 5px 18px #16452b0a;border-radius:14px}
+#appView input,#appView select,#appView textarea{border:1px solid #b8d7c5;border-radius:8px;background:#fff;color:#183b2a;min-height:39px}
+#appView input:focus,#appView select:focus,#appView textarea:focus{outline:3px solid #16a06425;border-color:#0b8b51}
+#appView .btn.green,#appView .tabs button.active{background:#087443}
+#tab-dashboard{margin-left:258px;padding-top:14px}
+.dashboard-hero{background:linear-gradient(115deg,#06452f,#0a8751);color:white;border-radius:16px;padding:22px 24px;margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;box-shadow:0 8px 24px #07503220}
+.dashboard-hero h2{color:#fff!important;margin:0 0 6px!important;font-size:25px}
+.dashboard-hero p{margin:0;color:#d6f6e5}
+.dashboard-date{background:#ffffff1c;border:1px solid #ffffff35;padding:10px 14px;border-radius:10px;font-weight:700}
+.dashboard-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:16px}
+.dash-stat{background:#fff;border:1px solid #d3e9dc;border-radius:13px;padding:17px;box-shadow:0 4px 14px #16452b08;min-width:0}
+.dash-stat .dash-label{font-size:12px;color:#547261;font-weight:700}
+.dash-stat .dash-value{font-size:28px;line-height:1.25;font-weight:800;color:#075c39;margin:8px 0 3px}
+.dash-stat .dash-foot{font-size:11px;color:#6b8777}
+.dashboard-columns{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,1fr);gap:14px}
+.dashboard-panel{background:#fff;border:1px solid #d3e9dc;border-radius:14px;padding:18px;margin-bottom:14px;min-width:0}
+.dashboard-panel h3{margin:0 0 14px;color:#12452e;font-size:16px}
+.dash-profile{display:flex;align-items:center;gap:13px;background:#effaf3;border-radius:12px;padding:14px;margin-bottom:14px}
+.dash-avatar{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;background:#087443;color:#fff;font-size:23px;font-weight:800;overflow:hidden;flex-shrink:0;border:3px solid #c6efd6}
+.dash-avatar img{width:100%;height:100%;object-fit:cover}
+.dash-profile strong{display:block;color:#12452e;font-size:16px}.dash-profile small{color:#557765}
+.dash-chart-row{display:grid;grid-template-columns:140px 1fr;gap:18px;align-items:center}
+.dash-pie{width:132px;height:132px;border-radius:50%;background:conic-gradient(#0a8751 0 35%,#3a9ee8 35% 60%,#f3b63f 60% 82%,#e66a6a 82% 100%);position:relative;margin:auto}
+.dash-pie:after{content:'';position:absolute;inset:28px;border-radius:50%;background:#fff}
+.dash-legend{display:flex;flex-direction:column;gap:10px;font-size:12px;color:#355a45}
+.dash-legend span{display:flex;align-items:center;gap:8px}.dash-dot{width:10px;height:10px;border-radius:3px;display:inline-block;flex-shrink:0}
+.dash-bars{display:flex;flex-direction:column;gap:11px}.dash-bar-line{display:grid;grid-template-columns:minmax(80px,130px) 1fr 32px;gap:8px;align-items:center;font-size:12px;color:#355a45}.dash-bar-track{height:10px;border-radius:10px;background:#e7f2eb;overflow:hidden}.dash-bar-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,#087443,#4bc58b)}
+.dash-shortcuts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.dash-shortcut{border:1px solid #d0e8d9;border-radius:10px;padding:13px;background:#f7fcf9;text-align:left;color:#155438;font-weight:700;cursor:pointer}.dash-shortcut:hover{background:#e8f8ef;border-color:#8acba7}
+.dash-empty{padding:14px;background:#f4faf6;border:1px dashed #b8d9c5;border-radius:10px;color:#587563;font-size:13px}
+@media(max-width:900px){#appView>.tabs{width:205px}#appView>.card.noprint:first-child,#appView .page-company,#appView .notice,#appView section,#tab-dashboard{margin-left:218px}.dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-columns{grid-template-columns:1fr}}
+@media(max-width:640px){#appView{padding:0 9px 16px}#appView>.tabs{position:relative;top:auto;bottom:auto;left:auto;width:auto;max-height:none;border-radius:12px;margin:10px 0;padding:10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}#appView>.tabs .tree-brand,#appView>.tabs .tree-heading,#appView>.tabs .tree-bottom{grid-column:1/-1}#appView>.tabs .tree-sub,#appView>.tabs .sidebar-report-actions{grid-column:1/-1;margin-left:8px}#appView>.tabs button{padding:9px;font-size:12px}#appView>.card.noprint:first-child,#appView .page-company,#appView .notice,#appView section,#tab-dashboard{margin-left:0}#appView>.card.noprint:first-child{margin-top:10px}.dashboard-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.dash-stat{padding:12px}.dash-stat .dash-value{font-size:23px}.dashboard-hero{padding:17px}.dashboard-hero h2{font-size:21px}.dash-chart-row{grid-template-columns:110px 1fr;gap:10px}.dash-pie{width:104px;height:104px}.dash-pie:after{inset:23px}.dash-shortcuts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+body.dark-mode #appView .dash-stat,body.dark-mode #appView .dashboard-panel,body.dark-mode #appView .page-company{background:#14251d;color:#e2f4e9;border-color:#2a5540}body.dark-mode #appView .dashboard-panel h3,body.dark-mode #appView .dash-stat .dash-value,body.dark-mode #appView .dash-profile strong{color:#b7f3d0}body.dark-mode #appView .dash-profile,body.dark-mode #appView .dash-shortcut{background:#19382a;color:#dff8e9;border-color:#315d45}body.dark-mode #appView .dash-legend,body.dark-mode #appView .dash-bar-line,body.dark-mode #appView .dash-stat .dash-label{color:#c1dfcd}body.dark-mode .dash-pie:after{background:#14251d}
+
+
+/* v63 hotfix: repair narrow-screen layout and navigation sizing */
+html, body { max-width:100%; overflow-x:hidden; }
+#appView { min-width:0 !important; width:100% !important; }
+#mainTreeMenu, #appView > #mainTreeMenu {
+  box-sizing:border-box !important;
+}
+#mainTreeMenu button,
+#mainTreeMenu .tree-sub button,
+#mainTreeMenu .sidebar-report-actions button {
+  writing-mode:horizontal-tb !important;
+  text-orientation:mixed !important;
+  transform:none !important;
+  height:auto !important;
+  min-height:40px !important;
+  max-height:none !important;
+  flex:0 0 auto !important;
+  align-self:stretch !important;
+  white-space:normal !important;
+  overflow:visible !important;
+  word-break:normal !important;
+  overflow-wrap:anywhere !important;
+  line-height:1.35 !important;
+}
+#mainTreeMenu .tree-brand,
+#mainTreeMenu .tree-heading,
+#mainTreeMenu .tree-bottom,
+#mainTreeMenu .tree-sub,
+#mainTreeMenu .sidebar-report-actions {
+  box-sizing:border-box !important;
+  min-width:0 !important;
+  max-width:100% !important;
+}
+#appView > section[id^="tab-"] {
+  min-width:0 !important;
+  max-width:100% !important;
+}
+@media screen and (max-width:700px) {
+  header#appHeader {
+    box-sizing:border-box !important;
+    width:100% !important;
+    padding:12px 14px !important;
+    gap:8px !important;
+    flex-wrap:wrap !important;
+  }
+  header#appHeader h1 {
+    font-size:clamp(17px,5vw,22px) !important;
+    line-height:1.25 !important;
+    overflow-wrap:anywhere !important;
+  }
+  #appView {
+    display:flex !important;
+    flex-direction:column !important;
+    gap:10px !important;
+    padding:0 10px 16px !important;
+    margin:0 !important;
+  }
+  #appView > #mainTreeMenu {
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    overflow:visible !important;
+    display:flex !important;
+    flex-direction:column !important;
+    flex-wrap:nowrap !important;
+    margin:10px 0 !important;
+    padding:12px !important;
+    border-radius:14px !important;
+    gap:5px !important;
+    order:1 !important;
+  }
+  #mainTreeMenu button {
+    display:flex !important;
+    width:100% !important;
+    min-width:0 !important;
+    padding:10px 12px !important;
+    font-size:13px !important;
+    text-align:left !important;
+  }
+  #mainTreeMenu .tree-brand,
+  #mainTreeMenu .tree-heading,
+  #mainTreeMenu .tree-bottom,
+  #mainTreeMenu .tree-sub,
+  #mainTreeMenu .sidebar-report-actions {
+    width:100% !important;
+    grid-column:auto !important;
+  }
+  #mainTreeMenu .tree-sub,
+  #mainTreeMenu .sidebar-report-actions {
+    margin:0 0 5px 8px !important;
+    padding:4px 0 4px 10px !important;
+  }
+  #appView > .card.noprint:first-child,
+  #appView .page-company,
+  #appView .notice,
+  #appView > section[id^="tab-"],
+  #appView section,
+  #tab-dashboard {
+    margin-left:0 !important;
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+  }
+  #appView > section[id^="tab-"] { order:4 !important; }
+  #appView .page-company { order:2 !important; }
+  #appView > .card.noprint:first-child { order:3 !important; }
+  .dashboard-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  .dashboard-columns { grid-template-columns:minmax(0,1fr) !important; }
+  .dashboard-hero { width:100% !important; box-sizing:border-box !important; }
+  .dashboard-panel, .dash-stat { min-width:0 !important; }
+}
+@media screen and (max-width:390px) {
+  #appView { padding-left:7px !important; padding-right:7px !important; }
+  #mainTreeMenu { padding:9px !important; }
+  .dashboard-grid { grid-template-columns:minmax(0,1fr) !important; }
+  .dash-chart-row { grid-template-columns:minmax(0,1fr) !important; }
+  .dash-legend { padding-top:8px; }
+  .dash-shortcuts { grid-template-columns:minmax(0,1fr) !important; }
+}
+
+
+/* v64: professional vertical sidebar navigation; submenu always below parent */
+#appView>.tabs {
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  flex-wrap:nowrap !important;
+  overflow-x:hidden !important;
+  overflow-y:auto !important;
+  gap:5px !important;
+}
+#appView>.tabs > button,
+#appView>.tabs button {
+  box-sizing:border-box !important;
+  width:100% !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  flex:0 0 auto !important;
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  text-align:left !important;
+  white-space:normal !important;
+  overflow:visible !important;
+  writing-mode:horizontal-tb !important;
+  transform:none !important;
+  min-height:42px !important;
+  height:auto !important;
+  padding:10px 12px !important;
+  line-height:1.35 !important;
+  overflow-wrap:anywhere !important;
+}
+#appView>.tabs .tree-sub,
+#appView>.tabs .sidebar-report-actions {
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:stretch !important;
+  width:calc(100% - 12px) !important;
+  min-width:0 !important;
+  max-width:calc(100% - 12px) !important;
+  box-sizing:border-box !important;
+  flex:0 0 auto !important;
+  margin:0 0 6px 12px !important;
+  padding:5px 0 5px 10px !important;
+  border-left:2px solid #48b889 !important;
+  border-top:0 !important;
+  border-radius:0 8px 8px 0 !important;
+  background:rgba(255,255,255,.035) !important;
+  gap:3px !important;
+}
+#appView>.tabs .tree-sub button,
+#appView>.tabs .sidebar-report-actions button {
+  width:100% !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  min-height:36px !important;
+  padding:8px 10px !important;
+  font-size:12px !important;
+  flex:0 0 auto !important;
+}
+#appView>.tabs .tree-heading {
+  display:block !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+  padding:14px 10px 5px !important;
+}
+#appView>.tabs .tree-bottom {
+  width:100% !important;
+  box-sizing:border-box !important;
+  margin-top:auto !important;
+}
+@media screen and (max-width:700px) {
+  #appView { display:flex !important; flex-direction:column !important; }
+  #appView>.tabs {
+    position:relative !important;
+    inset:auto !important;
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    margin:8px 0 !important;
+    padding:12px !important;
+    overflow:visible !important;
+    display:flex !important;
+    flex-direction:column !important;
+    flex-wrap:nowrap !important;
+    align-items:stretch !important;
+    gap:4px !important;
+  }
+  #appView>.tabs > button,
+  #appView>.tabs button {
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    min-height:42px !important;
+    text-align:left !important;
+    justify-content:flex-start !important;
+  }
+  #appView>.tabs .tree-sub,
+  #appView>.tabs .sidebar-report-actions {
+    width:calc(100% - 12px) !important;
+    max-width:calc(100% - 12px) !important;
+    margin-left:12px !important;
+    border-left:2px solid #48b889 !important;
+    border-top:0 !important;
+  }
+}
+
+
+/* v66 targeted stability fixes, based on v64 (not v65) */
+#appView.wrap { box-sizing:border-box; width:100%; max-width:none; padding-left:224px; padding-right:22px; }
+#appView > #tab-dashboard { margin-left:0 !important; width:100%; max-width:100%; min-width:0; box-sizing:border-box; }
+#appView > section[id^="tab-"] { min-width:0; max-width:100%; box-sizing:border-box; }
+.dashboard-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.dashboard-columns { grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); }
+.dashboard-panel, .dash-stat { min-width:0; }
+#mainTreeMenu .tree-brand { display:none !important; }
+#mainTreeMenu .tree-sub.hidden, #mainTreeMenu .sidebar-report-actions.hidden { display:none !important; }
+#mainTreeMenu .tree-sub:not(.hidden), #mainTreeMenu .sidebar-report-actions:not(.hidden) {
+  display:flex; flex-direction:column; width:100%; min-width:0; box-sizing:border-box;
+}
+#mainTreeMenu button span { flex:0 0 auto; }
+@media(max-width:900px) {
+  #appView.wrap { padding-left:215px; padding-right:14px; }
+  .dashboard-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .dashboard-columns { grid-template-columns:minmax(0,1fr); }
+}
+@media(max-width:680px) {
+  #appView.wrap { padding:12px !important; }
+  #appView > .tabs { position:relative !important; left:auto !important; top:auto !important; bottom:auto !important; width:100% !important; max-height:none !important; }
+  #appView > #tab-dashboard { margin:0 !important; }
+  .dashboard-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .dashboard-columns { grid-template-columns:minmax(0,1fr); }
+}
+@media(max-width:390px) {
+  .dashboard-grid { grid-template-columns:minmax(0,1fr); }
+}
+
+
+/* v67: clean vertical navigation, separators, report accordion and aligned company header */
+#appView>.tabs:before { content:none !important; display:none !important; }
+#appView .app-company {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  align-self:stretch !important;
+  width:auto !important;
+  max-width:none !important;
+  box-sizing:border-box !important;
+  text-align:left !important;
+  padding:14px 22px !important;
+  margin:12px 0 8px !important;
+}
+#appView .app-company strong,
+#appView .app-company span {
+  display:block !important;
+  text-align:left !important;
+}
+#mainTreeMenu .tree-brand {
+  display:block;
+  padding:2px 10px 12px;
+  margin-bottom:2px;
+  border-bottom:1px solid rgba(255,255,255,.16);
+}
+#mainTreeMenu .tree-brand-kicker {
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  color:#9bdcbb;
+  margin-bottom:8px;
+}
+#mainTreeMenu .tree-brand-title {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#f0fff7;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+#mainTreeMenu .menu-divider {
+  border:0;
+  border-top:1px solid rgba(255,255,255,.16);
+  height:0;
+  width:calc(100% - 8px);
+  margin:5px 4px;
+  flex:0 0 auto;
+}
+#mainTreeMenu .menu-chevron { margin-left:auto; flex:0 0 auto; }
+#mainTreeMenu .tree-heading {
+  width:100%;
+  box-sizing:border-box;
+  font-weight:800;
+  padding-top:12px !important;
+}
+#mainTreeMenu > button,
+#mainTreeMenu .tree-sub button,
+#mainTreeMenu .sidebar-report-actions button {
+  flex:0 0 auto !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  white-space:normal !important;
+  overflow-wrap:anywhere !important;
+}
+#mainTreeMenu .tree-sub.hidden,
+#mainTreeMenu .sidebar-report-actions.hidden { display:none !important; }
+#mainTreeMenu .tree-sub:not(.hidden),
+#mainTreeMenu .sidebar-report-actions:not(.hidden) {
+  display:flex !important;
+  flex-direction:column !important;
+}
+#mainTreeMenu .sidebar-report-actions {
+  padding:4px 0 6px 12px !important;
+  margin:0 0 4px 13px !important;
+  border-left:2px solid rgba(100,220,160,.55) !important;
+  background:transparent !important;
+  border-radius:0 !important;
+}
+#mainTreeMenu .sidebar-report-actions .sidebar-report-title {
+  color:#9bdcbb !important;
+  padding:5px 8px !important;
+  font-size:10px !important;
+  font-weight:800 !important;
+}
+@media(max-width:850px) {
+  #appView .app-company { grid-column:2 !important; padding:12px 14px !important; }
+}
+@media(max-width:620px) {
+  #appView .app-company { grid-column:1 !important; grid-row:auto !important; width:100% !important; margin:0 0 8px !important; }
+}
+
+
+/* v68 targeted layout repair: report submenu stays under Reports; content aligns with company header */
+#appView {
+  display:block !important;
+  position:relative !important;
+  box-sizing:border-box !important;
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  margin:0 !important;
+  padding:0 12px 24px 0 !important;
+}
+#appView > .tabs#mainTreeMenu {
+  position:fixed !important;
+  z-index:900 !important;
+  left:0 !important;
+  top:76px !important;
+  bottom:0 !important;
+  width:174px !important;
+  max-width:174px !important;
+  height:auto !important;
+  box-sizing:border-box !important;
+  display:flex !important;
+  flex-direction:column !important;
+  flex-wrap:nowrap !important;
+  align-items:stretch !important;
+  overflow-x:hidden !important;
+  overflow-y:auto !important;
+}
+#appView > .tabs#mainTreeMenu::before { content:none !important; display:none !important; }
+#appView > .tabs#mainTreeMenu .sidebar-report-actions {
+  order:0 !important;
+  position:static !important;
+  float:none !important;
+  flex:0 0 auto !important;
+  width:calc(100% - 12px) !important;
+  max-width:calc(100% - 12px) !important;
+  min-width:0 !important;
+  margin:0 0 6px 12px !important;
+  padding:5px 0 5px 10px !important;
+  border-left:2px solid #48b889 !important;
+  border-top:0 !important;
+  border-radius:0 8px 8px 0 !important;
+  background:rgba(255,255,255,.04) !important;
+  display:flex !important;
+  flex-direction:column !important;
+}
+#appView > .tabs#mainTreeMenu .sidebar-report-actions.hidden { display:none !important; }
+#appView > .tabs#mainTreeMenu .tree-bottom { order:0 !important; margin-top:12px !important; }
+#appView > .page-company,
+#appView > .app-company,
+#appView .page-company,
+#appView .app-company {
+  display:block !important;
+  box-sizing:border-box !important;
+  width:auto !important;
+  max-width:none !important;
+  margin:12px 0 8px 188px !important;
+  padding:12px 20px !important;
+  text-align:left !important;
+}
+#appView .page-company strong,
+#appView .page-company span,
+#appView .app-company strong,
+#appView .app-company span { display:block !important; text-align:left !important; }
+#appView > .card.noprint:first-child {
+  box-sizing:border-box !important;
+  width:auto !important;
+  max-width:none !important;
+  margin:10px 0 12px 188px !important;
+}
+#appView > section[id^="tab-"],
+#appView section[id^="tab-"],
+#appView section {
+  display:block !important;
+  box-sizing:border-box !important;
+  width:auto !important;
+  max-width:none !important;
+  min-width:0 !important;
+  margin-left:188px !important;
+  margin-right:0 !important;
+}
+#appView #tab-dashboard { margin-left:188px !important; width:auto !important; max-width:none !important; }
+#appView #tab-dashboard .dashboard-grid { grid-template-columns:repeat(4,minmax(0,1fr)) !important; }
+#appView #tab-dashboard .dashboard-columns { grid-template-columns:minmax(0,1.7fr) minmax(260px,.9fr) !important; }
+#appView input, #appView select, #appView textarea { max-width:100% !important; box-sizing:border-box !important; }
+#appView table { max-width:100% !important; }
+@media(max-width:1100px) {
+  #appView #tab-dashboard .dashboard-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+  #appView #tab-dashboard .dashboard-columns { grid-template-columns:minmax(0,1fr) !important; }
+}
+@media(max-width:700px) {
+  #appView { padding:0 8px 18px !important; }
+  #appView > .tabs#mainTreeMenu {
+    position:relative !important; left:auto !important; top:auto !important; bottom:auto !important;
+    width:100% !important; max-width:100% !important; height:auto !important;
+    margin:8px 0 !important; overflow:visible !important;
+  }
+  #appView > .page-company, #appView > .app-company,
+  #appView .page-company, #appView .app-company,
+  #appView > .card.noprint:first-child,
+  #appView > section[id^="tab-"], #appView section[id^="tab-"], #appView section,
+  #appView #tab-dashboard {
+    width:100% !important; max-width:100% !important;
+    margin-left:0 !important; margin-right:0 !important;
+  }
+  #appView #tab-dashboard .dashboard-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+}
+@media(max-width:390px) {
+  #appView #tab-dashboard .dashboard-grid { grid-template-columns:minmax(0,1fr) !important; }
+}
+
+
+/* v69 critical visibility fix: login and app views must never display together */
+#appView.hidden,
+#loginView.hidden,
+#announcementTicker.hidden {
+  display:none !important;
+}
+#appView:not(.hidden) { display:block !important; }
+#loginView:not(.hidden) { display:block; }
+
+
+/* v70: hidden application sections must remain hidden until selected from the sidebar */
+#appView > section.hidden,
+#appView section.hidden,
+#appView .hidden {
+  display:none !important;
+}
+#appView > section:not(.hidden) {
+  display:block !important;
+}
+/* Keep the dashboard as the only initially visible content panel */
+#appView > #tab-dashboard { display:block; }
+#appView > #tab-entry.hidden,
+#appView > #tab-reports.hidden,
+#appView > #tab-master.hidden,
+#appView > #tab-backup.hidden { display:none !important; }
+
+
+/* v71: strictly show only the selected main content panel */
+#appView #tab-dashboard[aria-hidden="true"],
+#appView #tab-entry[aria-hidden="true"],
+#appView #tab-reports[aria-hidden="true"],
+#appView #tab-master[aria-hidden="true"],
+#appView #tab-backup[aria-hidden="true"] {
+  display:none !important;
+}
+#appView #tab-dashboard[aria-hidden="false"],
+#appView #tab-entry[aria-hidden="false"],
+#appView #tab-reports[aria-hidden="false"],
+#appView #tab-master[aria-hidden="false"],
+#appView #tab-backup[aria-hidden="false"] {
+  display:block !important;
+}
+
+
+/* v72: stronger readable typography and form controls for Green and Light Blue themes */
+body.theme-green,
+body.theme-light-blue,
+body[data-theme="green"],
+body[data-theme="light-blue"] {
+  --form-text-strong:#102b25;
+  --form-label-strong:#123d30;
+  --form-placeholder:#526b63;
+  --form-border-strong:#9bb9ad;
+}
+body.theme-green label,
+body.theme-light-blue label,
+body[data-theme="green"] label,
+body[data-theme="light-blue"] label,
+body.theme-green .form-label,
+body.theme-light-blue .form-label,
+body[data-theme="green"] .form-label,
+body[data-theme="light-blue"] .form-label {
+  color:var(--form-label-strong,#123d30) !important;
+  font-weight:700 !important;
+  opacity:1 !important;
+}
+body.theme-green input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+body.theme-green select,
+body.theme-green textarea,
+body.theme-light-blue input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+body.theme-light-blue select,
+body.theme-light-blue textarea,
+body[data-theme="green"] input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+body[data-theme="green"] select,
+body[data-theme="green"] textarea,
+body[data-theme="light-blue"] input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+body[data-theme="light-blue"] select,
+body[data-theme="light-blue"] textarea {
+  color:#102b25 !important;
+  background:#ffffff !important;
+  border:1px solid #9bb9ad !important;
+  opacity:1 !important;
+  -webkit-text-fill-color:#102b25 !important;
+}
+body.theme-green input::placeholder,
+body.theme-green textarea::placeholder,
+body.theme-light-blue input::placeholder,
+body.theme-light-blue textarea::placeholder,
+body[data-theme="green"] input::placeholder,
+body[data-theme="green"] textarea::placeholder,
+body[data-theme="light-blue"] input::placeholder,
+body[data-theme="light-blue"] textarea::placeholder {
+  color:#526b63 !important;
+  opacity:1 !important;
+}
+body.theme-green select option,
+body.theme-light-blue select option,
+body[data-theme="green"] select option,
+body[data-theme="light-blue"] select option {
+  color:#102b25 !important;
+  background:#ffffff !important;
+}
+body.theme-green input:focus,
+body.theme-green select:focus,
+body.theme-green textarea:focus,
+body.theme-light-blue input:focus,
+body.theme-light-blue select:focus,
+body.theme-light-blue textarea:focus,
+body[data-theme="green"] input:focus,
+body[data-theme="green"] select:focus,
+body[data-theme="green"] textarea:focus,
+body[data-theme="light-blue"] input:focus,
+body[data-theme="light-blue"] select:focus,
+body[data-theme="light-blue"] textarea:focus {
+  outline:2px solid #13865d !important;
+  outline-offset:1px !important;
+  border-color:#13865d !important;
+}
+body.theme-green .card,
+body.theme-light-blue .card,
+body[data-theme="green"] .card,
+body[data-theme="light-blue"] .card {
+  color:#12352c;
+}
+
+
+/* v73: use the actual theme classes applied by the theme switcher */
+body.light-blue-theme label,
+body.light-blue-theme .form-label,
+body:not(.dark-mode):not(.light-blue-theme) label,
+body:not(.dark-mode):not(.light-blue-theme) .form-label {
+  color:#123d30 !important;
+  font-weight:700 !important;
+  opacity:1 !important;
+}
+body.light-blue-theme input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+body.light-blue-theme select,
+body.light-blue-theme textarea,
+body:not(.dark-mode):not(.light-blue-theme) input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+body:not(.dark-mode):not(.light-blue-theme) select,
+body:not(.dark-mode):not(.light-blue-theme) textarea {
+  color:#102b25 !important;
+  background:#ffffff !important;
+  border:1px solid #8aaec7 !important;
+  opacity:1 !important;
+  -webkit-text-fill-color:#102b25 !important;
+}
+body.light-blue-theme input::placeholder,
+body.light-blue-theme textarea::placeholder,
+body:not(.dark-mode):not(.light-blue-theme) input::placeholder,
+body:not(.dark-mode):not(.light-blue-theme) textarea::placeholder {
+  color:#4c6476 !important;
+  opacity:1 !important;
+}
+body.light-blue-theme select option,
+body:not(.dark-mode):not(.light-blue-theme) select option {
+  color:#102b25 !important;
+  background:#ffffff !important;
+}
+body.light-blue-theme input:focus,
+body.light-blue-theme select:focus,
+body.light-blue-theme textarea:focus,
+body:not(.dark-mode):not(.light-blue-theme) input:focus,
+body:not(.dark-mode):not(.light-blue-theme) select:focus,
+body:not(.dark-mode):not(.light-blue-theme) textarea:focus {
+  outline:2px solid #16865d !important;
+  outline-offset:1px !important;
+  border-color:#16865d !important;
+}
+/* Settings views occupy the same main content area and remain menu-controlled. */
+#appView #accountSettingsCard[style*="display: block"] { display:block !important; }
+#appView #accountSettingsCard.hidden { display:none !important; }
+#appView #accountPanel.hidden,
+#appView #userRoleManagement.hidden,
+#appView #ownRolePhotoPanel.hidden { display:none !important; }
+
+
+/* v74 safe settings display patch; keep login behavior from v72 intact */
+#appView #accountSettingsCard.hidden,
+#appView #accountPanel.hidden,
+#appView #userRoleManagement.hidden,
+#appView #ownRolePhotoPanel.hidden { display:none !important; }
+
+
+/* v75: settings panels must not remain visible behind another selected menu */
+#appView #accountSettingsCard.hidden,
+#appView #accountPanel.hidden,
+#appView #userRoleManagement.hidden,
+#appView #ownRolePhotoPanel.hidden {
+  display:none !important;
+}
+
+
+/* v77: ensure Step 1-4 form labels/headings remain readable in Green and Light Blue themes */
+:root {
+  --cap-form-label:#173b32;
+  --cap-form-heading:#123c30;
+  --cap-form-muted:#405d55;
+}
+body:not(.dark-mode) .step-card,
+body:not(.dark-mode) .step-section,
+body:not(.dark-mode) .form-step,
+body:not(.dark-mode) .cap-step {
+  color:#173b32 !important;
+}
+body:not(.dark-mode) .step-card label,
+body:not(.dark-mode) .step-section label,
+body:not(.dark-mode) .form-step label,
+body:not(.dark-mode) .cap-step label,
+body:not(.dark-mode) label,
+body:not(.dark-mode) .field-label,
+body:not(.dark-mode) .form-label {
+  color:var(--cap-form-label) !important;
+  opacity:1 !important;
+  text-shadow:none !important;
+  font-weight:700 !important;
+}
+body:not(.dark-mode) .step-card h1,
+body:not(.dark-mode) .step-card h2,
+body:not(.dark-mode) .step-card h3,
+body:not(.dark-mode) .step-section h1,
+body:not(.dark-mode) .step-section h2,
+body:not(.dark-mode) .step-section h3,
+body:not(.dark-mode) .form-step h1,
+body:not(.dark-mode) .form-step h2,
+body:not(.dark-mode) .form-step h3,
+body:not(.dark-mode) .cap-step h1,
+body:not(.dark-mode) .cap-step h2,
+body:not(.dark-mode) .cap-step h3 {
+  color:var(--cap-form-heading) !important;
+  opacity:1 !important;
+}
+body:not(.dark-mode) .step-card input,
+body:not(.dark-mode) .step-card select,
+body:not(.dark-mode) .step-card textarea,
+body:not(.dark-mode) .step-section input,
+body:not(.dark-mode) .step-section select,
+body:not(.dark-mode) .step-section textarea,
+body:not(.dark-mode) .form-step input,
+body:not(.dark-mode) .form-step select,
+body:not(.dark-mode) .form-step textarea,
+body:not(.dark-mode) .cap-step input,
+body:not(.dark-mode) .cap-step select,
+body:not(.dark-mode) .cap-step textarea {
+  color:#102b25 !important;
+  background:#ffffff !important;
+  -webkit-text-fill-color:#102b25 !important;
+  opacity:1 !important;
+}
+body:not(.dark-mode) .step-card input::placeholder,
+body:not(.dark-mode) .step-card textarea::placeholder,
+body:not(.dark-mode) .step-section input::placeholder,
+body:not(.dark-mode) .step-section textarea::placeholder,
+body:not(.dark-mode) .form-step input::placeholder,
+body:not(.dark-mode) .form-step textarea::placeholder,
+body:not(.dark-mode) .cap-step input::placeholder,
+body:not(.dark-mode) .cap-step textarea::placeholder {
+  color:#526b63 !important;
+  opacity:1 !important;
+}
+body:not(.dark-mode) .step-card .field-row,
+body:not(.dark-mode) .step-section .field-row,
+body:not(.dark-mode) .form-step .field-row,
+body:not(.dark-mode) .cap-step .field-row {
+  color:#173b32 !important;
+}
+body:not(.dark-mode) .step-card .field-row > span,
+body:not(.dark-mode) .step-section .field-row > span,
+body:not(.dark-mode) .form-step .field-row > span,
+body:not(.dark-mode) .cap-step .field-row > span {
+  color:#173b32 !important;
+  opacity:1 !important;
+}
+body:not(.dark-mode) .step-card .step-title,
+body:not(.dark-mode) .step-section .step-title,
+body:not(.dark-mode) .form-step .step-title,
+body:not(.dark-mode) .cap-step .step-title {
+  color:#123c30 !important;
+  opacity:1 !important;
+}
+body.light-blue-theme:not(.dark-mode) .step-card,
+body.light-blue-theme:not(.dark-mode) .step-section,
+body.light-blue-theme:not(.dark-mode) .form-step,
+body.light-blue-theme:not(.dark-mode) .cap-step {
+  background:#ffffff !important;
+}
+
+
+/* v77 precise selectors from the actual CAP Step 1 markup */
+body:not(.dark-mode) #tab-entry .step1-card {
+  background:#ffffff !important;
+  color:#173b32 !important;
+  border:1px solid #b9e0cf !important;
+}
+body:not(.dark-mode) #tab-entry .step1-card h2 {
+  color:#123c30 !important;
+  opacity:1 !important;
+}
+body:not(.dark-mode) #tab-entry .step1-card .step1-line,
+body:not(.dark-mode) #tab-entry .step1-card .step1-line label,
+body:not(.dark-mode) #tab-entry .step1-card .step1-line span {
+  color:#173b32 !important;
+  opacity:1 !important;
+  text-shadow:none !important;
+  font-weight:600 !important;
+}
+body:not(.dark-mode) #tab-entry .step1-card .step1-line input,
+body:not(.dark-mode) #tab-entry .step1-card .step1-line select,
+body:not(.dark-mode) #tab-entry .step1-card .step1-line textarea {
+  color:#102b25 !important;
+  background:#ffffff !important;
+  border:1px solid #91b9a8 !important;
+  -webkit-text-fill-color:#102b25 !important;
+  opacity:1 !important;
+}
+body:not(.dark-mode) #tab-entry .step1-card .step1-line input::placeholder,
+body:not(.dark-mode) #tab-entry .step1-card .step1-line textarea::placeholder {
+  color:#526b63 !important;
+  opacity:1 !important;
+}
+body:not(.dark-mode) #tab-entry .step1-card .step1-pill,
+body:not(.dark-mode) #tab-entry .step1-card .step-pill {
+  color:#ffffff !important;
+}
+body:not(.dark-mode) #tab-entry .card:not(.step1-card) {
+  color:#173b32 !important;
+}
+body:not(.dark-mode) #tab-entry .card:not(.step1-card) h2,
+body:not(.dark-mode) #tab-entry .card:not(.step1-card) h3 {
+  color:#123c30 !important;
+  opacity:1 !important;
+}
+
+
+/* v78: keep the CAP top bar fixed and reserve its vertical space */
+:root { --cap-fixed-header-height:72px; }
+#topHeader, .top-header, .app-header, #appHeader, header#appHeader {
+  position:fixed !important; top:0 !important; left:0 !important; right:0 !important;
+  width:100% !important; z-index:5000 !important; box-sizing:border-box !important;
+}
+body { padding-top:var(--cap-fixed-header-height) !important; }
+html, body { overflow-x:hidden !important; }
+
+/* Main application content flows vertically; settings are not floated beside the header. */
+#appView {
+  display:flex !important; flex-direction:column !important; align-items:stretch !important;
+  min-width:0 !important; scroll-margin-top:84px !important;
+}
+#appView > * { order:3; }
+#appView > .tabs, #appView > #mainTreeMenu { order:0 !important; }
+#appView .page-company, #appView .app-company {
+  position:relative !important; float:none !important; clear:both !important;
+  order:1 !important; width:auto !important; max-width:none !important;
+  scroll-margin-top:84px !important;
+}
+#appView #accountSettingsCard {
+  position:relative !important; float:none !important; clear:both !important;
+  order:2 !important; width:auto !important; max-width:none !important;
+  margin:12px 0 !important; box-sizing:border-box !important;
+}
+#appView > .tabs#mainTreeMenu { order:0 !important; }
+
+
+/* v79: settings card is physically placed after company identity; consistent left alignment */
+#appView .page-company {
+  display:block !important;
+  width:auto !important;
+  max-width:none !important;
+  box-sizing:border-box !important;
+}
+#appView #accountSettingsCard {
+  display:block;
+  width:auto !important;
+  max-width:none !important;
+  min-width:0 !important;
+  box-sizing:border-box !important;
+  margin-top:12px !important;
+  margin-bottom:12px !important;
+}
+#appView #accountSettingsCard .grid {
+  width:100% !important;
+  max-width:100% !important;
+  box-sizing:border-box !important;
+}
+#appView #accountSettingsCard input,
+#appView #accountSettingsCard select {
+  max-width:100% !important;
+  box-sizing:border-box !important;
+}
+
+
+/* v80: align settings panel with the company header, clear of fixed sidebar */
+#appView #accountSettingsCard {
+  display:block;
+  position:relative !important;
+  float:none !important;
+  clear:both !important;
+  box-sizing:border-box !important;
+  width:calc(100% - 258px) !important;
+  max-width:calc(100% - 258px) !important;
+  min-width:0 !important;
+  margin:12px 0 12px 258px !important;
+  padding:18px !important;
+  left:0 !important;
+  right:auto !important;
+  transform:none !important;
+}
+#appView .page-company {
+  box-sizing:border-box !important;
+  width:calc(100% - 258px) !important;
+  max-width:calc(100% - 258px) !important;
+  margin-left:258px !important;
+  margin-right:0 !important;
+}
+#appView #accountSettingsCard .grid {
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  width:100% !important;
+  max-width:100% !important;
+  min-width:0 !important;
+  gap:12px !important;
+}
+#appView #accountSettingsCard .field,
+#appView #accountSettingsCard input,
+#appView #accountSettingsCard select,
+#appView #accountSettingsCard textarea {
+  min-width:0 !important;
+  max-width:100% !important;
+  box-sizing:border-box !important;
+}
+@media(max-width:850px) {
+  #appView #accountSettingsCard,
+  #appView .page-company {
+    width:calc(100% - 190px) !important;
+    max-width:calc(100% - 190px) !important;
+    margin-left:190px !important;
+  }
+  #appView #accountSettingsCard .grid {
+    grid-template-columns:minmax(0,1fr) !important;
+  }
+}
+@media(max-width:620px) {
+  #appView #accountSettingsCard,
+  #appView .page-company {
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+  }
+}
+
+
+/* v81 My Profile page */
+#tab-profile.hidden{display:none!important;}
+#tab-profile{min-width:0;width:100%;box-sizing:border-box;}
+#tab-profile .profile-card{width:100%;max-width:100%;box-sizing:border-box;}
+#tab-profile .profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+#tab-profile input{width:100%;max-width:100%;box-sizing:border-box;}
+.profile-avatar{width:68px;height:68px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#08734b,#18b981);color:#fff;font-size:28px;font-weight:800;border:3px solid #d8f3e6;box-shadow:0 5px 16px #0a68402b;}
+@media(max-width:700px){#tab-profile .profile-grid{grid-template-columns:minmax(0,1fr);}}
+
+
+/* v83: Live Report menu positioned immediately above Settings; report logic intentionally not implemented */
+#appView>.tabs .live-report-menu{display:flex;flex-direction:column;gap:3px;margin:0 0 6px 12px;padding:4px 0 7px 10px;border-left:1px solid #ffffff35}
+#appView>.tabs .live-report-menu.hidden,#appView>.tabs .live-report-periods.hidden,#appView>.tabs .live-report-lines.hidden{display:none!important}
+#appView>.tabs .live-report-menu .live-category{font-size:12px;padding:8px 7px;color:#d8f3e5}
+#appView>.tabs .live-report-menu .live-period{font-size:11px;padding:7px 7px 7px 12px;color:#bfe8d2}
+#appView>.tabs .live-report-menu .live-line{font-size:10px;padding:6px 7px 6px 18px;color:#a9d9c0}
+#appView>.tabs .live-report-periods{display:flex;flex-direction:column;gap:2px;margin-left:8px;border-left:1px solid #ffffff24;padding-left:5px}
+#appView>.tabs .live-report-lines{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:2px 0 5px 8px;padding-left:5px;border-left:1px dashed #ffffff24}
+#appView>.tabs .live-report-menu button:hover{background:#ffffff12}
+#appHeader h1[role="button"],#appView>.tabs .tree-brand[role="button"]{cursor:pointer}
+
+</style><style id="v61-design-standard">
+/* v61: green enterprise design standard; presentation-only overrides */
+:root{font-family:Arial,'Noto Sans Bengali',sans-serif;color:#172b25;background:#eaf6ef;--v61-green:#087443;--v61-green-dark:#064b34;--v61-mint:#dff5e8;--v61-border:#c6e4d2;--v61-text:#172b25;--v61-muted:#506b60}
+body{background:linear-gradient(135deg,#edf8f1 0%,#e3f4e9 52%,#f7fbf8 100%);color:var(--v61-text);min-height:100vh}
+#appHeader{position:sticky;top:0;z-index:1000;min-height:76px;padding:12px 24px;background:linear-gradient(110deg,#043d2d,#087443 58%,#11935b);border-bottom:1px solid #65bd91;box-shadow:0 6px 22px #073e2a25;gap:18px}
+#appHeader>div:first-child{display:flex;align-items:center;gap:14px;min-width:0}#appHeader h1{display:flex;align-items:center;gap:10px;font-size:25px;font-weight:800;letter-spacing:.2px;color:#fff;line-height:1.2}#appHeader .cap-mark{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:#ffffff1c;border:1px solid #ffffff3b;color:#a8f0c7;font-size:24px}#appHeader .header-subbrand{display:block;max-width:330px;font-size:12px;line-height:1.35;font-weight:500;letter-spacing:.1px;color:#d9f8e7;border-left:1px solid #ffffff55;padding-left:13px}
+#loginUser{display:inline-flex;align-items:center;min-height:38px;padding:8px 13px;margin-right:4px;border:1px solid #ffffff35;border-radius:12px;background:#ffffff16;color:#fff;font-weight:700}
+#appHeader .btn{min-height:40px;border-radius:11px;padding:10px 14px;box-shadow:0 2px 5px #003d2920}#appHeader .btn.gray{background:#ffffff1c;border:1px solid #ffffff45;color:#fff}
+#appView.wrap{max-width:none;width:100%;margin:0;padding:18px 22px 28px 224px;position:relative}
+#appView>.tabs{position:fixed;z-index:900;left:0;top:76px;bottom:0;width:205px;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;align-items:stretch;gap:7px;padding:24px 13px 18px;background:linear-gradient(180deg,#073f30,#052f27);border-right:1px solid #1b7750;box-shadow:5px 0 18px #003b2918;margin:0}
+#appView>.tabs:before{content:'MAIN MENU';display:block;padding:0 11px 8px;color:#9ddbb9;font-size:11px;font-weight:800;letter-spacing:1.4px}
+#appView>.tabs button{display:flex;align-items:center;justify-content:flex-start;width:100%;min-height:44px;padding:11px 12px;text-align:left;white-space:normal;border:1px solid transparent;border-radius:10px;background:transparent;color:#e4f8ec;font-size:13px;font-weight:700;line-height:1.35;transition:background .18s ease,border-color .18s ease,transform .18s ease}
+#appView>.tabs button:hover{background:#ffffff12;border-color:#ffffff22;transform:translateX(2px)}#appView>.tabs button.active{background:linear-gradient(100deg,#0a8b51,#087443);border-color:#3fc887;color:#fff;box-shadow:0 5px 14px #001e1433}
+#appView>.tabs #editAnnouncementBtn{background:#176b4a!important;color:#fff!important}#appView>.tabs .sidebar-report-actions{background:#073629;border-left:3px solid #4bd08b;border-radius:8px;margin:0;padding:8px;gap:6px}#appView>.tabs .sidebar-report-actions .sidebar-report-title{color:#9de7bc}
+#appView>.tabs .sidebar-report-actions button{font-size:11px;min-height:36px;padding:8px;background:#ffffff12;color:#fff}
+#appView>.card.noprint:first-child{border:1px solid var(--v61-border);border-radius:14px;box-shadow:0 5px 18px #0a5a3510}
+.page-company.app-company{border-radius:14px;border:1px solid #b5dec7;background:linear-gradient(100deg,#fff,#effbf3);padding:14px 18px;box-shadow:0 4px 15px #0c68400b;color:#14543a}
+.page-company.app-company strong{font-size:20px;letter-spacing:.25px}.page-company.app-company span{color:#4e7160}
+.notice{border:1px solid #c6e5d3;border-left:4px solid #0a8b51;border-radius:12px;background:#f7fcf8;color:#355447;padding:12px 15px;line-height:1.6}
+#appView .card{border:1px solid #c7e4d3;border-radius:15px;box-shadow:0 7px 22px #145b3910;background:linear-gradient(145deg,#fff,#fbfefc);padding:20px;margin-bottom:16px}
+#appView .card h2{color:#103d2d;font-size:20px;letter-spacing:.1px;border-bottom:1px solid #e1f0e7;padding-bottom:12px}
+#appView .card h3{color:#14543a}#appView label{color:#183e2e;font-weight:750;font-size:13px}#appView input:not([type=checkbox]):not([type=radio]),#appView select,#appView textarea{color:#172b25;background:#f7fbf8;border:1px solid #b8d8c5;border-radius:9px;min-height:42px;padding:10px 12px;font-size:14px;box-shadow:inset 0 1px 2px #0b4c2b08}#appView textarea{min-height:95px}#appView input::placeholder,#appView textarea::placeholder{color:#71877b;opacity:1}#appView input:focus,#appView select:focus,#appView textarea:focus{outline:3px solid #21a56825;border-color:#0a8b51;background:#fff}
+#appView .btn,.btn{border-radius:9px;font-weight:750;min-height:40px;box-shadow:0 2px 5px #173d2a0a}#appView .btn:not(.gray):not(.red){background:linear-gradient(110deg,#07824a,#0a9a58);color:#fff}#appView .btn.gray{background:#64786d;color:#fff}#appView .btn.red{background:#b83434;color:#fff}
+#appView .step-pill{background:#087443;color:#fff;border-radius:9px;padding:7px 11px}#appView .design-note{color:#466657;background:#eff9f2;border-left:3px solid #24a765;padding:10px 12px;border-radius:0 8px 8px 0;line-height:1.6}
+#appView table{border-collapse:separate;border-spacing:0;border-radius:10px;overflow:hidden}#appView th{background:#e3f5e9;color:#124c34}#appView td,#appView th{border-color:#d5e9dd;padding:9px 10px}
+body.dark-mode{background:#0b1512;color:#e8f4ed}body.dark-mode #appHeader{background:linear-gradient(110deg,#061e18,#073e2b 58%,#07583a)}body.dark-mode #appView.wrap{color:#e8f4ed}body.dark-mode #appView .card,body.dark-mode #appView>.card.noprint:first-child{background:linear-gradient(145deg,#14231d,#172a22);border-color:#315844;color:#e8f4ed}body.dark-mode #appView .card h2,body.dark-mode #appView .card h3,body.dark-mode #appView label{color:#e3f8eb}body.dark-mode #appView input:not([type=checkbox]):not([type=radio]),body.dark-mode #appView select,body.dark-mode #appView textarea{background:#24372e;color:#f3fff7;border-color:#527b63}body.dark-mode #appView input::placeholder,body.dark-mode #appView textarea::placeholder{color:#c0d4c7}body.dark-mode .page-company.app-company,body.dark-mode .notice,body.dark-mode #appView .design-note{background:#172b22;color:#cce6d6;border-color:#315844}body.dark-mode #appView th{background:#214332;color:#e6fff0}body.dark-mode #appView td,body.dark-mode #appView th{border-color:#355642}body.dark-mode #appView .tabs{background:linear-gradient(180deg,#071f18,#061a15)}
+body.light-blue-theme{background:#edf5ff;color:#172b45}body.light-blue-theme #appHeader{background:linear-gradient(110deg,#12345c,#1766a9 58%,#2885cb)}body.light-blue-theme #appView>.tabs{background:linear-gradient(180deg,#102e50,#10243e)}body.light-blue-theme #appView .card{border-color:#c8def5}body.light-blue-theme #appView label,body.light-blue-theme #appView .card h2,body.light-blue-theme #appView .card h3{color:#15385d}body.light-blue-theme #appView input:not([type=checkbox]):not([type=radio]),body.light-blue-theme #appView select,body.light-blue-theme #appView textarea{background:#f8fbff;border-color:#bfd5ed;color:#172b45}
+@media(max-width:900px){#appView.wrap{padding:14px}#appView>.tabs{position:sticky;top:76px;bottom:auto;width:100%;height:auto;flex-direction:row;overflow-x:auto;overflow-y:hidden;padding:9px;background:#073f30;border-radius:0 0 12px 12px}#appView>.tabs:before{display:none}#appView>.tabs button{width:auto;min-width:130px;flex:0 0 auto}#appView>.tabs .sidebar-report-actions{min-width:180px;flex:0 0 auto}#appHeader{position:relative;padding:12px 14px}#appHeader h1{font-size:20px}#appHeader .header-subbrand{font-size:10px;max-width:190px}}
+@media(max-width:560px){#appHeader{align-items:flex-start}#appHeader>div:first-child{align-items:flex-start;flex-direction:column;gap:5px}#appHeader h1{font-size:20px}#appHeader .header-subbrand{border-left:0;padding-left:0;max-width:260px}#loginUser{font-size:12px;padding:6px 8px}#appView.wrap{padding:10px}#appView>.tabs button{min-width:112px;font-size:12px;padding:9px}#appView .card{padding:14px}}
+@media(prefers-reduced-motion:reduce){#appView>.tabs button{transition:none}}
+</style></head><body>
+<header id="appHeader"><div><h1 onclick="goDashboardFromBrand()" role="button" tabindex="0" title="Go to Dashboard" onkeydown="if(event.key==='Enter'||event.key===' ')goDashboardFromBrand()"><span class="cap-mark">✦</span> CAP <span class="header-subbrand">Root Cause Analysis &amp; Corrective Action Plan</span></h1><small>Root Cause Analysis & Corrective Action Plan · Offline Edition</small></div><div><span id="loginUser"></span> <button id="themeToggle" class="btn gray" type="button" onclick="toggleTheme()">🌙 Dark Mode</button> <button class="btn gray" onclick="logout()">Logout</button></div></header>
+<div id="loginView" class="wrap login"><div class="login-shell"><section class="login-visual"><div class="login-brand"><h1 id="loginHeaderTitle">GMS TEXTILES LIMITED</h1><p id="loginHeaderSubtitle">Root Cause Analysis &amp; Corrective Action Plan</p></div><div class="login-profiles"><div class="login-profile"><div class="portrait"><img id="loginManagerImage" alt="Manager" class="hidden"><span id="loginManagerInitial">M</span></div><div class="portrait-label" id="loginManagerCaption">abc, Manager, Kadom Floor</div></div><div class="login-profile"><div class="portrait"><img id="loginOfficerImage" alt="Officer" class="hidden"><span id="loginOfficerInitial">O</span></div><div class="portrait-label" id="loginOfficerCaption">abc, Officer, Kadom Floor</div></div><div class="login-profile"><div class="portrait"><img id="loginDeveloperImage" src="" alt="CAP Web App Demo"></div><div class="portrait-label" id="loginDeveloperCaption">CAP Web App Demo, Preview Only</div></div></div><div class="login-visual-foot"><div class="login-address">Tansutrapur, Kaliakoir, Gazipur</div><div class="login-values">Quality • Accountability • Improvement</div></div></section><section class="login-panel"><h2>Welcome Back</h2><p class="login-subtitle">Sign in to continue to the CAP system.</p><div class="field"><label for="username">Username</label><input id="username" autocomplete="username" placeholder="Enter username"></div><div class="field" style="margin-top:14px"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" placeholder="Enter password" onkeydown="if(event.key==='Enter')login()"></div><div class="login-action-buttons"><button class="btn" onclick="login()">Login</button><button type="button" class="btn green" onclick="toggleRegisterPanel()">＋ Create New User</button><button type="button" class="btn gray" onclick="toggleForgotPanel()">Forgot Password?</button></div><div id="loginError" class="bad login-error"></div>
+<div id="registerPanel" class="card hidden" style="margin-top:14px;padding:16px;box-shadow:none">
+<h3 style="margin:0 0 8px;color:#214b22">নতুন সাধারণ ইউজার তৈরি করুন</h3><p class="muted">নতুন অ্যাকাউন্টটি General User হবে। Master Database ও Admin সেটিংস পরিবর্তন করতে পারবে না।</p>
+<div class="field"><label for="newUsername">নতুন Username</label><input id="newUsername" autocomplete="username" placeholder="কমপক্ষে 3 অক্ষর"></div>
+<div class="field" style="margin-top:10px"><label for="newPassword">Password</label><input id="newPassword" type="password" autocomplete="new-password" placeholder="কমপক্ষে 6 অক্ষর"></div>
+<div class="field" style="margin-top:10px"><label for="confirmNewPassword">Confirm Password</label><input id="confirmNewPassword" type="password" autocomplete="new-password" placeholder="আবার Password লিখুন"></div>
+<div class="field" style="margin-top:10px"><label for="newRecoveryCode">Recovery Code (পাসওয়ার্ড ভুলে গেলে লাগবে)</label><input id="newRecoveryCode" autocomplete="off" placeholder="নিজের মনে রাখার মতো কোড দিন"></div>
+<div class="row"><button type="button" class="btn green" onclick="registerGeneralUser()">Create Account</button><button type="button" class="btn gray" onclick="toggleRegisterPanel(false)">Cancel</button></div><p id="registerStatus" class="muted"></p></div>
+<div id="forgotPanel" class="card hidden" style="margin-top:14px;padding:16px;box-shadow:none">
+<h3 style="margin:0 0 8px;color:#214b22">পাসওয়ার্ড পুনরুদ্ধার</h3><p class="muted">সাধারণ ইউজার অ্যাকাউন্ট তৈরির সময় দেওয়া Recovery Code লাগবে। Master account-এর জন্য লগইন করে Change Password ব্যবহার করুন।</p>
+<div class="field"><label for="forgotUsername">Username</label><input id="forgotUsername" autocomplete="username"></div>
+<div class="field" style="margin-top:10px"><label for="forgotRecoveryCode">Recovery Code</label><input id="forgotRecoveryCode" autocomplete="off"></div>
+<div class="field" style="margin-top:10px"><label for="forgotNewPassword">নতুন Password</label><input id="forgotNewPassword" type="password" autocomplete="new-password"></div>
+<div class="field" style="margin-top:10px"><label for="forgotConfirmPassword">নতুন Password আবার লিখুন</label><input id="forgotConfirmPassword" type="password" autocomplete="new-password"></div>
+<div class="row"><button type="button" class="btn green" onclick="recoverGeneralPassword()">Reset Password</button><button type="button" class="btn gray" onclick="toggleForgotPanel(false)">Cancel</button></div><p id="forgotStatus" class="muted"></p></div>
+<div class="login-contact"><span id="loginFooterLine1" class="login-developed-label">Developed by:</span><strong id="loginFooterLine2">CAP Web App Demo</strong><br><span id="loginFooterLine3"></span><br><span id="loginFooterLine4"></span></div></section></div>
+<div id="announcementTicker" class="announcement-ticker login-announcement" aria-live="polite"><span id="announcementText">GMS TEXTILES LIMITED · Root Cause Analysis &amp; Corrective Action Plan</span></div></div>
+<div id="appView" class="wrap hidden"><div id="accountSettingsCard" class="card noprint hidden"><div id="accountPanel" class="hidden" style="margin-top:14px"><h3>Change Password</h3><p class="muted">লগইন করা অ্যাকাউন্টের পাসওয়ার্ড বদলাতে বর্তমান Password দিন।</p><div class="grid"><div class="field"><label>বর্তমান Password</label><input id="currentPassword" type="password" autocomplete="current-password"></div><div class="field"><label>নতুন Password</label><input id="changedPassword" type="password" autocomplete="new-password"></div><div class="field"><label>নতুন Password আবার লিখুন</label><input id="changedPasswordConfirm" type="password" autocomplete="new-password"></div></div><div class="row"><button class="btn green" type="button" onclick="changeCurrentPassword()">Change Password</button><span id="changePasswordStatus" class="muted"></span></div><div id="ownRolePhotoPanel" class="hidden" style="margin-top:16px"><h3>নিজের Login Photo পরিবর্তন</h3><p class="muted">Manager/Officer role-এর ইউজার শুধু নিজের নির্ধারিত ছবিটি পরিবর্তন করতে পারবেন।</p><div class="field"><label id="ownRolePhotoLabel">নিজের ছবি</label><input id="ownRolePhotoInput" type="file" accept="image/*" onchange="changeOwnRolePhoto(event)"></div><span id="ownRolePhotoStatus" class="muted"></span></div><div id="userRoleManagement" class="hidden" data-admin-only="1" style="margin-top:16px"><h3>User Role Management — Master Only</h3><p class="muted">Manager ও Officer-ও সাধারণ ইউজারের অনুমতিতে কাজ করবেন; শুধু নিজের নির্ধারিত Login Photo পরিবর্তন করতে পারবেন।</p><div id="userRoleTable" class="tablewrap"></div></div></div></div><div class="page-company app-company"><strong>GMS TEXTILES LIMITED</strong><span>Kaliakoir, Gazipur</span></div><div class="notice"><b>গুরুত্বপূর্ণ:</b> এই এক-ফাইল অ্যাপ Firefox-এ সরাসরি চালানোর জন্য তৈরি। ডাটা এই ব্রাউজারের local storage-এ থাকবে। নিয়মিত <b>Backup Export</b> করুন। অন্য PC-তে শুধু HTML কপি করলে নতুন CAP রেকর্ড/ছবি যাবে না—JSON backup import করতে হবে। ছবি স্বয়ংক্রিয়ভাবে ছোট JPEG-এ রূপান্তর হয় যাতে storage কম লাগে। Firefox-এর policy/প্রোফাইল পরিবর্তনে ডাটা হারানোর ঝুঁকি আছে।</div>
+<div class="tabs noprint" id="mainTreeMenu">
+  <div class="tree-brand" role="button" tabindex="0" onclick="goDashboardFromBrand()" onkeydown="if(event.key==='Enter'||event.key===' ')goDashboardFromBrand()" title="Go to Dashboard">
+    <div class="tree-brand-kicker">CAP WORKSPACE</div>
+    <div class="tree-brand-title"><span>🌿</span> Main Menu · Dashboard</div>
+  </div>
+  <button class="active" data-tab="dashboard" onclick="showTab('dashboard',this)">▦ &nbsp; Dashboard</button>
+  <button data-tab="profile" onclick="showTab('profile',this)">♙ &nbsp; My Profile</button>
+  <hr class="menu-divider">
+  <div class="tree-heading">CAP WORKFLOW</div>
+  <button id="entryMenuToggle" data-tab="entry" aria-expanded="false" onclick="toggleSidebarSubmenu('entrySubmenu',this);showTab('entry',this)">▤ &nbsp; CAP Entry Form <span class="menu-chevron">⌄</span></button>
+  <div class="tree-sub hidden" id="entrySubmenu">
+    <button data-tab="entry" onclick="showTab('entry',this)">＋ New CAP Entry</button>
+    <button data-tab="entry" onclick="showTab('entry',this);document.getElementById('recentRecords')?.scrollIntoView({behavior:'smooth',block:'start'})">▧ Entry List / Edit</button>
+  </div>
+  <hr class="menu-divider">
+  <button id="reportsMenuToggle" data-tab="reports" aria-expanded="false" onclick="showTab('reports',this);toggleSidebarSubmenu('sidebarReportActions',this)">▥ &nbsp; Reports <span class="menu-chevron">⌄</span></button>
+  <div id="sidebarReportActions" class="sidebar-report-actions hidden">
+    <div class="sidebar-report-title">REPORTS &amp; EXPORT</div>
+    <button data-tab="reports" onclick="showTab('reports',this)">◷ Re-Check / Follow-up</button>
+    <button onclick="runReportAction('generate')">▤ Generate Report</button>
+    <button onclick="runReportAction('cap')">⇩ Download CAP Report</button>
+    <button onclick="runReportAction('recheck')">✓ Re-Check Summary</button>
+  </div>
+  <hr class="menu-divider">
+  <button id="liveReportToggle" type="button" aria-expanded="false" onclick="toggleSidebarSubmenu('liveReportMenu',this)">▤ &nbsp; Live Report <span class="menu-chevron">⌄</span></button>
+  <div id="liveReportMenu" class="live-report-menu hidden"></div>
+  <hr class="menu-divider">
+  <div class="tree-heading">SETTINGS</div>
+  <button id="accountMenuToggle" aria-expanded="false" onclick="toggleAccountPanel();this.setAttribute('aria-expanded',document.getElementById('accountPanel')?.classList.contains('hidden')?'false':'true')">⚙ &nbsp; Account / Password Settings <span class="menu-chevron">⌄</span></button>
+  <button data-admin-only="1" onclick="openUserRoleManagement()">♙ &nbsp; User Role Management</button>
+  <button data-tab="master" onclick="showTab('master',this)">▦ &nbsp; Master Database</button>
+  <button data-tab="backup" onclick="showTab('backup',this)">☁ &nbsp; Backup / Restore</button>
+  <button id="editAnnouncementBtn" class="hidden" data-admin-only="1" onclick="editAnnouncement()" type="button">▣ &nbsp; Change Login Message</button>
+  <hr class="menu-divider">
+  <div class="tree-bottom"><button onclick="logout()">⇥ &nbsp; Logout</button></div>
+</div>
+<section id="tab-dashboard">
+<div class="dashboard-hero"><div><h2>Welcome to CAP Dashboard</h2><p>Root Cause Analysis &amp; Corrective Action Plan · GMS TEXTILES LIMITED</p></div><div class="dashboard-date" id="dashboardToday">📅 Today</div></div>
+<div class="dashboard-grid"><div class="dash-stat"><div class="dash-label">TOTAL CAP RECORDS</div><div class="dash-value" id="dashTotal">0</div><div class="dash-foot">Saved CAP entries</div></div><div class="dash-stat"><div class="dash-label">UNIQUE FINDINGS</div><div class="dash-value" id="dashFindings">0</div><div class="dash-foot">Different defect types</div></div><div class="dash-stat"><div class="dash-label">BUYERS COVERED</div><div class="dash-value" id="dashBuyers">0</div><div class="dash-foot">Unique buyer names</div></div><div class="dash-stat"><div class="dash-label">THIS MONTH</div><div class="dash-value" id="dashMonth">0</div><div class="dash-foot">Records by CAP date</div></div></div>
+<div class="dashboard-columns"><div><div class="dashboard-panel"><h3>📊 Finding Distribution</h3><div id="dashFindingChart" class="dash-chart-row"><div class="dash-pie"></div><div class="dash-legend"><span>Finding statistics will appear here.</span></div></div></div><div class="dashboard-panel"><h3>📈 Top Findings</h3><div id="dashTopBars" class="dash-bars"><div class="dash-empty">CAP record যোগ হলে এখানে Top Findings দেখাবে।</div></div></div></div>
+<div><div class="dashboard-panel"><h3>👤 Login Information</h3><div class="dash-profile"><div id="dashAvatar" class="dash-avatar">U</div><div><strong id="dashUserName">User</strong><small id="dashUserRole">General User</small><br><small id="dashUserDate">Logged in to CAP Web App</small></div></div><div class="dash-empty">আপনার Role অনুযায়ী মেনু ও অনুমতি প্রযোজ্য হবে। নিয়মিত Backup Export করুন।</div></div><div class="dashboard-panel"><h3>⚡ Quick Actions</h3><div class="dash-shortcuts"><button class="dash-shortcut" onclick="showTab('entry',document.querySelector('.tabs button[data-tab=entry]'))">＋ New CAP Entry</button><button class="dash-shortcut" onclick="showTab('reports',document.querySelector('.tabs button[data-tab=reports]'))">▥ Open Reports</button><button class="dash-shortcut" onclick="showTab('master',document.querySelector('.tabs button[data-tab=master]'))">▦ Master Data</button><button class="dash-shortcut" onclick="showTab('backup',document.querySelector('.tabs button[data-tab=backup]'))">☁ Backup / Restore</button></div></div></div></div>
+<div class="dashboard-panel"><h3>🕒 Recent CAP Records</h3><div id="dashboardRecentRecords" class="dash-empty">সাম্প্রতিক রেকর্ড এখানে দেখানো হবে।</div></div>
+</section>
+
+<section id="tab-profile" class="hidden" aria-hidden="true">
+  <div class="card profile-card">
+    <div class="row" style="align-items:center;gap:16px;flex-wrap:wrap">
+      <div id="myProfileAvatar" class="profile-avatar">U</div>
+      <div><h2 style="margin:0">My Profile</h2><p class="muted" style="margin:5px 0 0">আপনার ব্যক্তিগত তথ্য দেখুন এবং প্রয়োজন হলে Update করুন।</p></div>
+    </div>
+    <div class="grid profile-grid" style="margin-top:18px">
+      <div class="field"><label>Username</label><input id="profileUsername" type="text" disabled></div>
+      <div class="field"><label>Full Name</label><input id="profileFullName" type="text" placeholder="আপনার পূর্ণ নাম"></div>
+      <div class="field"><label>Email Address</label><input id="profileEmail" type="email" placeholder="আপনার ইমেইল"></div>
+      <div class="field"><label>Phone / Contact No.</label><input id="profilePhone" type="tel" placeholder="মোবাইল নম্বর"></div>
+      <div class="field"><label>Department</label><input id="profileDepartment" type="text" placeholder="যেমন: Quality"></div>
+      <div class="field"><label>Designation</label><input id="profileDesignation" type="text" placeholder="আপনার পদবি"></div>
+      <div class="field"><label>Floor / Work Location</label><input id="profileFloor" type="text" placeholder="আপনার Floor"></div>
+    </div>
+    <div class="row" style="margin-top:14px;align-items:center;gap:12px;flex-wrap:wrap">
+      <button class="btn green" type="button" onclick="saveMyProfile()">Save Profile</button>
+      <span id="profileSaveStatus" class="muted" aria-live="polite"></span>
+    </div>
+    <p class="muted" style="margin-top:14px">নিরাপত্তার জন্য Username ও Role নিজের Profile থেকে পরিবর্তন করা যাবে না। এগুলো Master User নিয়ন্ত্রণ করবেন।</p>
+  </div>
+</section>
+
+<section id="tab-entry" class="hidden">
+<div class="card step1-card"><h2><span class="step-pill">Step 1</span> Inspection Information</h2><div class="step1-grid"><div class="step1-side"><div class="step1-line"><label>Inspector Name</label><span>:</span><input id="inspectedBy" placeholder="Inspector Name" required></div><div class="step1-line"><label>Email ID</label><span>:</span><input id="inspectorEmail" type="email" placeholder="Email ID"></div><div class="step1-line"><label>Contact No</label><span>:</span><input id="contactNo" placeholder="Contact No"></div><div class="step1-line"><label>Inspection Date</label><span>:</span><input id="inspectionDate" type="date"></div><div class="step1-line"><label>CAP Date</label><span>:</span><input id="capDate" type="date" required></div></div><div class="step1-side"><div class="step1-line"><label>Buyer Name</label><span>:</span><input id="buyer" placeholder="Buyer Name" required></div><div class="step1-line"><label>Style Name</label><span>:</span><input id="style" placeholder="Style Name" required></div><div class="step1-line"><label>Style Number</label><span>:</span><input id="styleNo" placeholder="Style Number" required></div><div class="step1-line"><label>PO Number</label><span>:</span><input id="poNo" placeholder="একাধিক PO হলে কমা দিয়ে লিখুন" required></div><div class="step1-line"><label>Order Qty</label><span>:</span><input id="orderQty" placeholder="Order Qty"></div></div></div><div class="field" style="margin-top:8px;max-width:260px"><label>Inspection Type</label><select id="inspectionType"><option>Inline</option><option>Per-Final</option><option>Final</option><option>2nd Final</option></select></div></div>
+<div class="card"><h2><span class="step-pill">Step 2</span> RCA FINDING</h2><p class="design-note">Defect Name ড্রপডাউন থেকে নির্বাচন করুন। Master Database-এ থাকলে ✓ দেখাবে। প্রথমে একটি সারি থাকবে। প্রতিটি অতিরিক্ত Defect-এর জন্য ＋ Add Row চাপুন।</p><div id="findingRows"></div><div class="row"><button class="btn" onclick="addFindingRow()">＋ Add Row</button><button class="btn gray" onclick="refreshFindingRows()">Click for Refresh</button></div></div>
+<div class="card"><h2><span class="step-pill">Step 3</span> CAP GIVEN</h2><p class="design-note">এখানে প্রথমে একটি সারি থাকবে। Step 2 থেকে আলাদা করে Defect Name নির্বাচন করুন; অতিরিক্ত সারির জন্য ＋ Add Row চাপুন। Step 2-এর তুলনায় কম Defect নির্বাচন করতে পারবেন। প্রতিটি সারিতে Who responsible দিতে হবে। রিপোর্টে শুধু Step 3-তে নির্বাচিত Defect-গুলো যাবে। প্রতিটি Defect-এর Finding Photo (আগের ছবি) ও Present Photo (পরের ছবি) আপলোড করুন। কোনো Recommended ফিল্ড নেই।</p><div id="capRows"></div><div class="row"><button class="btn" onclick="addCapRow()">＋ Add Row</button></div></div>
+<div class="card"><h2><span class="step-pill">Step 4</span> Re-Check Summary</h2>
+<p class="design-note">Date Of Failed, PO No., Style No. ও Qty Step 1 থেকে স্বয়ংক্রিয়ভাবে আসবে। Reason Of Fail Step 2 থেকে আসবে। Step 3-এর Defect অনুযায়ী Total Defect Found লিখুন; Repair Qty একই সংখ্যায় অটো বসবে।</p>
+<div class="grid">
+<div class="field"><label>Date Of Failed (Inspection Date)</label><input id="recheckFailedDate" readonly></div>
+<div class="field"><label>PO No.</label><input id="recheckPoNo" readonly></div>
+<div class="field"><label>Style No.</label><input id="recheckStyleNo" readonly></div>
+<div class="field"><label>Qty (Order Qty)</label><input id="recheckOrderQty" readonly></div>
+<div class="field"><label>Final Offer Qty</label><input id="recheckFinalOfferQty" type="number" min="0" placeholder="ম্যানুয়ালি লিখুন"></div>
+<div class="field"><label>Total Manpower</label><input id="recheckTotalManpower" placeholder="যেমন: 3 Person"></div>
+<div class="field"><label>Total Hours</label><input id="recheckTotalHours" placeholder="যেমন: 2 Hours"></div>
+<div class="field"><label>Re-Check Start Time</label><input id="recheckStartTime" type="time"></div>
+<div class="field"><label>Re-Check End Time</label><input id="recheckEndTime" type="time"></div>
+<div class="field"><label>Final Offer Date</label><input id="recheckFinalOfferDate" type="date"></div>
+<div id="recheckCommentsField" class="field span2"><label>Manual Comments (Re-check Report-এর ফাঁকা অংশে দেখাবে)</label><textarea id="recheckManualComments" rows="3" placeholder="প্রয়োজন হলে মন্তব্য লিখুন; না হলে ফাঁকা রাখুন"></textarea></div>
+</div>
+<h3>Reason Of Fail</h3><div id="recheckReasons" class="notice">Step 2-তে Defect নির্বাচন করলে এখানে দেখাবে।</div>
+<h3>Defect Analysis</h3><div id="step4DefectRows"></div>
+</div><div class="card noprint"><h2>Form Actions</h2><p class="muted">Step 1 থেকে Step 4-এর তথ্য যাচাই করে নিচের বাটন ব্যবহার করুন।</p><div class="row"><button id="capSubmitBtn" class="btn green" onclick="submitAllCAP()">Submit CAP Record(s)</button><button id="capCancelEditBtn" class="btn red hidden" onclick="cancelFullEdit()">Cancel Edit</button><button class="btn gray" onclick="syncCapRows();refreshFindingRows();syncStep4Header();renderStep4DefectRows()">Refresh Form</button></div></div></section>
+<section id="tab-master" class="hidden"><div class="row" data-admin-only="1" style="margin:0 0 12px"><button type="button" class="btn gray" onclick="toggleMasterAdminPanel()">⚙ Master ID / Admin Options — Show / Hide</button></div><div id="masterAdminPanel" class="hidden"><div class="card" data-admin-only="1"><h2>Login Screen Photos — Master User Only</h2><p class="muted">লগইন পেজের Header, ছবিগুলো এবং ছবির নিচের লেখা শুধু Master User পরিবর্তন করতে পারবেন। নিচের Developer Footer স্থায়ী; প্রয়োজন হলে কোডিংয়ের মাধ্যমে পরিবর্তন করা যাবে।</p>
+<h3 style="margin:14px 0 8px;color:#254b20">লগইন পেজের হেডার — Master User Only</h3><div class="grid"><div class="field span2"><label>Header Title</label><input id="loginHeaderTitleInput" maxlength="120" placeholder="GMS TEXTILES LIMITED"></div><div class="field span2"><label>Header Subtitle</label><input id="loginHeaderSubtitleInput" maxlength="180" placeholder="Root Cause Analysis & Corrective Action Plan"></div></div>
+<div class="notice" style="margin-top:10px"><b>Developer Footer — Fixed</b><br>লগইন পেজের নিচের Developer অংশটি স্থায়ী রাখা হয়েছে। প্রয়োজন হলে ভবিষ্যতে HTML কোডের মাধ্যমে পরিবর্তন করা যাবে।</div>
+<div class="row"><button class="btn green" type="button" onclick="saveLoginBranding()">হেডার/ফুটার সংরক্ষণ করুন</button><button class="btn gray" type="button" onclick="resetLoginBranding()">Default হেডার/ফুটার ফিরিয়ে আনুন</button><span id="brandingStatus" class="muted"></span></div><hr><div class="grid"><div class="role-photo-card"><img id="previewManagerPhoto" class="role-photo-preview" alt="Manager preview"><div class="field"><label>Manager-এর ছবি</label><input type="file" accept="image/*" onchange="changeLoginRolePhoto('manager',event)"></div></div><div class="role-photo-card"><img id="previewOfficerPhoto" class="role-photo-preview" alt="Officer preview"><div class="field"><label>Officer-এর ছবি</label><input type="file" accept="image/*" onchange="changeLoginRolePhoto('officer',event)"></div></div><div class="role-photo-card"><img id="previewDeveloperPhoto" class="role-photo-preview" alt="Developer preview"><div class="field"><label>Developer-এর ছবি</label><input type="file" accept="image/*" onchange="changeLoginRolePhoto('developer',event)"></div></div></div><h3 style="margin:16px 0 8px;color:#254b20">লগইন ছবির নিচের নাম/পদবি — Master User Only</h3><p class="muted">প্রতিটি ছবির নিচে নাম, পদবি ও Floor লিখুন। উদাহরণ: abc, Manager, Kadom Floor</p><div class="grid"><div class="field"><label>Manager-এর নাম/পদবি/Floor</label><input id="captionManagerInput" maxlength="100" placeholder="abc, Manager, Kadom Floor" oninput="saveLoginCaptionDraft('manager',this.value)"></div><div class="field"><label>Officer-এর নাম/পদবি/Floor</label><input id="captionOfficerInput" maxlength="100" placeholder="abc, Officer, Kadom Floor" oninput="saveLoginCaptionDraft('officer',this.value)"></div><div class="field"><label>Developer-এর নাম/পদবি/Floor</label><input id="captionDeveloperInput" maxlength="100" placeholder="CAP Web App Demo, Preview Only" oninput="saveLoginCaptionDraft('developer',this.value)"></div></div><div class="row"><button class="btn green" type="button" onclick="saveLoginCaptions()">নাম/পদবি সংরক্ষণ করুন</button><button class="btn gray" type="button" onclick="resetLoginCaptions()">Default নাম ফিরিয়ে আনুন</button><button class="btn gray" type="button" onclick="resetLoginRolePhotos()">Default ছবি ফিরিয়ে আনুন</button><span id="profilePhotoStatus" class="muted"></span></div></div></div><div class="card"><h2>Master Database Management</h2><p class="muted">Excel-এর data Sheet থেকে ১০৩টি Defect রেকর্ড প্রাথমিকভাবে লোড করা হয়েছে। সাধারণ ইউজার নতুন Master record যোগ করতে পারবেন; Edit/Delete শুধু Master User করতে পারবেন।</p><div class="grid"><div class="field span2"><label>What happened / Defect</label><input id="mWhat"></div><div class="field"><label>Code</label><input id="mCode"></div><div class="field span4"><label>Why did it happen</label><textarea id="mWhy"></textarea></div><div class="field span2"><label>How did it happen</label><textarea id="mHow"></textarea></div><div class="field span2"><label>How did it correct</label><textarea id="mCorrect"></textarea></div></div><div class="row"><button class="btn green" onclick="saveMaster()">Save Master Record</button><button class="btn gray" onclick="resetMasterForm()">New / Clear</button><span id="masterEditId" class="muted"></span></div></div><div class="card"><div class="row"><input id="masterSearch" placeholder="Defect বা Code দিয়ে খুঁজুন" oninput="renderMaster()"><span id="masterCount" class="muted"></span></div><div id="masterTable" class="tablewrap"></div></div></section>
+<section id="tab-reports" class="hidden"><div class="card noprint"><h2>Report Filters</h2><div class="grid"><div class="field"><label>Buyer</label><input id="filterBuyer" placeholder="সব Buyer"></div><div class="field"><label>Style No.</label><input id="filterStyleNo" placeholder="সব Style"></div><div class="field"><label>PO Number</label><input id="filterPoNo" placeholder="PO নম্বর দিয়ে খুঁজুন"></div><div class="field"><label>CAP Date থেকে</label><input id="filterFrom" type="date"></div><div class="field"><label>CAP Date পর্যন্ত</label><input id="filterTo" type="date"></div></div></div><div id="reportOutput"></div><div class="card noprint" data-admin-only="1"><h2>Submitted CAP Records — Edit / Delete</h2><p class="muted">এখান থেকে Submit করা রেকর্ড সম্পাদনা বা মুছে ফেলতে পারবেন।</p><div id="recentRecords"></div></div></section>
+<section id="tab-backup" class="hidden"><div class="card"><h2>Backup / Restore</h2><p class="notice"><b>সতর্কতা:</b> সাধারণ ইউজারও সম্পূর্ণ Backup Export এবং Restore করতে পারবেন। Restore করলে বর্তমান CAP ডাটা প্রতিস্থাপিত হবে; Restore-এর আগে বর্তমান ডাটার Backup নিন।</p><p><b>Backup:</b> <b>Backup Export (JSON)</b> চাপুন। ডাউনলোড হওয়া <code>CAP_Backup_তারিখ.json</code> ফাইলটি USB/অন্য নিরাপদ ফোল্ডারে কপি করে রাখুন। এতে Master Database, CAP records, Re-check তথ্য, Manual Comments এবং আপলোড করা ছবি থাকে। নিয়মিত, বিশেষ করে অনেকগুলো রেকর্ড Submit করার পর Backup নিন।</p><p><b>Restore:</b> একই অ্যাপের <b>Restore / Import JSON</b> বাটনে ক্লিক করে আগে নেওয়া JSON ফাইলটি নির্বাচন করুন। নিশ্চিতকরণে OK দিন। Backup-এর ডাটা বর্তমান ডাটাকে প্রতিস্থাপন করবে, তাই Restore করার আগে বর্তমান ডাটারও Backup নিন। অন্য কম্পিউটারে কাজ চালাতে HTML ফাইলের পাশাপাশি JSON Backup কপি করে Import করতে হবে। CSV-তে ছবি থাকে না; পূর্ণ Backup-এর জন্য JSON ব্যবহার করুন।</p><div class="row"><button class="btn green" onclick="exportBackup()">Backup Export (JSON)</button><button class="btn gray" onclick="exportRecordsCSV()">CAP Records Export (CSV)</button><label class="btn gray" for="backupFile">Restore / Import JSON</label><input id="backupFile" type="file" accept="application/json,.json" class="hidden" onchange="importBackup(event)"></div><p id="backupStatus" class="muted"></p><hr><h3>Master Database Excel থেকে পুনরায় লোড</h3><p class="muted">শুধু প্রাথমিক Master Database পুনরায় যোগ হবে; বর্তমান CAP records মুছে যাবে না।</p><button class="btn gray" onclick="restoreStarterMaster()">Restore Starter Master Data</button><hr><h3>সব ডাটা মুছে ফেলুন</h3><button class="btn red" onclick="clearAllData()">Delete All Local Data</button></div></section>
+<div class="footer">GMS Textiles Limited · Tansutrapur, Kaliakoir, Gazipur.<span class="dev">Demo Version · Not for production use</span><span>CAP Web App Offline · Data stays in this Firefox profile unless exported.</span></div></div>
+<script>
+const starterMaster=[{"what":"Uneven Stitch","code":"DEMO01","why":"Demo cause: operator needs additional guidance.","how":"Demo cause: machine setting requires verification.","correct":"Demo action: provide training and verify machine settings."},{"what":"Untrimmed Thread","code":"DEMO02","why":"Demo cause: trimming process was not followed.","how":"Demo cause: final checking was incomplete.","correct":"Demo action: recheck garments and brief the team."},{"what":"Oil Spot","code":"DEMO03","why":"Demo cause: handling area needs better control.","how":"Demo cause: preventive maintenance check was missed.","correct":"Demo action: isolate affected items and review maintenance."}];
+const DBKEY='cap_web_app_v22';let db={master:[],records:[],nextId:1};let editingMaster=null,activePhoto={finding:'',present:''};
+const ANNOUNCEMENT_KEY='cap_web_app_announcement_v1';
+function renderAnnouncement(){let saved=null;try{saved=localStorage.getItem(ANNOUNCEMENT_KEY)}catch(e){}const text=saved===null?'GMS TEXTILES LIMITED · Root Cause Analysis & Corrective Action Plan':saved;const el=document.getElementById('announcementText');if(el)el.textContent=text;const btn=document.getElementById('editAnnouncementBtn');if(btn)btn.classList.toggle('hidden',currentRole!=='master');}
+function editAnnouncement(){if(currentRole!=='master'){alert('শুধু Admin/Master User মেসেজ পরিবর্তন করতে পারবেন।');return;}let old;try{old=localStorage.getItem(ANNOUNCEMENT_KEY)}catch(e){old=null}if(old===null)old='GMS TEXTILES LIMITED · Root Cause Analysis & Corrective Action Plan';const value=prompt('নিচের স্ক্রলিং মেসেজে যে লেখা দেখাতে চান তা লিখুন:',old);if(value===null)return;try{localStorage.setItem(ANNOUNCEMENT_KEY,value.trim());renderAnnouncement();alert('মেসেজ সংরক্ষণ করা হয়েছে। একই Firefox প্রোফাইল ও একই ফাইল ব্যবহার করলে এটি পরেও থাকবে।')}catch(e){alert('মেসেজ সংরক্ষণ করা যায়নি। Firefox storage access অনুমতি/প্রোফাইল পরীক্ষা করুন। '+e.message)}}
+const PROFILE_PHOTO_KEY='cap_web_app_profile_photo_v1';
+const LOGIN_PHOTO_KEYS={manager:'cap_login_photo_manager_v1',officer:'cap_login_photo_officer_v1',developer:PROFILE_PHOTO_KEY};
+const LOGIN_CAPTION_KEYS={manager:'cap_login_caption_manager_v1',officer:'cap_login_caption_officer_v1',developer:'cap_login_caption_developer_v1'};
+const DEFAULT_LOGIN_CAPTIONS={manager:'abc, Manager, Kadom Floor',officer:'abc, Officer, Kadom Floor',developer:'CAP Web App Demo, Preview Only'};
+const LOGIN_BRANDING_KEY='cap_login_branding_v1';
+const DEFAULT_LOGIN_BRANDING={headerTitle:'GMS TEXTILES LIMITED',headerSubtitle:'Root Cause Analysis & Corrective Action Plan'};
+const FIXED_LOGIN_FOOTER={footer1:'Developed by:',footer2:'CAP Web App Demo',footer3:'',footer4:''};
+function applyLoginBranding(){let b={...DEFAULT_LOGIN_BRANDING};try{const saved=JSON.parse(localStorage.getItem(LOGIN_BRANDING_KEY)||'{}');if(saved&&typeof saved==='object')b={...b,...saved}}catch(e){}const map={headerTitle:'loginHeaderTitle',headerSubtitle:'loginHeaderSubtitle'};Object.entries(map).forEach(([k,id])=>{const el=document.getElementById(id);if(el)el.textContent=b[k]??DEFAULT_LOGIN_BRANDING[k]??'';const inp=document.getElementById('login'+k[0].toUpperCase()+k.slice(1)+'Input');if(inp&&document.activeElement!==inp)inp.value=b[k]??DEFAULT_LOGIN_BRANDING[k]??'';});Object.entries(FIXED_LOGIN_FOOTER).forEach(([k,v])=>{const el=document.getElementById('loginFooterLine'+k.slice(-1));if(el)el.textContent=v;});}
+function saveLoginBranding(){if(currentRole!=='master'){alert('শুধু Master User লগইন পেজের Header পরিবর্তন করতে পারবেন।');return}const keys=['headerTitle','headerSubtitle'];const b={};keys.forEach(k=>{const el=document.getElementById('login'+k[0].toUpperCase()+k.slice(1)+'Input');b[k]=(el?.value||'').trim()});if(!b.headerTitle){alert('Header Title খালি রাখা যাবে না।');return}try{localStorage.setItem(LOGIN_BRANDING_KEY,JSON.stringify(b));applyLoginBranding();const st=document.getElementById('brandingStatus');if(st)st.textContent='Header সংরক্ষিত হয়েছে। Developer Footer স্থায়ী।'}catch(e){alert('Header সংরক্ষণ করা যায়নি: '+e.message)}}
+function resetLoginBranding(){if(currentRole!=='master'){alert('শুধু Master User Header/Footer reset করতে পারবেন।');return}if(!confirm('লগইন পেজের Header default অবস্থায় ফিরিয়ে আনবেন? Developer Footer অপরিবর্তিত থাকবে।'))return;localStorage.removeItem(LOGIN_BRANDING_KEY);applyLoginBranding();const st=document.getElementById('brandingStatus');if(st)st.textContent='Default Header ফিরিয়ে আনা হয়েছে; Developer Footer স্থায়ী।'}
+
+function applyLoginCaptions(){['manager','officer','developer'].forEach(role=>{let value='';try{value=localStorage.getItem(LOGIN_CAPTION_KEYS[role])||''}catch(e){}const caption=value||DEFAULT_LOGIN_CAPTIONS[role];const label=document.getElementById('login'+role[0].toUpperCase()+role.slice(1)+'Caption');if(label)label.textContent=caption;const input=document.getElementById('caption'+role[0].toUpperCase()+role.slice(1)+'Input');if(input&&document.activeElement!==input)input.value=caption;});}
+function saveLoginCaptionDraft(role,value){if(currentRole!=='master')return;const label=document.getElementById('login'+role[0].toUpperCase()+role.slice(1)+'Caption');if(label)label.textContent=value.trim()||DEFAULT_LOGIN_CAPTIONS[role];}
+function saveLoginCaptions(){if(currentRole!=='master'){alert('শুধু Master User নাম/পদবি পরিবর্তন করতে পারবেন।');return}try{['manager','officer','developer'].forEach(role=>{const input=document.getElementById('caption'+role[0].toUpperCase()+role.slice(1)+'Input');const value=(input?.value||'').trim();if(value)localStorage.setItem(LOGIN_CAPTION_KEYS[role],value);else localStorage.removeItem(LOGIN_CAPTION_KEYS[role]);});applyLoginCaptions();const status=document.getElementById('profilePhotoStatus');if(status)status.textContent='ছবির নিচের নাম/পদবি সংরক্ষিত হয়েছে।';}catch(e){alert('নাম/পদবি সংরক্ষণ করা যায়নি: '+e.message)}}
+function resetLoginCaptions(){if(currentRole!=='master'){alert('শুধু Master User নাম/পদবি reset করতে পারবেন।');return}if(!confirm('তিনটি ছবির নিচের নাম/পদবি default করা হবে—চালিয়ে যাবেন?'))return;Object.values(LOGIN_CAPTION_KEYS).forEach(k=>localStorage.removeItem(k));applyLoginCaptions();const status=document.getElementById('profilePhotoStatus');if(status)status.textContent='Default নাম/পদবি ফিরিয়ে আনা হয়েছে।'}
+function applyProfilePhoto(){try{const dev=document.getElementById('loginDeveloperImage');if(!dev)return;if(!dev.dataset.defaultSrc)dev.dataset.defaultSrc=dev.getAttribute('src');const saved=localStorage.getItem(PROFILE_PHOTO_KEY);if(saved)dev.src=saved;['manager','officer','developer'].forEach(role=>{const v=localStorage.getItem(LOGIN_PHOTO_KEYS[role]);const img=document.getElementById(role==='manager'?'loginManagerImage':role==='officer'?'loginOfficerImage':'loginDeveloperImage');if(img&&v){img.src=v;img.classList.remove('hidden');if(role!=='developer'){const initial=document.getElementById(role==='manager'?'loginManagerInitial':'loginOfficerInitial');if(initial)initial.classList.add('hidden')}}});['manager','officer','developer'].forEach(role=>{const v=localStorage.getItem(LOGIN_PHOTO_KEYS[role]);const preview=document.getElementById('preview'+role[0].toUpperCase()+role.slice(1)+'Photo');if(preview){const live=document.getElementById(role==='manager'?'loginManagerImage':role==='officer'?'loginOfficerImage':'loginDeveloperImage');preview.src=v||(live?.dataset.defaultSrc||live?.getAttribute('src')||'')}})}catch(e){console.warn('Login photos load failed',e)}}
+function changeLoginRolePhoto(role,event){if(currentRole!=='master'){alert('এই ছবিটি শুধু Master User পরিবর্তন করতে পারবেন।');event.target.value='';return}const file=event.target.files&&event.target.files[0];if(!file)return;if(!file.type||!file.type.startsWith('image/')){alert('অনুগ্রহ করে একটি ছবি নির্বাচন করুন।');event.target.value='';return}const reader=new FileReader();reader.onerror=()=>{alert('ছবি পড়া যায়নি।');event.target.value=''};reader.onload=()=>{const image=new Image();image.onerror=()=>{alert('ছবিটি খোলা যায়নি।');event.target.value=''};image.onload=()=>{try{const max=700,scale=Math.min(1,max/Math.max(image.width,image.height));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(image.width*scale));canvas.height=Math.max(1,Math.round(image.height*scale));canvas.getContext('2d').drawImage(image,0,0,canvas.width,canvas.height);const data=canvas.toDataURL('image/jpeg',0.78);localStorage.setItem(LOGIN_PHOTO_KEYS[role],data);applyProfilePhoto();const status=document.getElementById('profilePhotoStatus');if(status)status.textContent=role+' ছবি সংরক্ষিত হয়েছে।';}catch(err){alert('ছবি সংরক্ষণ করা যায়নি। ছোট ছবি ব্যবহার করুন। '+err.message)}event.target.value=''};image.src=reader.result};reader.readAsDataURL(file)}
+function changeProfilePhoto(event){changeLoginRolePhoto('developer',event)}
+function resetLoginRolePhotos(){if(currentRole!=='master'){alert('শুধু Master User ছবি reset করতে পারবেন।');return}if(!confirm('Manager, Officer ও Developer-এর ছবি default অবস্থায় ফিরিয়ে আনবেন?'))return;Object.values(LOGIN_PHOTO_KEYS).forEach(k=>localStorage.removeItem(k));applyProfilePhoto();const status=document.getElementById('profilePhotoStatus');if(status)status.textContent='Default ছবি ফিরিয়ে আনা হয়েছে।'}
+function resetProfilePhoto(){resetLoginRolePhotos()}
+function loadDB(){try{const x=localStorage.getItem(DBKEY);if(x){db=JSON.parse(x);if(!db.master)db.master=[];if(!db.records)db.records=[];const oldCount=db.master.length;db.master=db.master.filter(m=>!(String(m.code||'').trim().toLowerCase()==='code'&&String(m.what||'').trim().toLowerCase().startsWith('what hap')));if(db.master.length!==oldCount)saveDB();db.nextId=Math.max(Number(db.nextId)||1,...db.records.map(r=>(Number(r.id)||0)+1));}else{db.master=starterMaster.map((x,i)=>({...x,id:i+1}));db.records=[];db.nextId=1;saveDB();}}catch(e){alert('ডাটা পড়তে সমস্যা হয়েছে। Backup থাকলে Import করুন। '+e.message);db={master:starterMaster.map((x,i)=>({...x,id:i+1})),records:[],nextId:1};}}
+function saveDB(){try{localStorage.setItem(DBKEY,JSON.stringify(db));return true}catch(e){alert('Storage পূর্ণ হয়েছে। ছবি কমিয়ে নিন এবং Backup Export করুন। Error: '+e.message);return false}}
+let currentRole='';
+const USERS_KEY='cap_web_app_users_v1';
+const MASTER_PASS_KEY='cap_web_app_master_password_v1';
+function getMasterPassword(){return localStorage.getItem(MASTER_PASS_KEY)||'demoAdmin123'}
+function readUsers(){try{const v=JSON.parse(localStorage.getItem(USERS_KEY)||'[]');return Array.isArray(v)?v:[]}catch(e){return []}}
+function writeUsers(users){try{localStorage.setItem(USERS_KEY,JSON.stringify(users));return true}catch(e){alert('User account সংরক্ষণ করা যায়নি: '+e.message);return false}}
+function toggleRegisterPanel(force){const panel=document.getElementById('registerPanel');if(!panel)return;const show=typeof force==='boolean'?force:panel.classList.contains('hidden');panel.classList.toggle('hidden',!show);document.getElementById('registerStatus').textContent='';if(show)document.getElementById('newUsername').focus()}
+function registerGeneralUser(){const u=document.getElementById('newUsername').value.trim(),p=document.getElementById('newPassword').value,c=document.getElementById('confirmNewPassword').value,rc=(document.getElementById('newRecoveryCode')?.value||'').trim(),status=document.getElementById('registerStatus');if(u.length<3){status.textContent='Username কমপক্ষে 3 অক্ষরের হতে হবে।';return}if(!/^[a-zA-Z0-9._-]+$/.test(u)){status.textContent='Username-এ ইংরেজি অক্ষর, সংখ্যা, dot, underscore বা hyphen ব্যবহার করুন।';return}if(p.length<6){status.textContent='Password কমপক্ষে 6 অক্ষরের হতে হবে।';return}if(p!==c){status.textContent='দুটি Password মিলছে না।';return}if(rc.length<4){status.textContent='Recovery Code কমপক্ষে 4 অক্ষরের দিন। এটি নিরাপদে মনে রাখুন।';return}if(['admin','user'].includes(u.toLowerCase())||readUsers().some(x=>String(x.username).toLowerCase()===u.toLowerCase())){status.textContent='এই Username আগে থেকেই আছে। অন্য Username দিন।';return}const users=readUsers();users.push({username:u,password:p,recoveryCode:rc,role:'user',createdAt:new Date().toISOString()});if(writeUsers(users)){document.getElementById('username').value=u;document.getElementById('password').value='';document.getElementById('newUsername').value='';document.getElementById('newPassword').value='';document.getElementById('confirmNewPassword').value='';document.getElementById('newRecoveryCode').value='';status.textContent='সাধারণ ইউজার অ্যাকাউন্ট তৈরি হয়েছে। এখন Password লিখে Login করুন।';document.getElementById('password').focus()}}
+function toggleForgotPanel(force){const p=document.getElementById('forgotPanel');if(!p)return;const show=typeof force==='boolean'?force:p.classList.contains('hidden');p.classList.toggle('hidden',!show);if(show)document.getElementById('forgotUsername').focus();}
+function recoverGeneralPassword(){const u=document.getElementById('forgotUsername').value.trim(),rc=document.getElementById('forgotRecoveryCode').value.trim(),p=document.getElementById('forgotNewPassword').value,c=document.getElementById('forgotConfirmPassword').value,st=document.getElementById('forgotStatus');if(!u||!rc||!p||!c){st.textContent='সব ঘর পূরণ করুন।';return}if(u.toLowerCase()==='admin'){st.textContent='Master account-এর জন্য আগে Master হিসেবে লগইন করে Change Password ব্যবহার করুন।';return}if(p.length<6){st.textContent='নতুন Password কমপক্ষে 6 অক্ষরের হতে হবে।';return}if(p!==c){st.textContent='নতুন Password দুটি মিলছে না।';return}const users=readUsers(),i=users.findIndex(x=>String(x.username).toLowerCase()===u.toLowerCase()&&String(x.recoveryCode||'')===rc);if(i<0){st.textContent='Username বা Recovery Code সঠিক নয়।';return}users[i].password=p;if(writeUsers(users)){st.textContent='Password reset হয়েছে। এখন নতুন Password দিয়ে Login করুন।';document.getElementById('username').value=u;document.getElementById('password').value='';['forgotUsername','forgotRecoveryCode','forgotNewPassword','forgotConfirmPassword'].forEach(id=>document.getElementById(id).value='');}}
+
+const MASTER_PROFILE_KEY='cap_web_app_master_profile_v1';
+function getCurrentAccount(){
+  if(currentRole==='master')return null;
+  const username=(document.getElementById('username')?.value||'').trim();
+  return readUsers().find(u=>String(u.username||'').toLowerCase()===username.toLowerCase())||null;
+}
+function getMyProfile(){
+  if(currentRole==='master'){
+    try{return JSON.parse(localStorage.getItem(MASTER_PROFILE_KEY)||'{}')||{};}catch(e){return {};}
+  }
+  const u=getCurrentAccount();return u&&u.profile&&typeof u.profile==='object'?u.profile:{};
+}
+function renderMyProfile(){
+  const username=(document.getElementById('username')?.value||'admin').trim();
+  const p=getMyProfile();
+  const set=(id,v)=>{const el=document.getElementById(id);if(el)el.value=v||'';};
+  set('profileUsername',username);set('profileFullName',p.fullName);set('profileEmail',p.email);
+  set('profilePhone',p.phone);set('profileDepartment',p.department);set('profileDesignation',p.designation);set('profileFloor',p.floor);
+  const av=document.getElementById('myProfileAvatar');
+  if(av)av.textContent=String(p.fullName||username||'U').trim().slice(0,1).toUpperCase();
+  const st=document.getElementById('profileSaveStatus');if(st)st.textContent='';
+}
+function saveMyProfile(){
+  if(!currentRole){alert('আগে Login করুন।');return;}
+  const profile={
+    fullName:document.getElementById('profileFullName').value.trim(),
+    email:document.getElementById('profileEmail').value.trim(),
+    phone:document.getElementById('profilePhone').value.trim(),
+    department:document.getElementById('profileDepartment').value.trim(),
+    designation:document.getElementById('profileDesignation').value.trim(),
+    floor:document.getElementById('profileFloor').value.trim(),
+    updatedAt:new Date().toISOString()
+  };
+  const st=document.getElementById('profileSaveStatus');
+  if(profile.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(profile.email)){st.textContent='সঠিক Email Address লিখুন।';return;}
+  try{
+    if(currentRole==='master')localStorage.setItem(MASTER_PROFILE_KEY,JSON.stringify(profile));
+    else{
+      const users=readUsers(),username=(document.getElementById('username')?.value||'').trim();
+      const i=users.findIndex(u=>String(u.username||'').toLowerCase()===username.toLowerCase());
+      if(i<0){st.textContent='User account পাওয়া যায়নি।';return;}
+      users[i].profile=profile;
+      if(!writeUsers(users)){st.textContent='Profile সংরক্ষণ করা যায়নি।';return;}
+    }
+    renderMyProfile();st.textContent='আপনার Profile সফলভাবে Update হয়েছে।';
+    renderDashboard();
+  }catch(e){st.textContent='Profile সংরক্ষণ করা যায়নি: '+e.message;}
+}
+
+function renderDashboard(){
+ const records=Array.isArray(db.records)?db.records:[],today=new Date(),monthKey=String(today.getFullYear())+'-'+String(today.getMonth()+1).padStart(2,'0');
+ const unique=(arr)=>new Set(arr.filter(x=>String(x||'').trim()).map(x=>String(x).trim().toLowerCase())).size;
+ const set=(id,val)=>{const el=document.getElementById(id);if(el)el.textContent=val};
+ const myProfile=getMyProfile();set('dashTotal',records.length);set('dashFindings',unique(records.map(r=>r.what||r.defectName||r.code)));set('dashBuyers',unique(records.map(r=>r.buyer)));set('dashMonth',records.filter(r=>String(r.date||r.capDate||'').startsWith(monthKey)).length);
+ const dt=document.getElementById('dashboardToday');if(dt)dt.textContent='📅 '+today.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
+ const roleNames={master:'Master User',manager:'Manager',officer:'Officer',user:'General User'};set('dashUserName',myProfile.fullName||document.getElementById('username')?.value||'CAP User');set('dashUserRole',roleNames[currentRole]||'General User');set('dashUserDate','Active session · '+today.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'}));
+ const av=document.getElementById('dashAvatar');if(av){const photoKey=(typeof LOGIN_PHOTO_KEYS!=='undefined'&&LOGIN_PHOTO_KEYS[currentRole])?LOGIN_PHOTO_KEYS[currentRole]:null;let photo='';try{if(photoKey)photo=localStorage.getItem(photoKey)||''}catch(e){}av.innerHTML=photo?'<img alt="User profile" src="'+photo+'">':esc((document.getElementById('username')?.value||'U').slice(0,1).toUpperCase())}
+ const counts={};records.forEach(r=>{const name=String(r.what||r.defectName||r.code||'Unspecified').trim()||'Unspecified';counts[name]=(counts[name]||0)+1});const top=Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,5),total=top.reduce((a,x)=>a+x[1],0),colors=['#0a8751','#3a9ee8','#f3b63f','#e66a6a','#8a70d6'];
+ const chart=document.getElementById('dashFindingChart');if(chart){if(!top.length){chart.innerHTML='<div class="dash-empty" style="grid-column:1/-1">এখনো কোনো CAP record নেই। নতুন CAP Entry যোগ করলে এখানে Finding-এর চার্ট তৈরি হবে।</div>'}else{let pos=0;const stops=top.map((x,i)=>{const start=pos;pos+=x[1]/total*100;return colors[i]+' '+start+'% '+pos+'%'}).join(',');chart.innerHTML='<div class="dash-pie" style="background:conic-gradient('+stops+')"></div><div class="dash-legend">'+top.map((x,i)=>'<span><i class="dash-dot" style="background:'+colors[i]+'"></i>'+esc(x[0])+' <b style="margin-left:auto">'+x[1]+'</b></span>').join('')+'</div>'}}
+ const bars=document.getElementById('dashTopBars');if(bars){if(!top.length)bars.innerHTML='<div class="dash-empty">CAP record যোগ হলে এখানে Top Findings দেখাবে।</div>';else{const max=top[0][1]||1;bars.innerHTML=top.map((x,i)=>'<div class="dash-bar-line"><span title="'+esc(x[0])+'">'+esc(x[0].length>19?x[0].slice(0,18)+'…':x[0])+'</span><div class="dash-bar-track"><div class="dash-bar-fill" style="width:'+Math.max(5,x[1]/max*100)+'%"></div></div><b>'+x[1]+'</b></div>').join('')}}
+ const recent=document.getElementById('dashboardRecentRecords');if(recent){const list=records.slice().reverse().slice(0,5);recent.innerHTML=list.length?'<div class="tablewrap"><table><thead><tr><th>CAP Date</th><th>Buyer</th><th>Style</th><th>Finding</th></tr></thead><tbody>'+list.map(r=>'<tr><td>'+esc(r.date||r.capDate||'')+'</td><td>'+esc(r.buyer||'')+'</td><td>'+esc(r.style||'')+'</td><td>'+esc(r.what||r.defectName||r.code||'')+'</td></tr>').join('')+'</tbody></table></div>':'এখনো কোনো CAP Record নেই।'}
+}
+
+function placeSettingsCardUnderCompany(){
+  const card=document.getElementById('accountSettingsCard');
+  const company=document.querySelector('#appView .page-company');
+  if(card && company && company.parentElement){
+    company.insertAdjacentElement('afterend',card);
+    card.style.position='relative';
+    card.style.float='none';
+    card.style.clear='both';
+    card.style.width='auto';
+    card.style.maxWidth='none';
+    card.style.boxSizing='border-box';
+    card.style.margin='12px 0';
+  }
+}
+function openUserRoleManagement(){
+  if(currentRole!=='master'){alert('শুধু Master User Role Management ব্যবহার করতে পারবেন।');return;}
+  placeSettingsCardUnderCompany();
+  ['dashboard','entry','reports','master','backup'].forEach(name=>{
+    const p=document.getElementById('tab-'+name);
+    if(p){p.classList.add('hidden');p.style.display='none';p.setAttribute('aria-hidden','true');}
+  });
+  const card=document.getElementById('accountSettingsCard');
+  const panel=document.getElementById('accountPanel');
+  const rolePanel=document.getElementById('userRoleManagement');
+  const ownPanel=document.getElementById('ownRolePhotoPanel');
+  if(card){card.classList.remove('hidden');card.style.display='block';}
+  if(panel){panel.classList.remove('hidden');panel.style.display='block';}
+  if(ownPanel){ownPanel.classList.add('hidden');ownPanel.style.display='none';}
+  if(rolePanel){rolePanel.classList.remove('hidden');rolePanel.style.display='block';}
+  renderUserRoleTable();
+  document.querySelectorAll('#mainTreeMenu button').forEach(x=>x.classList.toggle('active',x.textContent.includes('User Role Management')));
+  setTimeout(()=>card?.scrollIntoView({behavior:'smooth',block:'start'}),60);
+}
+function toggleAccountPanel(){
+  placeSettingsCardUnderCompany();
+  const panel=document.getElementById('accountPanel');
+  const card=document.getElementById('accountSettingsCard');
+  const rolePanel=document.getElementById('userRoleManagement');
+  const ownPanel=document.getElementById('ownRolePhotoPanel');
+  if(!panel||!card)return;
+  const isVisible=!card.classList.contains('hidden')&&card.style.display!=='none'&&!panel.classList.contains('hidden')&&panel.style.display!=='none'&&(!rolePanel||rolePanel.classList.contains('hidden'));
+  if(isVisible){
+    panel.classList.add('hidden');panel.style.display='none';
+    card.classList.add('hidden');card.style.display='none';
+    return;
+  }
+  ['dashboard','entry','reports','master','backup'].forEach(name=>{
+    const p=document.getElementById('tab-'+name);
+    if(p){p.classList.add('hidden');p.style.display='none';p.setAttribute('aria-hidden','true');}
+  });
+  card.classList.remove('hidden');card.style.display='block';
+  panel.classList.remove('hidden');panel.style.display='block';
+  if(rolePanel){rolePanel.classList.add('hidden');rolePanel.style.display='none';}
+  if(ownPanel){
+    const allowed=['manager','officer'].includes(currentRole);
+    ownPanel.classList.toggle('hidden',!allowed);
+    ownPanel.style.display=allowed?'block':'none';
+  }
+  document.querySelectorAll('#mainTreeMenu button').forEach(x=>x.classList.toggle('active',x.id==='accountMenuToggle'));
+  const toggle=document.getElementById('accountMenuToggle');
+  if(toggle)toggle.setAttribute('aria-expanded','true');
+  setTimeout(()=>card.scrollIntoView({behavior:'smooth',block:'start'}),60);
+}
+function changeCurrentPassword(){const old=document.getElementById('currentPassword').value,p=document.getElementById('changedPassword').value,c=document.getElementById('changedPasswordConfirm').value,st=document.getElementById('changePasswordStatus');if(!old||!p||!c){st.textContent='সব ঘর পূরণ করুন।';return}if(p.length<6){st.textContent='নতুন Password কমপক্ষে 6 অক্ষরের হতে হবে।';return}if(p!==c){st.textContent='নতুন Password দুটি মিলছে না।';return}if(currentRole==='master'){if(old!==getMasterPassword()){st.textContent='বর্তমান Master Password সঠিক নয়।';return}try{localStorage.setItem(MASTER_PASS_KEY,p);st.textContent='Master Password পরিবর্তন হয়েছে। নিরাপদে রাখুন।';}catch(e){st.textContent='সংরক্ষণ করা যায়নি: '+e.message;return}}else{const users=readUsers(),u=document.getElementById('username').value.trim(),i=users.findIndex(x=>String(x.username).toLowerCase()===u.toLowerCase());if(i<0||users[i].password!==old){st.textContent='বর্তমান Password সঠিক নয়।';return}users[i].password=p;if(!writeUsers(users)){st.textContent='Password সংরক্ষণ করা যায়নি।';return}st.textContent='Password পরিবর্তন হয়েছে।';}['currentPassword','changedPassword','changedPasswordConfirm'].forEach(id=>document.getElementById(id).value='');}
+function toggleMasterAdminPanel(){const p=document.getElementById('masterAdminPanel');if(p)p.classList.toggle('hidden')}
+function renderUserRoleTable(){const el=document.getElementById('userRoleTable');if(!el)return;const users=readUsers();el.innerHTML='<table><thead><tr><th>Username</th><th>Role</th><th>Action</th></tr></thead><tbody>'+users.map((u,i)=>`<tr><td>${esc(u.username)}</td><td><select id="userRole_${i}"><option value="user" ${(!['manager','officer'].includes(u.role))?'selected':''}>General User</option><option value="manager" ${u.role==='manager'?'selected':''}>Manager</option><option value="officer" ${u.role==='officer'?'selected':''}>Officer</option></select></td><td><button class="btn green" onclick="saveUserRole(${i})">Save Role</button></td></tr>`).join('')+'</tbody></table>'||'<p>কোনো ইউজার নেই।</p>'}
+function saveUserRole(i){if(currentRole!=='master'){alert('শুধু Master User role নির্ধারণ করতে পারবেন।');return}const users=readUsers();if(!users[i])return;const sel=document.getElementById('userRole_'+i);if(!sel)return;users[i].role=sel.value;if(writeUsers(users)){alert('User role সংরক্ষিত হয়েছে। পরবর্তী লগইনে নতুন role কার্যকর হবে।');renderUserRoleTable()}}
+function changeOwnRolePhoto(event){if(!['manager','officer'].includes(currentRole)){alert('এই সুবিধা শুধু Manager/Officer role-এর জন্য।');event.target.value='';return}const role=currentRole,file=event.target.files&&event.target.files[0];if(!file)return;if(!file.type.startsWith('image/')){alert('একটি image file নির্বাচন করুন।');event.target.value='';return}const rd=new FileReader();rd.onerror=()=>alert('ছবি পড়া যায়নি।');rd.onload=()=>{const im=new Image();im.onerror=()=>alert('ছবি খোলা যায়নি।');im.onload=()=>{try{const scale=Math.min(1,700/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(im.width*scale));c.height=Math.max(1,Math.round(im.height*scale));c.getContext('2d').drawImage(im,0,0,c.width,c.height);localStorage.setItem(LOGIN_PHOTO_KEYS[role],c.toDataURL('image/jpeg',0.78));applyProfilePhoto();const st=document.getElementById('ownRolePhotoStatus');if(st)st.textContent='আপনার Login Photo পরিবর্তন হয়েছে।';}catch(e){alert('ছবি সংরক্ষণ করা যায়নি: '+e.message)}};im.src=rd.result};rd.readAsDataURL(file);event.target.value=''}
+function login(){const u=document.getElementById('username').value.trim(),p=document.getElementById('password').value;let role='';if(u==='admin'&&p===getMasterPassword())role='master';else if(u==='user'&&p==='demoUser123')role='user';else{const account=readUsers().find(x=>String(x.username).toLowerCase()===u.toLowerCase()&&x.password===p);if(account)role=['manager','officer'].includes(account.role)?account.role:'user'}if(role){currentRole=role;sessionStorage.setItem('cap_role',role);showApp()}else document.getElementById('loginError').textContent='Username বা Password সঠিক নয়।'}
+function logout(){sessionStorage.removeItem('cap_role');sessionStorage.removeItem('cap_logged_in');currentRole='';document.body.classList.remove('user-mode');document.getElementById('appView').classList.add('hidden');document.getElementById('loginView').classList.remove('hidden');document.getElementById('announcementTicker').classList.remove('hidden');document.getElementById('username').value='';document.getElementById('password').value='';document.getElementById('loginError').textContent='';document.getElementById('loginUser').textContent='';document.getElementById('accountPanel')?.classList.add('hidden');renderAnnouncement()}
+function applyRole(){const isMaster=currentRole==='master';document.body.classList.toggle('user-mode',!isMaster);document.querySelectorAll('[data-admin-only]').forEach(el=>el.classList.toggle('hidden',!isMaster));const labels={master:'Master User',manager:'Manager (General User)',officer:'Officer (General User)',user:'General User'};document.getElementById('loginUser').textContent='Logged in: '+(labels[currentRole]||'General User');const own=document.getElementById('ownRolePhotoPanel');if(own){own.classList.toggle('hidden',!['manager','officer'].includes(currentRole));const lab=document.getElementById('ownRolePhotoLabel');if(lab)lab.textContent=currentRole==='manager'?'Manager-এর নিজের ছবি':'Officer-এর নিজের ছবি';}const ur=document.getElementById('userRoleManagement');if(ur)ur.classList.toggle('hidden',!isMaster);if(isMaster)renderUserRoleTable();renderAnnouncement();}
+function goDashboardFromBrand(){if(!currentRole){return}showTab('dashboard',document.querySelector('#mainTreeMenu button[data-tab="dashboard"]'));const live=document.getElementById('liveReportMenu');if(live)live.classList.add('hidden');const liveToggle=document.getElementById('liveReportToggle');if(liveToggle)liveToggle.setAttribute('aria-expanded','false');}
+function toggleLiveReportNode(id,button){const panel=document.getElementById(id);if(!panel)return;const opening=panel.classList.contains('hidden');panel.classList.toggle('hidden',!opening);if(button)button.setAttribute('aria-expanded',opening?'true':'false');}
+function liveReportMenuNotice(category,period,line){alert(category+'\n'+period+'\nLine '+line+'\n\nএই Menu Structure প্রস্তুত করা হয়েছে। Report Data ও Logic পরে যুক্ত করা হবে।');}
+function buildLiveReportMenu(){const root=document.getElementById('liveReportMenu');if(!root||root.dataset.built==='1')return;const categories=['DHU Entry * Report','Non-Confirming * Report','Fault Finding * Report','Layout Issue * Report','Measurement Chart * Report'];const periods=['Daily Report','Weekly Report','Monthly Report','Yearly Report','Custom Report Date-wise'];root.innerHTML=categories.map((cat,ci)=>{const cid='liveCat_'+ci;return `<button type="button" class="live-category" aria-expanded="false" onclick="toggleLiveReportNode('${cid}',this)">▸ ${cat}</button><div id="${cid}" class="live-report-periods hidden">${periods.map((period,pi)=>{const pid=`${cid}_p${pi}`;return `<button type="button" class="live-period" aria-expanded="false" onclick="toggleLiveReportNode('${pid}',this)">＋ ${period}</button><div id="${pid}" class="live-report-lines hidden">${Array.from({length:20},(_,li)=>`<button type="button" class="live-line" onclick="liveReportMenuNotice('${cat}','${period}',${li+1})">Line ${li+1}</button>`).join('')}</div>`}).join('')}</div>`}).join('');root.dataset.built='1';}
+function showApp(){buildLiveReportMenu();if(!currentRole)currentRole=sessionStorage.getItem('cap_role')||'master';applyRole();document.getElementById('loginView').classList.add('hidden');document.getElementById('announcementTicker').classList.add('hidden');document.getElementById('appView').classList.remove('hidden');const d=new Date();const today=new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,10);document.getElementById('capDate').value=today;refreshSelects();renderMaster();renderReports();renderRecent();renderDashboard();if(!findingRowCount){findingRowCount=1;renderFindingRows()}syncCapRows()}
+function toggleReportActions(){const menu=document.getElementById('sidebarReportActions');if(menu)menu.classList.toggle('hidden')}
+function restoreReportActionsOnHover(){const active=document.querySelector('.tabs button[data-tab="reports"]');const menu=document.getElementById('sidebarReportActions');if(active&&active.classList.contains('active')&&menu)menu.classList.remove('hidden')}
+function hideReportActionsOnLeave(){const menu=document.getElementById('sidebarReportActions');if(menu)menu.classList.add('hidden')}
+function runReportAction(action){showTab('reports',document.querySelector('.tabs button[data-tab="reports"]'));if(action==='generate')renderReports();else if(action==='print')window.print();else if(action==='cap')downloadCAPReport();else if(action==='recheck')downloadRecheckReport()}
+function showTab(id,btn){
+  if(!currentRole){alert('আগে Login করুন।');return;}
+  // Hide the Account/Password and User Role panels whenever a normal menu is selected.
+  ['accountSettingsCard','accountPanel','userRoleManagement','ownRolePhotoPanel'].forEach(pid=>{
+    const p=document.getElementById(pid);
+    if(p){p.classList.add('hidden');p.style.display='none';}
+  });
+  const accountToggle=document.getElementById('accountMenuToggle');
+  if(accountToggle)accountToggle.setAttribute('aria-expanded','false');
+  // Close any open menu subpanels when switching main content.
+  const roleToggle=document.getElementById('userRoleMenuToggle');
+  if(roleToggle)roleToggle.setAttribute('aria-expanded','false');
+
+  const panelIds=['dashboard','profile','entry','reports','master','backup'];
+  panelIds.forEach(name=>{
+    const panel=document.getElementById('tab-'+name);
+    if(panel){
+      panel.classList.add('hidden');
+      panel.style.display='none';
+      panel.setAttribute('aria-hidden','true');
+    }
+  });
+  const target=document.getElementById('tab-'+id);
+  if(target && panelIds.includes(id)){
+    target.classList.remove('hidden');
+    target.style.display='block';
+    target.setAttribute('aria-hidden','false');
+  }
+  document.querySelectorAll('#mainTreeMenu button[data-tab]').forEach(x=>x.classList.remove('active'));
+  if(btn)btn.classList.add('active');
+  document.querySelectorAll('#mainTreeMenu button[data-tab="'+id+'"]').forEach(x=>x.classList.add('active'));
+  if(id==='reports')renderReports();
+  if(id==='dashboard')renderDashboard();
+  if(id==='profile')renderMyProfile();
+  if(id==='entry')renderRecent();
+}
+let findingRowCount=1;let capRowCount=1;let findingSelections={};let capRowState={};let editModeIds=null;let editModeGroupKey='';
+function defectOptions(selected=''){return '<option value="">— Defect Name নির্বাচন করুন —</option>'+db.master.map(m=>`<option value="${m.id}" ${String(m.id)===String(selected)?'selected':''}>${esc(m.what)}</option>`).join('')}
+function renderFindingRows(){const el=document.getElementById('findingRows');if(!el)return;el.innerHTML='<div class="finding-grid">'+Array.from({length:findingRowCount},(_,i)=>{let id=i+1;return `<div class="finding-option" style="cursor:default"><span class="num">${String(id).padStart(2,'0')}</span><select aria-label="RCA Finding ${id}" id="finding_${id}" onchange="onFindingChange(${id})" style="min-width:0;width:100%;padding:8px;border:1px solid #b6c9d7">${defectOptions(findingSelections[id]?.defectId||'')}</select><span id="findingMark_${id}" class="mark">${findingSelections[id]?.defectId?'✓':'—'}</span></div>`}).join('')+'</div>';syncCapRows()}
+function addFindingRow(){if(findingRowCount>=100){alert('সর্বোচ্চ ১০০টি Finding row রাখা যাবে।');return}findingRowCount++;renderFindingRows()}
+function onFindingChange(id){const sel=document.getElementById('finding_'+id),mark=document.getElementById('findingMark_'+id);if(!sel||!mark){alert('RCA Finding row তৈরি হয়নি। Refresh করুন, তারপর আবার চেষ্টা করুন।');return}let v=sel.value;findingSelections[id]=findingSelections[id]||{};findingSelections[id].defectId=v;let m=db.master.find(x=>String(x.id)===String(v));mark.textContent=v?(m?'✓':'✕'):'—';mark.className='mark '+(v&&m?'ok':v?'bad':'');syncCapRows();renderStep4Reasons()}
+function refreshFindingRows(){for(let i=1;i<=findingRowCount;i++){let sel=document.getElementById('finding_'+i);if(!sel)continue;let old=sel.value;sel.innerHTML=defectOptions(old);let m=db.master.find(x=>String(x.id)===String(old));let mark=document.getElementById('findingMark_'+i);mark.textContent=old?(m?'✓':'✕'):'—';mark.className='mark '+(old&&m?'ok':old?'bad':'')}syncCapRows();renderStep4Reasons()}
+function addCapRow(){if(capRowCount>=100){alert('সর্বোচ্চ ১০০টি CAP row রাখা যাবে।');return}capRowCount++;syncCapRows()}
+function syncCapRows(){const el=document.getElementById('capRows');if(!el)return;el.innerHTML='<div class="finding-grid">'+Array.from({length:capRowCount},(_,i)=>{let row=i+1,st=capRowState[row]||{};return `<div class="finding-option cap-photo-row" style="cursor:default;grid-template-columns:34px minmax(140px,1fr)"><span class="num">${String(row).padStart(2,'0')}</span><select aria-label="CAP Given Defect ${row}" id="capDefect_${row}" onchange="onCapDefectChange(${row})" style="min-width:0;width:100%;padding:8px;border:1px solid #b6c9d7">${defectOptions(st.defectId||'')}</select><div class="photo-fields"><label>Who responsible *</label><input id="responsible_${row}" value="${esc(st.responsible||'')}" placeholder="Name / Designation" onchange="setCapState(${row},'responsible',this.value)" oninput="setCapState(${row},'responsible',this.value)" required></div><div class="photo-fields"><label>Finding Photo (আগের ছবি) *</label><input id="before_${row}" type="file" accept="image/*" onchange="previewDynamicPhoto('before_${row}','beforePrev_${row}')"><img id="beforePrev_${row}" class="photo ${st.before?'':'hidden'}" ${st.before?`src="${st.before}"`:''}></div><div class="photo-fields"><label>Present Photo (পরের ছবি) *</label><input id="after_${row}" type="file" accept="image/*" onchange="previewDynamicPhoto('after_${row}','afterPrev_${row}')"><img id="afterPrev_${row}" class="photo ${st.after?'':'hidden'}" ${st.after?`src="${st.after}"`:''}></div></div>`}).join('')+'</div>';syncStep4Header();renderStep4DefectRows()}
+function syncStep4Header(){const pairs={inspectionDate:'recheckFailedDate',poNo:'recheckPoNo',styleNo:'recheckStyleNo',orderQty:'recheckOrderQty'};for(const [src,dst] of Object.entries(pairs)){const a=document.getElementById(src),b=document.getElementById(dst);if(a&&b)b.value=a.value||''}renderStep4Reasons()}
+function collectStep2Defects(){const names=[];for(let i=1;i<=findingRowCount;i++){const sel=document.getElementById('finding_'+i);if(sel&&sel.value){const m=db.master.find(x=>String(x.id)===String(sel.value));if(m&&!names.includes(m.what))names.push(m.what)}}return names}
+function renderStep4Reasons(){const el=document.getElementById('recheckReasons');if(!el)return;const names=[];for(let i=1;i<=findingRowCount;i++){const sel=document.getElementById('finding_'+i);if(sel&&sel.value){const m=db.master.find(x=>String(x.id)===String(sel.value));if(m&&!names.includes(m.what))names.push(m.what)}}el.innerHTML=names.length?names.map((n,i)=>`<div>${i+1}. ${esc(n)}</div>`).join(''):'Step 2-তে Defect নির্বাচন করলে এখানে দেখাবে।'}
+function renderStep4DefectRows(){const el=document.getElementById('step4DefectRows');if(!el)return;const rows=[];for(let i=1;i<=capRowCount;i++){const sel=document.getElementById('capDefect_'+i);if(sel&&sel.value){const m=db.master.find(x=>String(x.id)===String(sel.value));if(m)rows.push({row:i,m,st:capRowState[i]||{}})}}if(!rows.length){el.innerHTML='<p class="muted">Step 3-তে Defect নির্বাচন করলে এখানে সারি তৈরি হবে।</p>';return}el.innerHTML='<div class="tablewrap"><table><thead><tr><th>SN</th><th>Defect Type</th><th>Total Defect Found</th><th>Repair Qty (Auto)</th><th>Replace Qty</th><th>Reject Qty</th><th>Re-Cut</th><th>Remarks</th><th>Comments</th></tr></thead><tbody>'+rows.map(({row,m,st},i)=>`<tr><td>${i+1}</td><td>${esc(m.what)}</td><td><input type="number" min="0" value="${esc(st.totalQty??'')}" onchange="setCapState(${row},'totalQty',this.value);const q=document.getElementById('repairQty_${row}');if(q)q.value=this.value"></td><td><input id="repairQty_${row}" type="number" min="0" value="${esc(st.totalQty??'')}" readonly></td><td><input type="number" min="0" value="${esc(st.replaceQty??'')}" onchange="setCapState(${row},'replaceQty',this.value)"></td><td><input type="number" min="0" value="${esc(st.rejectQty??'')}" onchange="setCapState(${row},'rejectQty',this.value)"></td><td><input type="number" min="0" value="${esc(st.recutQty??'')}" onchange="setCapState(${row},'recutQty',this.value)"></td><td><input value="${esc(st.remarks??'')}" onchange="setCapState(${row},'remarks',this.value)"></td><td><input value="${esc(st.comments??'')}" onchange="setCapState(${row},'comments',this.value)"></td></tr>`).join('')+'</tbody></table></div>'}
+function onCapDefectChange(row){const sel=document.getElementById('capDefect_'+row);if(!sel){alert('CAP Given row পাওয়া যায়নি। Refresh CAP Given চাপুন।');return}capRowState[row]=capRowState[row]||{};capRowState[row].defectId=sel.value;renderStep4DefectRows()}
+function setCapState(row,key,value){capRowState[row]=capRowState[row]||{};capRowState[row][key]=value}
+async function previewDynamicPhoto(inputId,previewId){try{const input=document.getElementById(inputId),img=document.getElementById(previewId);if(!input||!img){alert('ছবি আপলোডের ঘরটি পাওয়া যায়নি। Step 3-তে Refresh CAP Given চাপুন, তারপর আবার ছবি নির্বাচন করুন।');return}let v=await readPhoto(inputId);if(v){img.src=v;img.classList.remove('hidden');let row=Number(inputId.split('_')[1]);setCapState(row,inputId.startsWith('before_')?'before':'after',v)}else img.classList.add('hidden')}catch(e){alert('ছবি আপলোডে সমস্যা: '+(e.message||e));const input=document.getElementById(inputId);if(input)input.value=''}}
+function refreshSelects(){for(let i=1;i<=findingRowCount;i++){let sel=document.getElementById('finding_'+i);if(sel){let old=sel.value;sel.innerHTML=defectOptions(old)}}refreshFindingRows();syncCapRows()}
+function readPhoto(id){return new Promise((resolve,reject)=>{const input=document.getElementById(id);if(!input){reject(new Error('ছবির input পাওয়া যায়নি। Step 3-তে Refresh CAP Given চাপুন।'));return}const f=input.files[0];if(!f){resolve('');return}if(!f.type.startsWith('image/')){reject(new Error('শুধু image file নির্বাচন করুন।'));return}const r=new FileReader();r.onerror=()=>reject(new Error('ছবি পড়া যায়নি।'));r.onload=()=>{const im=new Image();im.onerror=()=>reject(new Error('ছবিটি খোলা যায়নি।'));im.onload=()=>{try{const max=1000,scale=Math.min(1,max/Math.max(im.width,im.height));const c=document.createElement('canvas');c.width=Math.max(1,Math.round(im.width*scale));c.height=Math.max(1,Math.round(im.height*scale));c.getContext('2d').drawImage(im,0,0,c.width,c.height);resolve(c.toDataURL('image/jpeg',0.72))}catch(e){reject(e)}};im.src=r.result};r.readAsDataURL(f)})}
+async function submitAllCAP(){const req=['buyer','style','styleNo','inspectedBy','capDate','poNo'];for(const id of req)if(!val(id)){alert('সব আবশ্যক তথ্য পূরণ করুন।');document.getElementById(id).focus();return}let selected=[];for(let i=1;i<=capRowCount;i++){let sel=document.getElementById('capDefect_'+i);if(sel&&sel.value){let m=db.master.find(x=>String(x.id)===String(sel.value));if(m)selected.push({row:i,m})}}if(!selected.length){alert('Step 3 থেকে অন্তত একটি Defect নির্বাচন করুন।');return}for(const x of selected){let st=capRowState[x.row]||{};const who=document.getElementById('responsible_'+x.row);if(!who||!who.value.trim()){alert('Defect '+String(x.row).padStart(2,'0')+' এর Who responsible লিখুন।');if(who)who.focus();return}if(!st.before&&!document.getElementById('before_'+x.row)?.files?.[0]){alert('Defect '+x.row+' এর Finding Photo দিন।');return}if(!st.after&&!document.getElementById('after_'+x.row)?.files?.[0]){alert('Defect '+x.row+' এর Present Photo দিন।');return}}
+try{let newRecords=[];for(const {row,m} of selected){let st=capRowState[row]||{};let before=st.before||await readPhoto('before_'+row);let after=st.after||await readPhoto('after_'+row);newRecords.push({id:db.nextId++,sn:Math.max(0,...db.records.map(x=>Number(x.sn)||0),...newRecords.map(x=>Number(x.sn)||0))+1,buyer:val('buyer'),style:val('style'),styleNo:val('styleNo'),inspectedBy:val('inspectedBy'),inspectorEmail:val('inspectorEmail'),contactNo:val('contactNo'),inspectionDate:val('inspectionDate'),date:val('capDate'),poNo:val('poNo'),orderQty:val('orderQty'),inspectionType:val('inspectionType'),defectId:m.id,what:m.what,code:m.code,why:m.why,how:m.how,correct:m.correct,responsible:(document.getElementById('responsible_'+row)?.value||st.responsible||'').trim(),finding:before,present:after,remarks:st.remarks||'',comments:st.comments||'',totalQty:Number(st.totalQty||0),repairQty:Number(st.totalQty||0),replaceQty:Number(st.replaceQty||0),rejectQty:Number(st.rejectQty||0),recutQty:Number(st.recutQty||0),finalOfferQty:Number(val('recheckFinalOfferQty')||0),finalOfferDate:val('recheckFinalOfferDate'),totalManpower:val('recheckTotalManpower'),totalHours:val('recheckTotalHours'),recheckStartTime:val('recheckStartTime'),recheckEndTime:val('recheckEndTime'),recheckManualComments:val('recheckManualComments'),reasonOfFail:collectStep2Defects(),measurement:(editModeIds&&db.records.find(x=>Number(x.id)===Number(editModeIds[0]))?.measurement)||'',measurementQty:(editModeIds&&db.records.find(x=>Number(x.id)===Number(editModeIds[0]))?.measurementQty)||0,recheckResponsible:(editModeIds&&db.records.find(x=>Number(x.id)===Number(editModeIds[0]))?.recheckResponsible)||'',followupResponsible:(editModeIds&&db.records.find(x=>Number(x.id)===Number(editModeIds[0]))?.followupResponsible)||'',gmOperation:(editModeIds&&db.records.find(x=>Number(x.id)===Number(editModeIds[0]))?.gmOperation)||''})}if(editModeIds&&editModeIds.length){let old=db.records.map(x=>({...x}));const targetIds=editModeIds.slice();const byId=new Map(db.records.map(x=>[Number(x.id),x]));const used=new Set();for(let i=0;i<newRecords.length;i++){const nr=newRecords[i];const prior=byId.get(Number(targetIds[i]));if(prior){nr.id=prior.id;nr.sn=prior.sn;db.records[db.records.findIndex(x=>Number(x.id)===Number(prior.id))]={...prior,...nr};used.add(Number(prior.id));}else{nr.id=db.nextId++;nr.sn=Math.max(0,...db.records.map(x=>Number(x.sn)||0))+1;db.records.push(nr);}}const groupIds=new Set(targetIds.map(Number));db.records=db.records.filter(x=>!groupIds.has(Number(x.id))||used.has(Number(x.id)));if(!saveDB()){db.records=old;return}const count=newRecords.length;editModeIds=null;editModeGroupKey='';document.getElementById('capSubmitBtn').textContent='Submit CAP Record(s)';document.getElementById('capCancelEditBtn').classList.add('hidden');renderReports();renderRecent();alert(count+'টি CAP record সফলভাবে Update হয়েছে। পুরোনো রেকর্ডের ID/SN বজায় রাখা হয়েছে; নতুন সারি থাকলে শুধু সেটি যোগ হয়েছে।');}else{let old=db.records.slice();db.records.push(...newRecords);if(!saveDB()){db.records=old;return}renderReports();renderRecent();alert(newRecords.length+'টি CAP record সফলভাবে সংরক্ষিত হয়েছে।');}capRowState={};for(let i=1;i<=findingRowCount;i++){let sel=document.getElementById('finding_'+i);if(sel)sel.value='';if(findingSelections[i])findingSelections[i].defectId=''}for(let i=1;i<=capRowCount;i++){if(capRowState[i])capRowState[i]={};}renderFindingRows();syncCapRows();['buyer','style','styleNo','inspectedBy','inspectorEmail','contactNo','inspectionDate','poNo','orderQty'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});}catch(e){alert('CAP Submit-এ সমস্যা: '+(e.message||'ছবি পড়া যায়নি।'));}}
+function val(id){const el=document.getElementById(id);if(!el)throw new Error('ফরমের একটি ঘর পাওয়া যায়নি (ID: '+id+')। ফাইলটি নতুন করে খুলে আবার চেষ্টা করুন।');return String(el.value||'').trim()}
+function renderRecent(){let el=document.getElementById('recentRecords');if(!el)return;if(!db.records.length){el.innerHTML='<p class="muted">এখনো কোনো CAP Record নেই।</p>';return}el.innerHTML='<div class="tablewrap"><table><thead><tr><th>SN</th><th>CAP Date</th><th>Buyer / Style</th><th>Defect</th><th>Photos</th><th>Action</th></tr></thead><tbody>'+db.records.slice().reverse().map(r=>`<tr><td>${esc(r.sn)}</td><td>${esc(r.date)}</td><td>${esc(r.buyer)}<br>${esc(r.style)}<br>${esc(r.styleNo)}</td><td>${esc(r.what)} (${esc(r.code)})</td><td>${r.finding?'<img src="'+r.finding+'">':''} ${r.present?'<img src="'+r.present+'">':''}</td><td><button class="btn" onclick="editRecord(${r.id})">Edit</button> <button class="btn red" onclick="deleteRecord(${r.id})">Delete</button></td></tr>`).join('')+'</tbody></table></div>'}
+function editRecord(id){
+ if(!currentRole){alert('আগে Login করুন।');return}
+ const original=db.records.find(x=>Number(x.id)===Number(id));if(!original)return;
+ const key=[original.buyer,original.style,original.styleNo,original.date,original.inspectedBy].join('|');
+ const group=db.records.filter(x=>[x.buyer,x.style,x.styleNo,x.date,x.inspectedBy].join('|')===key).sort((a,b)=>(Number(a.sn)||0)-(Number(b.sn)||0));
+ if(!group.length)return;
+ if(!confirm('এই CAP report group-এর সম্পূর্ণ Step 1–4 ফরম খুলে Edit করবেন? Update করলে এই group-এর আগের রেকর্ডগুলোই সংশোধন হবে।'))return;
+ editModeIds=group.map(x=>x.id);editModeGroupKey=key;
+ const first=group[0];
+ const fields={inspectedBy:first.inspectedBy,inspectorEmail:first.inspectorEmail,contactNo:first.contactNo,inspectionDate:first.inspectionDate,capDate:first.date,buyer:first.buyer,style:first.style,styleNo:first.styleNo,poNo:first.poNo,orderQty:first.orderQty,inspectionType:first.inspectionType||'Inline',recheckFinalOfferQty:first.finalOfferQty,recheckFinalOfferDate:first.finalOfferDate,recheckTotalManpower:first.totalManpower,recheckTotalHours:first.totalHours,recheckStartTime:first.recheckStartTime,recheckEndTime:first.recheckEndTime,recheckManualComments:first.recheckManualComments};
+ Object.entries(fields).forEach(([id,v])=>{const el=document.getElementById(id);if(el)el.value=v??''});
+ findingSelections={};findingRowCount=Math.max(1,group.reduce((n,r)=>n+(Array.isArray(r.reasonOfFail)?r.reasonOfFail.length:0),0));
+ const reasonNames=[];group.forEach(r=>(Array.isArray(r.reasonOfFail)?r.reasonOfFail:[]).forEach(n=>{if(n&&!reasonNames.includes(n))reasonNames.push(n)}));
+ findingRowCount=Math.max(1,reasonNames.length);reasonNames.forEach((name,i)=>{const m=db.master.find(x=>String(x.what)===String(name));findingSelections[i+1]={defectId:m?String(m.id):''}});renderFindingRows();
+ capRowState={};capRowCount=Math.max(1,group.length);group.forEach((r,i)=>{const row=i+1;capRowState[row]={defectId:String(r.defectId??(db.master.find(m=>m.what===r.what)?.id??'')),responsible:r.responsible||'',before:r.finding||'',after:r.present||'',totalQty:r.totalQty??0,replaceQty:r.replaceQty??0,rejectQty:r.rejectQty??0,recutQty:r.recutQty??0,remarks:r.remarks||'',comments:r.comments||''}});syncCapRows();
+ syncStep4Header();renderStep4Reasons();renderStep4DefectRows();
+ document.getElementById('capSubmitBtn').textContent='Update';document.getElementById('capCancelEditBtn').classList.remove('hidden');
+ showTab('entry',document.querySelector('.tabs button[data-tab="entry"]'));window.scrollTo({top:0,behavior:'smooth'});
+}
+function cancelFullEdit(){if(!editModeIds)return;if(!confirm('Edit বাতিল করবেন? পরিবর্তনগুলো সংরক্ষণ হবে না।'))return;editModeIds=null;editModeGroupKey='';document.getElementById('capSubmitBtn').textContent='Submit CAP Record(s)';document.getElementById('capCancelEditBtn').classList.add('hidden');capRowState={};findingSelections={};findingRowCount=1;capRowCount=1;renderFindingRows();syncCapRows();['inspectedBy','inspectorEmail','contactNo','inspectionDate','capDate','buyer','style','styleNo','poNo','orderQty','recheckFinalOfferQty','recheckFinalOfferDate','recheckTotalManpower','recheckTotalHours','recheckStartTime','recheckEndTime','recheckManualComments'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''});showTab('reports',document.querySelector('.tabs button[data-tab="reports"]'));}
+
+function deleteRecord(id){if(currentRole!=='master'){alert('Delete করার অনুমতি শুধু Master User-এর আছে।');return}const r=db.records.find(x=>Number(x.id)===Number(id));if(!r)return;if(confirm('এই CAP record ('+r.what+' / SN '+r.sn+') স্থায়ীভাবে মুছে ফেলবেন?')){const old=db.records.slice();db.records=db.records.filter(x=>Number(x.id)!==Number(id));if(!saveDB()){db.records=old;return}renderRecent();renderReports();alert('রেকর্ড মুছে ফেলা হয়েছে।')}}
+function saveMaster(){if(!currentRole){alert('আগে Login করুন।');return}if(currentRole!=='master'&&editingMaster){alert('সাধারণ ইউজার Master record Edit করতে পারবেন না; শুধু নতুন record যোগ করতে পারবেন।');return}let what=val('mWhat'),code=val('mCode');if(!what||!code){alert('Defect এবং Code আবশ্যক।');return}let id=editingMaster;let duplicate=db.master.find(x=>x.id!==id&&(x.what.toLowerCase()===what.toLowerCase()||x.code.toLowerCase()===code.toLowerCase()));if(duplicate&&!confirm('একই Defect বা Code আছে। তবুও সংরক্ষণ করবেন?'))return;let obj={id:id||Math.max(0,...db.master.map(x=>x.id||0))+1,what,code,why:val('mWhy'),how:val('mHow'),correct:val('mCorrect')};const previous=db.master.slice();if(id)db.master=db.master.map(x=>x.id===id?obj:x);else db.master.push(obj);if(!saveDB()){db.master=previous;return}resetMasterForm();refreshSelects();renderMaster();alert('Master Database সংরক্ষিত হয়েছে।')}
+function editMaster(id){if(currentRole!=='master'){alert('Master record Edit শুধু Master User করতে পারবেন।');return}let m=db.master.find(x=>x.id===id);if(!m)return;editingMaster=id;['what','code','why','how','correct'].forEach(k=>document.getElementById('m'+k[0].toUpperCase()+k.slice(1)).value=m[k]||'');document.getElementById('masterEditId').textContent='Editing ID '+id;window.scrollTo(0,0)}
+function resetMasterForm(){editingMaster=null;['mWhat','mCode','mWhy','mHow','mCorrect'].forEach(id=>document.getElementById(id).value='');document.getElementById('masterEditId').textContent=''}
+function deleteMaster(id){if(currentRole!=='master'){alert('Master record Delete শুধু Master User করতে পারবেন।');return}if(confirm('এই Master Record মুছে ফেলবেন? পুরোনো CAP report-এ সংরক্ষিত তথ্য থাকবে।')){db.master=db.master.filter(x=>x.id!==id);saveDB();refreshSelects();renderMaster()}}
+function renderMaster(){let q=(document.getElementById('masterSearch')?.value||'').toLowerCase();let list=db.master.filter(m=>(m.what+' '+m.code).toLowerCase().includes(q));document.getElementById('masterCount').textContent=list.length+' / '+db.master.length+' records';document.getElementById('masterTable').innerHTML='<table><thead><tr><th>Code</th><th>What happened</th><th>Why did it happen</th><th>How did it happen</th><th>How did it correct</th><th>Action</th></tr></thead><tbody>'+list.map(m=>`<tr><td>${esc(m.code)}</td><td>${esc(m.what)}</td><td>${esc(m.why)}</td><td>${esc(m.how)}</td><td>${esc(m.correct)}</td><td>${currentRole==='master'?`<button class="btn" onclick="editMaster(${m.id})">Edit</button> <button class="btn red" onclick="deleteMaster(${m.id})">Delete</button>`:'<span class="muted">View only</span>'}</td></tr>`).join('')+'</tbody></table>'}
+function getFiltered(){let b=val('filterBuyer').toLowerCase(),s=val('filterStyleNo').toLowerCase(),p=(document.getElementById('filterPoNo')?.value||'').trim().toLowerCase(),f=val('filterFrom'),t=val('filterTo');return db.records.filter(r=>(!b||String(r.buyer||'').toLowerCase().includes(b))&&(!s||String(r.styleNo||'').toLowerCase().includes(s))&&(!p||String(r.poNo||'').toLowerCase().split(',').some(x=>x.trim().includes(p)))&&(!f||r.date>=f)&&(!t||r.date<=t))}
+function renderReports(){let records=getFiltered(),groups={};records.forEach(r=>{let k=[r.buyer,r.style,r.styleNo,r.date,r.inspectedBy].join('|');(groups[k]??=[]).push(r)});let out='';if(!records.length){out='<div class="card"><p>এই ফিল্টারে কোনো CAP record পাওয়া যায়নি। আগে Step 3 থেকে Submit করুন।</p></div>'}else for(const [k,rs] of Object.entries(groups)){let [buyer,style,styleNo,date,inspector]=k.split('|');out+=`<div class="card"><div class="reporthead"><h2>Root Cause Analysis & Corrective Action Plan</h2><div>Buyer: <b>${esc(buyer)}</b> &nbsp; Style: <b>${esc(style)}</b> &nbsp; Style No.: <b>${esc(styleNo)}</b></div><div>Inspected by: <b>${esc(inspector)}</b> &nbsp; Inspection Date: <b>${esc(rs[0].inspectionDate||'')}</b> &nbsp; CAP Date: <b>${esc(date)}</b></div><div>Email: ${esc(rs[0].inspectorEmail||'n/a')} &nbsp; Contact: ${esc(rs[0].contactNo||'n/a')} &nbsp; PO: ${esc(rs[0].poNo||'')} &nbsp; Order Qty: ${esc(rs[0].orderQty||'')}</div></div><div class="tablewrap"><table class="report-table"><thead><tr><th>SN</th><th>Findings Photo</th><th>What happened</th><th>Why did it happen</th><th>How did it happen</th><th>How did it correct</th><th>Who was responsible</th><th>Present Photo</th><th>Remarks</th><th class="noprint">Action</th></tr></thead><tbody>${rs.map((r,i)=>`<tr><td>${i+1}</td><td>${r.finding?'<img class="photo" src="'+r.finding+'">':'<span class="muted">ছবি নেই</span>'}<div class="report-photo-tools noprint ${currentRole?'':'hidden'}"><input class="hidden" id="reportFindingPhoto_${r.id}" type="file" accept="image/*" onchange="changeReportPhoto(${r.id}, 'finding', this)"><button type="button" class="btn gray" onclick="document.getElementById('reportFindingPhoto_${r.id}').click()">Finding ছবি পরিবর্তন</button></div></td><td>${esc(r.what)}</td><td>${nl(r.why)}</td><td>${nl(r.how)}</td><td>${nl(r.correct)}</td><td>${nl(r.responsible)}</td><td>${r.present?'<img class="photo" src="'+r.present+'">':'<span class="muted">ছবি নেই</span>'}<div class="report-photo-tools noprint ${currentRole?'':'hidden'}"><input class="hidden" id="reportPresentPhoto_${r.id}" type="file" accept="image/*" onchange="changeReportPhoto(${r.id}, 'present', this)"><button type="button" class="btn gray" onclick="document.getElementById('reportPresentPhoto_${r.id}').click()">Present ছবি পরিবর্তন</button></div></td><td>${esc(r.remarks)}</td><td class="noprint"><button type="button" class="btn gray ${currentRole?'':'hidden'}" onclick="editRecord(${r.id})">সম্পূর্ণ ফরম Edit</button></td></tr>`).join('')}</tbody></table></div><h3>Re-check Summary</h3><div class="grid"><div class="field"><label>Final Offer Qty</label><input type="number" min="0" value="${rs[0].finalOfferQty||''}" onchange="updateGroup(${rs[0].id},'finalOfferQty',this.value)"></div><div class="field"><label>Final Offer Date</label><input type="date" value="${rs[0].finalOfferDate||''}" onchange="updateGroup(${rs[0].id},'finalOfferDate',this.value)"></div></div><div class="tablewrap"><table class="report-table"><thead><tr><th>Defect Type</th><th>Total Defect</th><th>Repair Qty</th><th>Reject Qty</th><th>Re-Cut</th><th>Remarks</th><th>Comments</th></tr></thead><tbody>${rs.map(r=>`<tr><td>${esc(r.what)}</td><td><input type="number" min="0" value="${r.totalQty||''}" onchange="updateRecord(${r.id},'totalQty',this.value)"></td><td><input type="number" min="0" value="${r.repairQty||''}" onchange="updateRecord(${r.id},'repairQty',this.value)"></td><td><input type="number" min="0" value="${r.rejectQty||''}" onchange="updateRecord(${r.id},'rejectQty',this.value)"></td><td><input type="number" min="0" value="${r.recutQty||''}" onchange="updateRecord(${r.id},'recutQty',this.value)"></td><td><input value="${esc(r.remarks)}" onchange="updateRecord(${r.id},'remarks',this.value)"></td><td><input value="${esc(r.comments)}" onchange="updateRecord(${r.id},'comments',this.value)"></td></tr>`).join('')}<tr><th>TOTAL</th><th>${rs.reduce((a,r)=>a+(Number(r.totalQty)||0),0)}</th><th>${rs.reduce((a,r)=>a+(Number(r.repairQty)||0),0)}</th><th>${rs.reduce((a,r)=>a+(Number(r.rejectQty)||0),0)}</th><th>${rs.reduce((a,r)=>a+(Number(r.recutQty)||0),0)}</th><th colspan="2">Quantity totals</th></tr></tbody></table></div><div class="grid" style="margin-top:12px"><div class="field"><label>Measurement</label><input value="${esc(rs[0].measurement||'')}" onchange="updateGroup(${rs[0].id},'measurement',this.value)"></div><div class="field"><label>Measurement Quantity</label><input type="number" value="${rs[0].measurementQty||''}" onchange="updateGroup(${rs[0].id},'measurementQty',this.value)"></div><div class="field"><label>Re-Check Responsible</label><input value="${esc(rs[0].recheckResponsible||'')}" onchange="updateGroup(${rs[0].id},'recheckResponsible',this.value)"></div><div class="field"><label>Followup Responsible / AQC</label><input value="${esc(rs[0].followupResponsible||'')}" onchange="updateGroup(${rs[0].id},'followupResponsible',this.value)"></div><div class="field"><label>GM Operation</label><input value="${esc(rs[0].gmOperation||'')}" onchange="updateGroup(${rs[0].id},'gmOperation',this.value)"></div></div></div>`}document.getElementById('reportOutput').innerHTML=out}
+function changeReportPhoto(id,field,input){
+ if(!currentRole){alert('আগে Login করুন।');if(input)input.value='';return}
+ if(!['finding','present'].includes(field)){if(input)input.value='';return}
+ const file=input&&input.files&&input.files[0];if(!file)return;
+ if(!file.type||!file.type.startsWith('image/')){alert('অনুগ্রহ করে একটি image ফাইল নির্বাচন করুন।');input.value='';return}
+ const reader=new FileReader();
+ reader.onerror=()=>{alert('ছবিটি পড়া যায়নি। অন্য ছবি নির্বাচন করুন।');input.value=''};
+ reader.onload=()=>{const image=new Image();image.onerror=()=>{alert('ছবিটি খোলা যায়নি। অন্য ছবি নির্বাচন করুন।');input.value=''};image.onload=()=>{try{
+  const max=1000,scale=Math.min(1,max/Math.max(image.width,image.height));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(image.width*scale));canvas.height=Math.max(1,Math.round(image.height*scale));canvas.getContext('2d').drawImage(image,0,0,canvas.width,canvas.height);const data=canvas.toDataURL('image/jpeg',0.72);
+  const index=db.records.findIndex(x=>Number(x.id)===Number(id));if(index<0){alert('এই CAP record পাওয়া যায়নি।');input.value='';return}
+  const previous=db.records[index][field];db.records[index][field]=data;if(!saveDB()){db.records[index][field]=previous;input.value='';return}
+  renderReports();renderRecent();alert((field==='finding'?'Finding Photo':'Present Photo')+' পরিবর্তন করে সংরক্ষণ করা হয়েছে।');
+ }catch(err){alert('ছবি সংরক্ষণ করা যায়নি। ছোট ছবি ব্যবহার করুন। '+(err.message||''))}input.value=''};image.src=reader.result};reader.readAsDataURL(file)
+}
+function updateRecord(id,k,v){let r=db.records.find(x=>x.id===id);if(r){r[k]=['totalQty','repairQty','rejectQty','recutQty'].includes(k)?Number(v||0):v;saveDB()}}
+function updateGroup(id,k,v){let r=db.records.find(x=>x.id===id);if(!r)return;let key=[r.buyer,r.style,r.styleNo,r.date,r.inspectedBy].join('|');db.records.filter(x=>[x.buyer,x.style,x.styleNo,x.date,x.inspectedBy].join('|')===key).forEach(x=>x[k]=v);saveDB()}
+
+function downloadBlobFile(filename, content, type){
+ try{
+  const blob=new Blob([content],{type:type||'text/html;charset=utf-8'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download=filename;
+  a.target='_blank';
+  a.rel='noopener';
+  a.style.position='fixed';
+  a.style.left='-10000px';
+  document.body.appendChild(a);
+  a.click();
+  window.setTimeout(()=>{a.remove();try{URL.revokeObjectURL(url)}catch(_e){}},30000);
+  return true;
+ }catch(err){
+  console.error('Download failed',err);
+  alert('ডাউনলোড তৈরি করা যায়নি: '+(err&&err.message?err.message:String(err)));
+  return false;
+ }
+}
+function getRecordsForDownload(){
+ let records=[];
+ try{records=getFiltered()}catch(err){console.warn('Report filters could not be applied',err)}
+ if(!Array.isArray(records)||records.length===0){
+  records=(window.db&&Array.isArray(window.db.records))?window.db.records:
+          (typeof db!=='undefined'&&db&&Array.isArray(db.records)?db.records:[]);
+ }
+ return records;
+}
+function formatResponsibleForReport(value){
+ const raw=String(value??'').replace(/<br\s*\/?>/gi,'\n').replace(/<\/?[^>]+>/g,'').trim();
+ if(!raw)return '';
+ const esc=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+ // Format the two standard CAP approvers as separate centered name/role lines.
+ if(/Md\.\s*Jafor Mia/i.test(raw)&&/Anwar Hossain/i.test(raw)){
+  return '<div class="responsible-report"><div>Md. Jafor Mia, Sr.</div><div>Manager (Fin.)</div><div class="responsible-gap"></div><div>Anwar Hossain, QM, QAD</div></div>';
+ }
+ const lines=raw.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);
+ if(lines.length>=3){
+  return '<div class="responsible-report"><div>'+esc(lines[0])+'</div><div>'+esc(lines[1])+'</div><div class="responsible-gap"></div><div>'+esc(lines.slice(2).join(' '))+'</div></div>';
+ }
+ return '<div class="responsible-report">'+lines.map(x=>'<div>'+esc(x)+'</div>').join('')+'</div>';
+}
+function downloadCAPReport(){
+ try{
+ const records=getRecordsForDownload();
+ if(!records.length){alert('ডাউনলোড করার মতো CAP Record নেই। আগে Step 3 থেকে Submit করে Report তৈরি করুন।');return}
+ const groups={};records.forEach(r=>{const k=[r.buyer,r.style,r.styleNo,r.date,r.inspectedBy].join('|');(groups[k]??=[]).push(r)});
+ const escHtml=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/\n/g,'<br>');
+ let body='';
+ for(const [key,rs] of Object.entries(groups)){
+  const first=rs[0];
+  const rows=rs.map((r,i)=>`<tr><td class="sn">${i+1}</td><td class="photo-cell">${r.finding?`<img class="photo" src="${r.finding}" alt="Finding Photo">`:''}</td><td>${escHtml(r.what)}</td><td>${escHtml(r.why)}</td><td>${escHtml(r.how)}</td><td>${escHtml(r.correct)}</td><td class="responsible-cell">${formatResponsibleForReport(r.responsible)}</td><td class="photo-cell">${r.present?`<img class="photo" src="${r.present}" alt="Present Photo">`:''}</td><td>${escHtml(r.remarks)}</td></tr>`).join('');
+  body+=`<section class="report-page"><div class="factory">Factory Name : GMS TEXTILES LTD.</div><div class="subtitle">Root Cause analysis &amp; Corrective Action plan</div><table class="meta"><tbody><tr><th>Buyer :</th><td>${escHtml(first.buyer)}</td><th>Style</th><td>${escHtml(first.style)}</td><th>Style No.:</th><td>${escHtml(first.styleNo)}</td><th>Inspected by :</th><td>${escHtml(first.inspectedBy)}</td><th>Date:</th><td>${escHtml(first.date)}</td></tr></tbody></table><table class="report-table"><colgroup><col style="width:3%"><col style="width:10%"><col style="width:10%"><col style="width:14%"><col style="width:14%"><col style="width:24%"><col style="width:9%"><col style="width:10%"><col style="width:6%"></colgroup><thead><tr><th>SN</th><th>Findings Photo</th><th>What happened</th><th>Why did it happen</th><th>How did it happen</th><th>How did it correct</th><th>Who was responsible</th><th>Present Photo</th><th>Remarks</th></tr></thead><tbody>${rows}</tbody></table></section>`;
+ }
+ const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CAP Report</title><style>*{box-sizing:border-box}body{font-family:Arial,sans-serif;margin:18px;color:#111;background:#fff}.report-page{width:100%;margin:0 auto 28px;page-break-after:always}.report-page:last-child{page-break-after:auto}.factory{text-align:center;font-size:24px;font-weight:700;margin:2px 0 0}.subtitle{text-align:center;font-size:19px;margin:0 0 10px}.meta{width:100%;border-collapse:collapse;margin-bottom:7px;table-layout:auto}.meta th,.meta td{border:2px solid #555;padding:5px 7px;white-space:nowrap;font-size:12px}.meta th{background:#d4d4d4;text-align:left;font-weight:700}.meta td{text-align:center;font-weight:600;background:#fff}.report-table{width:100%;border-collapse:collapse;table-layout:fixed}.report-table th,.report-table td{border:2px solid #444;padding:4px;font-size:11px;vertical-align:middle;overflow-wrap:anywhere}.report-table th{background:#dedede;text-align:center;font-size:12px;font-weight:700}.report-table td{white-space:normal}.report-table .responsible-cell{text-align:center;vertical-align:middle}.responsible-report{text-align:center;line-height:1.25}.responsible-gap{height:9px}.report-table .sn{text-align:center}.photo-cell{text-align:center;padding:2px!important}.photo{display:block;width:100%;height:92px;object-fit:contain;margin:auto}.report-table tr{page-break-inside:avoid}@page{size:A4 landscape;margin:8mm}@media print{body{margin:0}.report-page{page-break-after:always}.report-page:last-child{page-break-after:auto}.factory{font-size:20px}.subtitle{font-size:16px}.approval-signatures{margin:6px 0 8px;font-size:10px}.report-table th,.report-table td{font-size:9px;padding:3px}.report-table th{font-size:10px}.photo{height:78px}.meta th,.meta td{font-size:10px;padding:4px}}\n
+</style></head><body>${body}
+</body></html>`;
+ const ok=downloadBlobFile('Bs Root Cause Analysis CAP.html',html,'text/html;charset=utf-8;');
+ if(!ok)return;
+ }catch(err){alert('CAP Report তৈরি করতে সমস্যা হয়েছে: '+(err&&err.message?err.message:String(err)));console.error(err)}
+}
+function downloadRecheckReport(){
+ try{
+  const records=getRecordsForDownload();
+  if(!records.length){alert('ডাউনলোড করার মতো Re-check record নেই। আগে Step 3 থেকে CAP Record Submit করুন।');return}
+  const h=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/\n/g,'<br>');
+  const first=records[0];
+  const fmtTime=v=>{if(!v)return '';const m=String(v).match(/^(\d{1,2}):(\d{2})$/);if(!m)return String(v);let hh=Number(m[1]),ap=hh>=12?'PM':'AM';hh=hh%12||12;return hh+':'+m[2]+' '+ap};
+  const reasons=[...new Set(records.flatMap(r=>Array.isArray(r.reasonOfFail)?r.reasonOfFail:String(r.reasonOfFail||'').split('|')).map(x=>String(x||'').trim()).filter(Boolean))];
+  const groups={};
+  records.forEach(r=>{const k=String(r.what||'').trim()||'Other';(groups[k]??=[]).push(r)});
+  const sum=(arr,k)=>arr.reduce((n,r)=>n+Number(r[k]||0),0);
+  const defectEntries=Object.entries(groups);
+  const grand=sum(records,'totalQty');
+  const defectRows=defectEntries.map(([name,rs],i)=>`<tr>
+    <td class="num">${i+1}</td><td>${h(name)}</td>
+    <td class="center">${sum(rs,'totalQty')?sum(rs,'totalQty')+' PCS':''}</td>
+    <td class="center">${sum(rs,'repairQty')?sum(rs,'repairQty')+' PCS':''}</td>
+    <td class="center">${sum(rs,'replaceQty')?sum(rs,'replaceQty')+' PCS':''}</td>
+    <td class="center">${sum(rs,'rejectQty')?sum(rs,'rejectQty')+' PCS':''}</td>
+    <td class="center">${sum(rs,'recutQty')?sum(rs,'recutQty')+' PCS':''}</td>
+    <td class="remarks-cell">${h(rs.map(r=>r.remarks).filter(Boolean).join('; '))}</td>
+    <td>${h(rs.map(r=>r.comments).filter(Boolean).join('; '))}</td>
+  </tr>`).join('') + `<tr class="totals-row"><th colspan="2">Ground Total</th><th class="center">${sum(records,'totalQty')?sum(records,'totalQty')+' PCS':''}</th><th class="center">${sum(records,'repairQty')?sum(records,'repairQty')+' PCS':''}</th><th class="center">${sum(records,'replaceQty')?sum(records,'replaceQty')+' PCS':''}</th><th class="center">${sum(records,'rejectQty')?sum(records,'rejectQty')+' PCS':''}</th><th class="center">${sum(records,'recutQty')?sum(records,'recutQty')+' PCS':''}</th><td></td><td></td></tr>`;
+  const reasonRows=Array.from({length:10},(_,i)=>`<tr><td></td><td colspan="2">${reasons[i]?`${i+1} &nbsp; ${h(reasons[i])}`:''}</td></tr>`).join('');
+  const html='<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Re-check Summary</title><style>'+
+  `*{box-sizing:border-box}body{font-family:Arial,sans-serif;margin:20px;color:#111;font-size:12px}.sheet{width:100%;max-width:1360px;margin:auto}.top{border:1px solid #222;display:grid;grid-template-columns:1.2fr 1fr;font-size:22px;font-weight:bold;padding:7px 18px;margin-bottom:16px}.grid{width:100%;border-collapse:collapse;table-layout:fixed;margin-bottom:15px}.grid td,.grid th{border:1px solid #222;padding:5px 8px;height:25px}.grid th{background:#f0f0f0}.label{font-weight:bold;width:20%}.value{width:58%}.rightlabel{font-weight:bold;width:14%}.rightvalue{width:8%;text-align:center}.section{text-align:center;font-weight:bold;background:#eee}.analysis th{text-align:center}.analysis td{height:25px}.remarks-cell{white-space:pre-wrap;vertical-align:top!important}.totals-row th,.totals-row td{font-weight:bold;background:#f5f5f5}.num{text-align:center;width:3%}.center{text-align:center;font-weight:bold}.reason td{height:24px}.measurement{width:42%;margin-top:15px}.measurement td{height:26px}.signatures{display:grid;grid-template-columns:1fr 1fr 1fr;text-align:center;margin-top:60px;font-weight:bold}.signatures span{text-decoration:underline}.small{font-size:11px}@page{size:A4 landscape;margin:10mm}@media print{body{margin:0}.sheet{max-width:none;width:100%}.top{font-size:19px}.grid td,.grid th{padding:4px 6px}.signatures{margin-top:35px}}`+
+  '</style></head><body><main class="sheet">'+
+  `<div class="top"><div>BESTSELLER RE-CHECK REPORT</div><div style="text-align:center">AQC/BS QC In-Line/ Per-Final/Final/2nd Final</div></div>`+
+  `<table class="grid"><tr><td class="label">Date Of Failed</td><td class="value">${h(first.inspectionDate||'')}</td><td class="rightlabel">Total Manpower</td><td class="rightvalue">${h(first.totalManpower||'')}</td></tr>`+
+  `<tr><td class="label">PO No-</td><td>${h(first.poNo||'')}</td><td class="rightlabel">Total Hours</td><td class="rightvalue">${h(first.totalHours||'')}</td></tr>`+
+  `<tr><td class="label">Style No-</td><td>${h(first.styleNo||'')}</td><td class="rightlabel">Re-Check Start Time</td><td class="rightvalue">${h(fmtTime(first.recheckStartTime||''))}</td></tr>`+
+  `<tr><td class="label">Qty-</td><td>${h(first.orderQty||'')}</td><td class="rightlabel">Re-Check End Time</td><td class="rightvalue">${h(fmtTime(first.recheckEndTime||''))}</td></tr>`+
+  `<tr><td class="label">final Offer Qty</td><td>${h(first.finalOfferQty||'')}</td><td class="rightlabel">Final Offer Date</td><td>${h(first.finalOfferDate||'')}</td></tr></table>`+
+  `<table class="grid reason"><tr><th colspan="3" class="section">Reason Of Fail</th><td rowspan="12" style="width:21%;vertical-align:middle;padding:10px;white-space:pre-wrap;text-align:center">${h(first.recheckManualComments||'')}</td></tr>${reasonRows}</table>`+
+  `<table class="grid analysis"><tr><th colspan="9" class="section">Defect Analysis</th></tr><tr><th colspan="2">Defect Type</th><th>Total Defect Found</th><th>Repair Qty</th><th>Replace Qty</th><th>Reject Qty</th><th>Re-Cut</th><th>Remarks</th><th>Comments</th></tr>${defectRows}</table>`+
+  `<div class="signatures"><div><span>Re-Check Responsible</span></div><div><span>Followup Responsible/AQC</span></div><div><span>GM Operation</span></div></div>`+
+  `</main></body></html>`;
+  const ok=downloadBlobFile('Re-Check Summary.html',html,'text/html;charset=utf-8;');
+  if(!ok)return;
+ }catch(err){alert('Re-check Summary তৈরি করতে সমস্যা হয়েছে: '+(err&&err.message?err.message:String(err)));console.error(err)}
+}
+
+function exportBackup(){
+ if(!currentRole){alert('Backup Export করার আগে Login করুন।');return;}
+ const appStorage={};
+ for(let i=0;i<localStorage.length;i++){
+   const key=localStorage.key(i);
+   if(key && key.startsWith('cap_'))appStorage[key]=localStorage.getItem(key);
+ }
+ const payload={
+   format:'CAP_WEB_APP_FULL_BACKUP_V4',exportedAt:new Date().toISOString(),
+   applicationVersion:'v81',database:db,users:readUsers(),
+   masterPassword:getMasterPassword(),appStorage:appStorage
+ };
+ const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+ a.download='CAP_FULL_Backup_'+new Date().toISOString().slice(0,10)+'.json';
+ document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+ const st=document.getElementById('backupStatus');
+ if(st)st.textContent='সম্পূর্ণ Backup Export হয়েছে—Database, User Accounts, Roles, Profiles ও Settings অন্তর্ভুক্ত। JSON ফাইলটি গোপনীয়ভাবে সংরক্ষণ করুন।';
+ alert('Full Backup তৈরি হয়েছে। এতে User Account, Password ও Recovery Code-সহ সংবেদনশীল তথ্য থাকতে পারে—ফাইলটি কাউকে দেবেন না।');
+}
+
+function exportRecordsCSV(){
+ const headers=['SN','Buyer','Style','Style No.','Inspected By','Inspector Email','Contact No.','Inspection Date','CAP Date','Defect Code','What happened','Why did it happen','How did it happen','How did it correct','Who was responsible','Remarks','Total Defect','Repair Qty','Reject Qty','Re-Cut','Final Offer Qty','Final Offer Date','Measurement','Measurement Qty','Re-check Responsible','Followup Responsible / AQC','GM Operation'];
+ const keys=['sn','buyer','style','styleNo','inspectedBy','inspectorEmail','contactNo','inspectionDate','date','code','what','why','how','correct','responsible','remarks','totalQty','repairQty','rejectQty','recutQty','finalOfferQty','finalOfferDate','measurement','measurementQty','recheckResponsible','followupResponsible','gmOperation'];
+ const quote=v=>'"'+String(v??'').replace(/"/g,'""').replace(/\r?\n/g,' ')+'"';
+ const rows=[headers,...db.records.map(r=>keys.map(k=>r[k]??''))];
+ const csv='\ufeff'+rows.map(row=>row.map(quote).join(',')).join('\r\n');
+ const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='CAP_Records_'+new Date().toISOString().slice(0,10)+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+ document.getElementById('backupStatus').textContent='CAP Records CSV export করা হয়েছে। ছবিগুলো CSV-তে থাকে না; ছবি-সহ সম্পূর্ণ backup-এর জন্য JSON Export ব্যবহার করুন।';
+}
+
+function importBackup(e){
+ if(!currentRole){alert('Restore করার আগে Login করুন।');e.target.value='';return;}
+ const f=e.target.files&&e.target.files[0];if(!f)return;
+ const rd=new FileReader();
+ rd.onerror=()=>{alert('Backup ফাইল পড়া যায়নি।');e.target.value='';};
+ rd.onload=()=>{
+  try{
+   const x=JSON.parse(rd.result),full=x.format==='CAP_WEB_APP_FULL_BACKUP_V4';
+   const incomingDB=full?x.database:x;
+   if(!incomingDB||!Array.isArray(incomingDB.master)||!Array.isArray(incomingDB.records))throw Error('এটি সঠিক CAP backup নয়।');
+   if(full&&currentRole!=='master')throw Error('সম্পূর্ণ User Account ও System Settings Restore করার জন্য Master User দিয়ে Login করুন।');
+   const msg=full
+    ?'Full Restore করলে CAP Records, Master Data, User Accounts, Roles, Profiles ও Settings Backup-এর তথ্য দিয়ে প্রতিস্থাপিত হবে। আগে বর্তমান Full Backup নিয়েছেন?'
+    :'বর্তমান CAP Records ও Master Data Backup-এর তথ্য দিয়ে প্রতিস্থাপিত হবে। আগে বর্তমান ডাটার Backup নিয়েছেন?';
+   if(!confirm(msg))return;
+   if(full){
+     const incoming=x.appStorage&&typeof x.appStorage==='object'?x.appStorage:{};
+     const remove=[];
+     for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.startsWith('cap_'))remove.push(k);}
+     remove.forEach(k=>localStorage.removeItem(k));
+     Object.entries(incoming).forEach(([k,v])=>{if(k.startsWith('cap_')&&typeof v==='string')localStorage.setItem(k,v);});
+     if(Array.isArray(x.users))localStorage.setItem(USERS_KEY,JSON.stringify(x.users));
+     if(typeof x.masterPassword==='string')localStorage.setItem(MASTER_PASS_KEY,x.masterPassword);
+     localStorage.setItem(DBKEY,JSON.stringify(x.database));
+     loadDB();
+   }else{
+     db={master:incomingDB.master,records:incomingDB.records,nextId:incomingDB.nextId||Math.max(1,...incomingDB.records.map(r=>(Number(r.id)||0)+1))};
+     if(!saveDB())throw Error('Database সংরক্ষণ করা যায়নি।');
+     if(x.loginPhotos&&currentRole==='master')Object.entries(LOGIN_PHOTO_KEYS).forEach(([role,key])=>{const v=x.loginPhotos[role];if(typeof v==='string'&&v)localStorage.setItem(key,v);else localStorage.removeItem(key);});
+     if(x.loginCaptions&&currentRole==='master')Object.entries(LOGIN_CAPTION_KEYS).forEach(([role,key])=>{const v=x.loginCaptions[role];if(typeof v==='string'&&v)localStorage.setItem(key,v);else localStorage.removeItem(key);});
+     if(x.loginBranding&&currentRole==='master')localStorage.setItem(LOGIN_BRANDING_KEY,JSON.stringify(x.loginBranding));
+   }
+   if(currentRole==='master'){applyProfilePhoto();applyLoginCaptions();applyLoginBranding();}
+   refreshSelects();renderMaster();renderReports();renderRecent();renderDashboard();renderMyProfile();
+   const st=document.getElementById('backupStatus');
+   if(st)st.textContent=full?'সম্পূর্ণ System Backup সফলভাবে Restore হয়েছে—User Accounts, Roles, Profiles ও Settings-সহ।':'CAP Database Backup সফলভাবে Import হয়েছে।';
+   alert(full?'সম্পূর্ণ Backup সফলভাবে Restore হয়েছে। প্রয়োজনে পুনরায় Login করুন।':'CAP Database সফলভাবে Import হয়েছে।');
+  }catch(err){alert('Import ব্যর্থ: '+err.message);}
+  finally{e.target.value='';}
+ };
+ rd.readAsText(f);
+}
+function restoreStarterMaster(){if(!confirm('Starter Master Data বর্তমান Master-এর সঙ্গে যোগ হবে; একই Code/Defect পুনরায় যোগ হবে না।'))return;let n=0;starterMaster.forEach(s=>{if(!db.master.some(m=>m.code===s.code||m.what.toLowerCase()===s.what.toLowerCase())){db.master.push({...s,id:Math.max(0,...db.master.map(x=>x.id||0))+1});n++}});saveDB();refreshSelects();renderMaster();alert(n+'টি নতুন Master record যোগ হয়েছে।')}
+function clearAllData(){if(currentRole!=='master'){alert('এই কাজটি শুধু Master User করতে পারবেন।');return}if(!confirm('সতর্কতা: সব CAP Record ও Master Data মুছে যাবে। Backup ছাড়া এগোবেন না।'))return;if(!confirm('শেষবার নিশ্চিত করুন—সব লোকাল ডাটা Delete করবেন?'))return;localStorage.removeItem(DBKEY);loadDB();refreshSelects();renderRecent();renderMaster();renderReports()}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function nl(s){return esc(s).replace(/\n/g,'<br>')}
+window.addEventListener('error',function(ev){if(ev&&ev.message&&ev.message.includes('getElementById')){console.error('CAP DOM error:',ev.message,ev.filename,ev.lineno);}});
+
+// v60 theme switch: cycles Green -> Dark -> Light Blue; saved in this browser
+function applySavedTheme(){try{const mode=localStorage.getItem('cap_theme_mode')||'green';document.body.classList.toggle('dark-mode',mode==='dark');document.body.classList.toggle('light-blue-theme',mode==='blue');const b=document.getElementById('themeToggle');if(b)b.textContent=mode==='dark'?'🌙 Dark Theme':mode==='blue'?'🔵 Light Blue':'🟢 Green Theme';}catch(e){}}
+function toggleTheme(){const current=document.body.classList.contains('dark-mode')?'dark':document.body.classList.contains('light-blue-theme')?'blue':'green';const next=current==='green'?'dark':current==='dark'?'blue':'green';document.body.classList.toggle('dark-mode',next==='dark');document.body.classList.toggle('light-blue-theme',next==='blue');try{localStorage.setItem('cap_theme_mode',next)}catch(e){}const b=document.getElementById('themeToggle');if(b)b.textContent=next==='dark'?'🌙 Dark Theme':next==='blue'?'🔵 Light Blue':'🟢 Green Theme';}
+
+applySavedTheme();
+loadDB();applyProfilePhoto();applyLoginCaptions();applyLoginBranding();if(sessionStorage.getItem('cap_role')){currentRole=sessionStorage.getItem('cap_role');showApp();}
+
+
+function toggleSidebarSubmenu(id, button) {
+  const panel = document.getElementById(id);
+  if (!panel) return;
+  const willOpen = panel.classList.contains('hidden');
+  panel.classList.toggle('hidden', !willOpen);
+  if (button) button.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+}
+</script></body></html>
